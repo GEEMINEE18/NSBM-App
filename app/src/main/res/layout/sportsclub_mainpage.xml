@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="40dp"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#1D981D"
+                android:gravity="top">
+
+                <Button
+                    android:id="@+id/menuBtn"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/menu"
+                    android:backgroundTint="#1D981D"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="SPORTS CLUBS"
+                    android:textColor="#161E65"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/nsbmlogo"
+                    tools:ignore="RtlHardcoded" />
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <Button
+                android:id="@+id/myButton"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/back"
+                android:backgroundTint="#ffffff"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="167dp"
+                android:layout_gravity="start"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/pic1" />
+
+            <Button
+                android:id="@+id/athleticBtn"
+                android:layout_width="287dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="NSBM ATHLETIC CLUB"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/basketballBtn"
+                android:layout_width="287dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="NSBM BASKETBALL CLUB"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/badmintonBtn"
+                android:layout_width="287dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="NSBM BADMINTON CLUB"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/rugbyBtn"
+                android:layout_width="287dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="NSBM RUGBY CLUB"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/swimmingBtn"
+                android:layout_width="287dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="NSBM SWIMMING CLUB"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/cricketBtn"
+                android:layout_width="287dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="NSBM CRICKET CLUB"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/ttBtn"
+                android:layout_width="287dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="NSBM TABLE TENNIS CLUB"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/netballBtn"
+                android:layout_width="287dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="NSBM NETBALL CLUB"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/martsBtn"
+                android:layout_width="287dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="NSBM MARTIAL ARTS CLUB"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/hockeyBtn"
+                android:layout_width="287dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="NSBM HOCKEY CLUB"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/chessBtn"
+                android:layout_width="287dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="NSBM CHESS CLUB"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/volleyballBtn"
+                android:layout_width="287dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="NSBM VOLLEYBALL CLUB"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/archeryBtn"
+                android:layout_width="287dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="NSBM ARCHERY CLUB"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/fitnessBtn"
+                android:layout_width="287dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="NSBM FITNESS CLUB"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/soccerBtn"
+                android:layout_width="287dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="NSBM SOCCER CLUB"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

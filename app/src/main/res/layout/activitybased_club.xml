@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="40dp"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#1D981D"
+                android:gravity="top">
+
+                <Button
+                    android:id="@+id/menuBtn"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/menu"
+                    android:backgroundTint="#1D981D"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="ACTIVITY BASED CLUBS"
+                    android:textColor="#161E65"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/nsbmlogo"
+                    tools:ignore="RtlHardcoded" />
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <Button
+                android:id="@+id/myButton"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/back"
+                android:backgroundTint="#ffffff"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="167dp"
+                android:layout_gravity="start"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="1dp"
+                android:src="@drawable/pic1" />
+
+            <Button
+                android:id="@+id/mediaBtn"
+                android:layout_width="287dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="NSBM MEDIA CLUB"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/musicBtn"
+                android:layout_width="287dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="NSBM MUSIC CLUB"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/dramaBtn"
+                android:layout_width="287dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="NSBM DRAMA CLUB"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/dancingBtn"
+                android:layout_width="287dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="NSBM DANCING CLUB"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/literatureBtn"
+                android:layout_width="287dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="NSBM LITERATURE CLUB"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/graphicPaintBtn"
+                android:layout_width="287dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="NSBM GRAPHICS &amp; PAINTING CLUB"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/explorerBtn"
+                android:layout_width="287dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="NSBM EXPLORERS CLUB"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/taskBtn"
+                android:layout_width="287dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="NSBM GREEN TASK FORCE"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/natureBtn"
+                android:layout_width="287dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="NSBM NATURE &amp; WILD LIFE CLUB"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/debateBtn"
+                android:layout_width="287dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="NSBM ORATORY &amp; DEBATING CLUB"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/communityBtn"
+                android:layout_width="287dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="NSBM COMMUNITY SERVICE CLUB"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/aerobicBtn"
+                android:layout_width="287dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="NSBM AEROBICS CLUB"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/innovatorBtn"
+                android:layout_width="287dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="NSBM INNOVATORS' CLUB"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/healthBtn"
+                android:layout_width="287dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="NSBM HEALTH &amp; WELLNESS CLUB"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/triviaBtn"
+                android:layout_width="287dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="GENERAL KNOWLEDGE &amp; TRIVIA CLUB"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="40dp"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#1D981D"
+                android:gravity="top">
+
+                <Button
+                    android:id="@+id/menubtn"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/menu"
+                    android:backgroundTint="#1D981D"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="CLUB &amp; SOCIETIES"
+                    android:textColor="#161E65"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/nsbmlogo" />
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <Button
+                android:id="@+id/myButton"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/back"
+                android:backgroundTint="#ffffff"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/editBtn"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="-25dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/editicon"
+                android:backgroundTint="#ffffff"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <SearchView
+                android:id="@+id/searchView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/searchview" />
+
+            <Button
+                android:id="@+id/sportsBtn"
+                android:layout_width="160dp"
+                android:layout_height="118dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="SPORTS CLUBS"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/activityBtn"
+                android:layout_width="160dp"
+                android:layout_height="118dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="ACTIVITY BASED CLUBS"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/internationalBtn"
+                android:layout_width="160dp"
+                android:layout_height="118dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="INTERNATIONAL CLUBS"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/academicBtn"
+                android:layout_width="160dp"
+                android:layout_height="118dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="ACADEMIC CLUBS"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/religiousBtn"
+                android:layout_width="160dp"
+                android:layout_height="118dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="RELIGIOUS CLUBS"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
