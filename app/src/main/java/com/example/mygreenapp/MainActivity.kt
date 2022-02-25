@@ -11,9 +11,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val button = findViewById<Button>(R.id.clubSocietyBtn)
+        val newsBtn = findViewById<Button>(R.id.newsBtn)
 
         button.setOnClickListener {
             val intent = Intent (this,ClubAndSocietiesActivity::class.java)
+            startActivity(intent)
+        }
+
+        newsBtn.setOnClickListener {
+            val intent = Intent (this,NewsPageActivity::class.java)
             startActivity(intent)
         }
     }
