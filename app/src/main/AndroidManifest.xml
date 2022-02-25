@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyGreenApp">
         <activity
+            android:name=".SportsClubsActivity"
+            android:exported="false"></activity>
+        <activity
+            android:name=".ClubAndSocietiesActivity"
+            android:exported="false"></activity>
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
