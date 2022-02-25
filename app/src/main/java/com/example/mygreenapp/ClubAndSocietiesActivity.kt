@@ -11,9 +11,15 @@ class ClubAndSocietiesActivity : AppCompatActivity() {
         setContentView(R.layout.clubandsocieties)
 
         val sportsBtn = findViewById<Button>(R.id.sportsBtn)
+        val religiousBtn = findViewById<Button>(R.id.religiousBtn)
 
         sportsBtn.setOnClickListener {
             val intent = Intent (this,SportsClubsActivity::class.java)
+            startActivity(intent)
+        }
+
+        religiousBtn.setOnClickListener {
+            val intent = Intent(this,ReligiousClubActivity::class.java)
             startActivity(intent)
         }
     }
