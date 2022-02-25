@@ -13,6 +13,8 @@ class ClubAndSocietiesActivity : AppCompatActivity() {
         val sportsBtn = findViewById<Button>(R.id.sportsBtn)
         val religiousBtn = findViewById<Button>(R.id.religiousBtn)
         val internationalBtn = findViewById<Button>(R.id.internationalBtn)
+        val activityBtn = findViewById<Button>(R.id.activityBtn)
+        val academicBtn = findViewById<Button>(R.id.academicBtn)
 
         sportsBtn.setOnClickListener {
             val intent = Intent (this,SportsClubsActivity::class.java)
@@ -26,6 +28,16 @@ class ClubAndSocietiesActivity : AppCompatActivity() {
 
         internationalBtn.setOnClickListener {
             val intent = Intent (this,InternationalClubsActivity::class.java)
+            startActivity(intent)
+        }
+
+        activityBtn.setOnClickListener {
+            val intent = Intent (this,ActivityBasedClubsActivity::class.java)
+            startActivity(intent)
+        }
+
+        academicBtn.setOnClickListener {
+            val intent = Intent (this,AcademicClubsActivity::class.java)
             startActivity(intent)
         }
     }
