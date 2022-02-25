@@ -11,7 +11,11 @@ class SportsClubsActivity : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.sportsclub_mainpage)
 
-
+        //This is the back button
+        val myBtn = findViewById<Button>(R.id.myButton)
+        myBtn.setOnClickListener {
+            finish()
+        }
     }
 
 }
