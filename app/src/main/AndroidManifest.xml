@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyGreenApp">
         <activity
+            android:name=".InternationalClubsActivity"
+            android:exported="false"></activity>
+        <activity
             android:name=".ReligiousClubActivity"
             android:exported="false"></activity>
         <activity
