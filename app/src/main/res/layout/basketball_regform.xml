@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="40dp"
+    android:padding="0dp"
     tools:context=".MainActivity">
 
     <ScrollView
@@ -78,7 +78,6 @@
                 android:layout_marginEnd="10dp"
                 android:src="@drawable/bblogo" />
 
-            <!-- ENTER USERNAME -->
             <TextView
                 android:id="@+id/text"
                 android:layout_width="188dp"
@@ -91,11 +90,14 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
+            <!-- ENTER USERNAME -->
             <EditText
                 android:id="@+id/ffnBbReg"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="55dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
                 android:hint="Full Name"
                 android:inputType="text"
                 android:autofillHints="" />
@@ -105,6 +107,8 @@
                 android:id="@+id/emailBbReg"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
                 android:inputType="text"
                 android:hint="Email"
                 android:autofillHints=""
@@ -115,6 +119,8 @@
                 android:id="@+id/stdidBbReg"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
                 android:inputType="text"
                 android:hint="Student ID"
                 android:autofillHints="" />
@@ -124,6 +130,8 @@
                 android:id="@+id/batchBbReg"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
                 android:inputType="text"
                 android:hint="Batch"
                 android:autofillHints="" />
@@ -133,6 +141,8 @@
                 android:id="@+id/degreeBbReg"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
                 android:inputType="text"
                 android:hint="Degree"
                 android:autofillHints="" />
@@ -152,4 +162,4 @@
         </LinearLayout>
     </ScrollView>
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
