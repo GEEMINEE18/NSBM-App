@@ -27,7 +27,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="BADMINTON CLUB"
+                    android:text="SOCCER CLUB"
                     android:textStyle="bold"
                     android:textSize="20sp"
                     android:textColor="#161E65"/>
@@ -90,19 +90,11 @@
                 android:layout_marginTop="20dp"
                 android:src="@drawable/pic1" />
 
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_gravity="end"
-                android:layout_marginTop="-50dp"
-                android:layout_marginEnd="10dp"
-                android:src="@drawable/Badminton_logo" />
-
             <TextView
                 android:id="@+id/bbDescription"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Description"
+                android:text="\nDescription"
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:textSize="22dp"
@@ -112,7 +104,7 @@
                 android:id="@+id/text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="\nThe NSBM Badminton Club is the active and a well-established sports club at NSBM with many mercantile and national level players. This club is open to undergraduates of all levels for the purpose of recreation, physical fitness and development of skills in the sport. As one of the fastest sports in the world, badminton is a great way for students to develop and improve their reflexes, hand-eye coordination, as well as mental alertness. The club represents at inhouse badminton tournaments, inter university tournaments as well as other international badminton tournaments."
+                android:text="\nNSBM Soccer club is an active sports club of NSBM comprises of highly competitive players with skills on par with any other university soccer player. The team had participated in several inter-university tournaments and international sports tournament in past few years and was able bring several winning trophies to NSBM."
                 android:textAlignment="textStart"
                 android:layout_marginStart="25dp"
                 android:layout_marginEnd="10dp"

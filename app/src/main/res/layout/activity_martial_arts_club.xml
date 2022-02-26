@@ -27,7 +27,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="BADMINTON CLUB"
+                    android:text="MARTIAL ARTS CLUB"
                     android:textStyle="bold"
                     android:textSize="20sp"
                     android:textColor="#161E65"/>
@@ -96,7 +96,7 @@
                 android:layout_gravity="end"
                 android:layout_marginTop="-50dp"
                 android:layout_marginEnd="10dp"
-                android:src="@drawable/Badminton_logo" />
+                android:src="@drawable/martial_art_logo" />
 
             <TextView
                 android:id="@+id/bbDescription"
@@ -112,7 +112,7 @@
                 android:id="@+id/text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="\nThe NSBM Badminton Club is the active and a well-established sports club at NSBM with many mercantile and national level players. This club is open to undergraduates of all levels for the purpose of recreation, physical fitness and development of skills in the sport. As one of the fastest sports in the world, badminton is a great way for students to develop and improve their reflexes, hand-eye coordination, as well as mental alertness. The club represents at inhouse badminton tournaments, inter university tournaments as well as other international badminton tournaments."
+                android:text="\nNSBM Martial Arts Club is a fast- growing club which consist of Taekwondo and Karate sports."
                 android:textAlignment="textStart"
                 android:layout_marginStart="25dp"
                 android:layout_marginEnd="10dp"

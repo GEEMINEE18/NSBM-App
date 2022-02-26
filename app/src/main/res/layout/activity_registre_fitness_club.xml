@@ -43,9 +43,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="@string/international_clubs"
+                    android:text="FITNESS CLUB"
                     android:textColor="#161E65"
-                    android:textSize="16sp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
 
                 <ImageView
@@ -57,7 +57,6 @@
                     android:src="@drawable/nsbmlogo"
                     tools:ignore="RtlHardcoded"
                     android:contentDescription="@string/nsbm_logo" />
-
             </androidx.appcompat.widget.Toolbar>
 
             <Button
@@ -74,84 +73,93 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="168dp"
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="188dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="start"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="0dp"
-                android:src="@drawable/pic1"
-                android:contentDescription="@string/example_image_reader" />
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/register_form"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- ENTER USERNAME -->
+            <EditText
+                android:id="@+id/ffnBbReg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="55dp"
+                android:layout_marginEnd="30dp"
+                android:autofillHints=""
+                android:hint="@string/full_name"
+                android:inputType="text"
+                android:minHeight="48dp" />
+
+            <!-- ENTER EMAIL -->
+            <EditText
+                android:id="@+id/emailBbReg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:autofillHints=""
+                android:hint="@string/email"
+                android:inputType="text"
+                android:minHeight="48dp"
+                tools:ignore="TextFields" />
+
+            <!-- ENTER STUDENT ID -->
+            <EditText
+                android:id="@+id/stdidBbReg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:autofillHints=""
+                android:hint="@string/student_id"
+                android:inputType="text"
+                android:minHeight="48dp" />
+
+            <!-- ENTER BATCH -->
+            <EditText
+                android:id="@+id/batchBbReg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:autofillHints=""
+                android:hint="@string/batch"
+                android:inputType="text"
+                android:minHeight="48dp" />
+
+            <!-- ENTER DEGREE -->
+            <EditText
+                android:id="@+id/degreeBbReg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:autofillHints=""
+                android:hint="@string/degree"
+                android:inputType="text"
+                android:minHeight="48dp" />
 
             <Button
-                android:id="@+id/racBtn"
-                android:layout_width="287dp"
+                android:id="@+id/sportsBtn"
+                android:layout_width="100dp"
                 android:layout_height="56dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:text="@string/rotaract_club"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <Button
-                android:id="@+id/leoBtn"
-                android:layout_width="287dp"
-                android:layout_height="56dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:text="@string/leo_club"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <Button
-                android:id="@+id/aisecBtn"
-                android:layout_width="287dp"
-                android:layout_height="56dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:text="@string/aisec_club"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <Button
-                android:id="@+id/toastBtn"
-                android:layout_width="287dp"
-                android:layout_height="56dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:text="@string/toastmaster_club"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <Button
-                android:id="@+id/unBtn"
-                android:layout_width="287dp"
-                android:layout_height="56dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:text="@string/un_student_forum"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <Button
-                android:id="@+id/gavelBtn"
-                android:layout_width="287dp"
-                android:layout_height="56dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:text="@string/gavel_club"
+                android:layout_marginTop="30dp"
+                android:text="@string/submit"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
 
         </LinearLayout>
-
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,6 +10,69 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyGreenApp">
         <activity
+            android:name=".register_rugby_club"
+            android:exported="false" />
+        <activity
+            android:name=".register_soccer_club"
+            android:exported="false" />
+        <activity
+            android:name=".register_netball_club"
+            android:exported="false" />
+        <activity
+            android:name=".register_martialarts_club"
+            android:exported="false" />
+        <activity
+            android:name=".register_hockey_club"
+            android:exported="false" />
+        <activity
+            android:name=".registre_fitness_club"
+            android:exported="false" />
+        <activity
+            android:name=".register_cricket_club"
+            android:exported="false" />
+        <activity
+            android:name=".register_chess_club"
+            android:exported="false" />
+        <activity
+            android:name=".register_badminton_club"
+            android:exported="false" />
+        <activity
+            android:name=".register_athletic_club"
+            android:exported="false" />
+        <activity
+            android:name=".register_archery_club"
+            android:exported="false" />
+        <activity
+            android:name=".activity_soccer_club"
+            android:exported="false" />
+        <activity
+            android:name=".activity_rugby_club"
+            android:exported="false" />
+        <activity
+            android:name=".activity_netball_club"
+            android:exported="false" />
+        <activity
+            android:name=".activity_martial_arts_club"
+            android:exported="false" />
+        <activity
+            android:name=".activity_hockey_club"
+            android:exported="false" />
+        <activity
+            android:name=".activity_fitness_club"
+            android:exported="false" />
+        <activity
+            android:name=".activity_cricket_club"
+            android:exported="false" />
+        <activity
+            android:name=".activity_archery_club"
+            android:exported="false" />
+        <activity
+            android:name=".activity_chess_club"
+            android:exported="false" />
+        <activity
+            android:name=".activity_athletic_club"
+            android:exported="false" />
+        <activity
             android:name=".BadmintonClubActivity"
             android:exported="false" />
         <activity

@@ -27,7 +27,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="BADMINTON CLUB"
+                    android:text="RUGBY CLUB"
                     android:textStyle="bold"
                     android:textSize="20sp"
                     android:textColor="#161E65"/>
@@ -90,19 +90,11 @@
                 android:layout_marginTop="20dp"
                 android:src="@drawable/pic1" />
 
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_gravity="end"
-                android:layout_marginTop="-50dp"
-                android:layout_marginEnd="10dp"
-                android:src="@drawable/Badminton_logo" />
-
             <TextView
                 android:id="@+id/bbDescription"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Description"
+                android:text="\nDescription"
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:textSize="22dp"
@@ -112,7 +104,13 @@
                 android:id="@+id/text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="\nThe NSBM Badminton Club is the active and a well-established sports club at NSBM with many mercantile and national level players. This club is open to undergraduates of all levels for the purpose of recreation, physical fitness and development of skills in the sport. As one of the fastest sports in the world, badminton is a great way for students to develop and improve their reflexes, hand-eye coordination, as well as mental alertness. The club represents at inhouse badminton tournaments, inter university tournaments as well as other international badminton tournaments."
+                android:text="\nThat is the code NSBM Rugby club follows and it has earned many achievements because of that. Thus, the rugby club is one of the most highlighted clubs in the university since their non-stop victories under the NSBM name. Skipper Geshan Pethiyagoda and his deputy Charitha Nanayakkara leads the squad this year while the squad of 2019 consists around
+                35 determined players. Behind all these, the guidance to play a clean game and motivation to play hard is given by our master in charge Mr. Baratha Dodankotuwa and Ms. Sulari Fernando.
+                \n\nThe club emerged as winners in many platforms in the tournaments held last year including Mora 7s, ICBT 7s, KDU 10s and one international tournament, UiTM international sports tournament organized by the University of Technology MARA,
+                Shah Alam, Malaysia. Under the captaincy of Kasun Wimalasuriya and his deputy Selaka Molligoda. In this year the club has won its’ first championship at the Mora 7s which was held on 19th of February at the Havelock park.Beauty in this tournament
+                was that both NSBM teams qualified to face each other in the final segment of the bowl category, and both emerged as champions and runners up. The second win in this year was a huge one, the last years bowl champions at UiTM international sports tournament has bounced back to become the runners up at cup stage defeating many offshore universities in Asia.
+                “Success isn't always about greatness. It's about consistency. Consistent hard work leads to success. Greatness will come” as a wise man once said, players work hard for these achievements. Its not just a game it’s a way of life. Rugby is a 100% physical game, so you must have both mental and physical endurance. If you’re tough and you want it to be contested, this is the place for you because only the toughest will make it to the end. Once you step into the field you can’t back down because everyone has their role to play inside the team. When it comes to a nail-biting situation these players will play their heart out for one goal and that is to make sure that they seal a victory. It requires a lot of determination
+                and passion and luckily the mighty Greens of NSBM has what it takes to shine bright at the end of the day.\n\n"
                 android:textAlignment="textStart"
                 android:layout_marginStart="25dp"
                 android:layout_marginEnd="10dp"

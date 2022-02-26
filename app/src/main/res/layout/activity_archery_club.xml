@@ -27,7 +27,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="BADMINTON CLUB"
+                    android:text="ARCHERY CLUB"
                     android:textStyle="bold"
                     android:textSize="20sp"
                     android:textColor="#161E65"/>
@@ -90,19 +90,12 @@
                 android:layout_marginTop="20dp"
                 android:src="@drawable/pic1" />
 
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_gravity="end"
-                android:layout_marginTop="-50dp"
-                android:layout_marginEnd="10dp"
-                android:src="@drawable/Badminton_logo" />
 
             <TextView
                 android:id="@+id/bbDescription"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Description"
+                android:text="\nDescription"
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:textSize="22dp"
@@ -112,7 +105,9 @@
                 android:id="@+id/text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="\nThe NSBM Badminton Club is the active and a well-established sports club at NSBM with many mercantile and national level players. This club is open to undergraduates of all levels for the purpose of recreation, physical fitness and development of skills in the sport. As one of the fastest sports in the world, badminton is a great way for students to develop and improve their reflexes, hand-eye coordination, as well as mental alertness. The club represents at inhouse badminton tournaments, inter university tournaments as well as other international badminton tournaments."
+                android:text="\nArchery is an art, sport, practice or a skill where you shoot an arrow from a bow. The word “Archery” comes from the latin language “arcus”. In ancient time, archery was used for hunting. It was invented in the late Palaeolithic or early Mesolithic periods. The oldest signs of archery’s use in Europe date from around 10,000BC, while in Asia and the Middle East evidence suggests archery originated even earlier and in nowadays , it is mainly a competitive sport and recreational activity. A person who participates in archery is called an archer, and a person who is fond of or an expert at archery is sometimes called a toxophilite
+                              \n\nAs a sport, archery requires skills of precision, control, focus, repetition and determination. It is available to be practiced by all, no matter age, gender or ability, and is a widespread pastime in both developed and developing countries. NSBM Green university provides a platform to create young energetic archers through NSBM Archery club. Using the professional level equipment and training at provided at NSBM Archery Club young archers of NSBM is getting ready to participate for the next tournament at NSBM Sports Fiesta.
+                              \n\nLecturers in charge – Mrs. Jayani Nethmini Perera, Attorney- at- Law (Faculty of Business) Ms. Tharushi Nilanga (Faculty of Engineering)"
                 android:textAlignment="textStart"
                 android:layout_marginStart="25dp"
                 android:layout_marginEnd="10dp"
