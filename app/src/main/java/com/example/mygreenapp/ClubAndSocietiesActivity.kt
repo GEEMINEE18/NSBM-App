@@ -44,11 +44,5 @@ class ClubAndSocietiesActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        //This is the back button
-        val myBtn = findViewById<Button>(R.id.myButton)
-        myBtn.setOnClickListener {
-            finish()
-        }
-
     }
 }

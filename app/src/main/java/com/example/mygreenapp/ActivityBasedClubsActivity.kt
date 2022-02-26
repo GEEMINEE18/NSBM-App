@@ -11,11 +11,5 @@ class ActivityBasedClubsActivity: AppCompatActivity() {
         //title bar back button
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.title = "Activity Based Clubs"
-
-        //This is the back button
-        val myBtn = findViewById<Button>(R.id.myButton)
-        myBtn.setOnClickListener {
-            finish()
-        }
     }
 }

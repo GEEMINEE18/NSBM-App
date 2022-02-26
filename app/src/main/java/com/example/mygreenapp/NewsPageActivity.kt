@@ -11,11 +11,5 @@ class NewsPageActivity: AppCompatActivity() {
         //title bar back button
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.title = "News"
-
-        //This is the back button
-        val myBtn = findViewById<Button>(R.id.myButton)
-        myBtn.setOnClickListener {
-            finish()
-        }
     }
 }
