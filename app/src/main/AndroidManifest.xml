@@ -11,25 +11,32 @@
         android:theme="@style/Theme.MyGreenApp">
         <activity
             android:name=".NewsPageActivity"
-            android:exported="false"></activity>
+            android:exported="false"
+            android:parentActivityName=".MainActivity"></activity>
         <activity
             android:name=".AcademicClubsActivity"
-            android:exported="false"></activity>
+            android:exported="false"
+            android:parentActivityName=".ClubAndSocietiesActivity"></activity>
         <activity
             android:name=".ActivityBasedClubsActivity"
-            android:exported="false"></activity>
+            android:exported="false"
+            android:parentActivityName=".ClubAndSocietiesActivity"></activity>
         <activity
             android:name=".InternationalClubsActivity"
-            android:exported="false"></activity>
+            android:exported="false"
+            android:parentActivityName=".ClubAndSocietiesActivity"></activity>
         <activity
             android:name=".ReligiousClubActivity"
-            android:exported="false"></activity>
+            android:exported="false"
+            android:parentActivityName=".ClubAndSocietiesActivity"></activity>
         <activity
             android:name=".SportsClubsActivity"
-            android:exported="false"></activity>
+            android:exported="false"
+            android:parentActivityName=".ClubAndSocietiesActivity"></activity>
         <activity
             android:name=".ClubAndSocietiesActivity"
-            android:exported="false"></activity>
+            android:exported="false"
+            android:parentActivityName=".MainActivity"></activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">

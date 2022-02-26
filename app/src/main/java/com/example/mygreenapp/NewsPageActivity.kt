@@ -8,6 +8,9 @@ class NewsPageActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.news_page)
+        //title bar back button
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        supportActionBar!!.title = "News"
 
         //This is the back button
         val myBtn = findViewById<Button>(R.id.myButton)

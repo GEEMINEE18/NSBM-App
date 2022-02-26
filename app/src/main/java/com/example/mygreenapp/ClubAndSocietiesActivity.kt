@@ -9,6 +9,9 @@ class ClubAndSocietiesActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.clubandsocieties)
+        //title bar back button
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        supportActionBar!!.title = "Clubs and Societies"
 
         val sportsBtn = findViewById<Button>(R.id.sportsBtn)
         val religiousBtn = findViewById<Button>(R.id.religiousBtn)
@@ -46,5 +49,6 @@ class ClubAndSocietiesActivity : AppCompatActivity() {
         myBtn.setOnClickListener {
             finish()
         }
+
     }
 }

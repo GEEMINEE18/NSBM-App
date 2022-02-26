@@ -10,6 +10,9 @@ class SportsClubsActivity : AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.sportsclub_mainpage)
+        //title bar back button
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        supportActionBar!!.title = "Sports Clubs"
 
         //This is the back button
         val myBtn = findViewById<Button>(R.id.myButton)
