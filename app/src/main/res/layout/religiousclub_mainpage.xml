@@ -26,13 +26,14 @@
 
                 <Button
                     android:id="@+id/menuBtn"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
                     android:layout_gravity="start"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="15dp"
                     android:background="@drawable/menu"
                     android:backgroundTint="#1D981D"
+                    android:contentDescription="@string/menu_button"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -42,7 +43,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="RELIGIOUS CLUBS"
+                    android:text="@string/religious_clubs"
                     android:textColor="#161E65"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -54,19 +55,21 @@
                     android:layout_marginTop="15dp"
                     android:layout_marginEnd="10dp"
                     android:src="@drawable/nsbmlogo"
-                    tools:ignore="RtlHardcoded" />
+                    tools:ignore="RtlHardcoded"
+                    android:contentDescription="@string/nsbm_logo" />
 
             </androidx.appcompat.widget.Toolbar>
 
             <Button
                 android:id="@+id/myButton"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
                 android:layout_gravity="start"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="15dp"
                 android:background="@drawable/back"
                 android:backgroundTint="#ffffff"
+                android:contentDescription="@string/back_button_reader"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -76,7 +79,8 @@
                 android:layout_height="168dp"
                 android:layout_gravity="start"
                 android:layout_marginTop="15dp"
-                android:layout_marginEnd="10dp"
+                android:layout_marginEnd="0dp"
+                android:contentDescription="@string/example_image_reader"
                 android:src="@drawable/pic1" />
 
             <Button
@@ -85,7 +89,7 @@
                 android:layout_height="56dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:text="NSBM BUDDHIST SOCIETY"
+                android:text="@string/nsbm_buddhist_society"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -96,7 +100,7 @@
                 android:layout_height="56dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:text="NSBM CATHOLIC &amp; CHRISTIAN SOCIETY"
+                android:text="@string/nsbm_catholic_amp_christian_society"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -108,7 +112,7 @@
                 android:layout_height="56dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:text="NSBM HINDU SOCIETY"
+                android:text="@string/nsbm_hindu_society"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -119,7 +123,7 @@
                 android:layout_height="56dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:text="NSBM ISLAMIC SOCIETY"
+                android:text="@string/nsbm_islamic_society"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

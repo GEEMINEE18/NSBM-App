@@ -26,13 +26,14 @@
 
                 <Button
                     android:id="@+id/menuBtn"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
                     android:layout_gravity="start"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="15dp"
                     android:background="@drawable/menu"
                     android:backgroundTint="#1D981D"
+                    android:contentDescription="@string/menu_button"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -42,7 +43,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="BASKETBALL CLUB"
+                    android:text="@string/basketball_club"
                     android:textColor="#161E65"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -54,18 +55,20 @@
                     android:layout_marginTop="15dp"
                     android:layout_marginEnd="10dp"
                     android:src="@drawable/nsbmlogo"
-                    tools:ignore="RtlHardcoded" />
+                    tools:ignore="RtlHardcoded"
+                    android:contentDescription="@string/nsbm_logo" />
             </androidx.appcompat.widget.Toolbar>
 
             <Button
                 android:id="@+id/myButton"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
                 android:layout_gravity="start"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="15dp"
                 android:background="@drawable/back"
                 android:backgroundTint="#ffffff"
+                android:contentDescription="@string/back_button_reader"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -76,7 +79,8 @@
                 android:layout_gravity="end"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
-                android:src="@drawable/bblogo" />
+                android:src="@drawable/bblogo"
+                android:contentDescription="@string/basketball_club_logo" />
 
             <TextView
                 android:id="@+id/text"
@@ -85,7 +89,7 @@
                 android:layout_gravity="start"
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="-70dp"
-                android:text="Register Form"
+                android:text="@string/register_form"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -95,12 +99,13 @@
                 android:id="@+id/ffnBbReg"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="55dp"
                 android:layout_marginStart="30dp"
+                android:layout_marginTop="55dp"
                 android:layout_marginEnd="30dp"
-                android:hint="Full Name"
+                android:autofillHints=""
+                android:hint="@string/full_name"
                 android:inputType="text"
-                android:autofillHints="" />
+                android:minHeight="48dp" />
 
             <!-- ENTER EMAIL -->
             <EditText
@@ -109,9 +114,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
                 android:layout_marginEnd="30dp"
-                android:inputType="text"
-                android:hint="Email"
                 android:autofillHints=""
+                android:hint="@string/email"
+                android:inputType="text"
+                android:minHeight="48dp"
                 tools:ignore="TextFields" />
 
             <!-- ENTER STUDENT ID -->
@@ -121,9 +127,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
                 android:layout_marginEnd="30dp"
+                android:autofillHints=""
+                android:hint="@string/student_id"
                 android:inputType="text"
-                android:hint="Student ID"
-                android:autofillHints="" />
+                android:minHeight="48dp" />
 
             <!-- ENTER BATCH -->
             <EditText
@@ -132,9 +139,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
                 android:layout_marginEnd="30dp"
+                android:autofillHints=""
+                android:hint="@string/batch"
                 android:inputType="text"
-                android:hint="Batch"
-                android:autofillHints="" />
+                android:minHeight="48dp" />
 
             <!-- ENTER DEGREE -->
             <EditText
@@ -143,9 +151,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
                 android:layout_marginEnd="30dp"
+                android:autofillHints=""
+                android:hint="@string/degree"
                 android:inputType="text"
-                android:hint="Degree"
-                android:autofillHints="" />
+                android:minHeight="48dp" />
 
             <Button
                 android:id="@+id/sportsBtn"
@@ -153,7 +162,7 @@
                 android:layout_height="56dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp"
-                android:text="SUBMIT"
+                android:text="@string/submit"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

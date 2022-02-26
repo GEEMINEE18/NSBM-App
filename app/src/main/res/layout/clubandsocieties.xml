@@ -25,13 +25,14 @@
 
                 <Button
                     android:id="@+id/menubtn"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
                     android:layout_gravity="start"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="15dp"
                     android:background="@drawable/menu"
                     android:backgroundTint="#1D981D"
+                    android:contentDescription="@string/menu_button"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -41,7 +42,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="CLUB &amp; SOCIETIES"
+                    android:text="@string/club_amp_societies"
                     android:textColor="#161E65"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -52,32 +53,35 @@
                     android:layout_gravity="end"
                     android:layout_marginTop="15dp"
                     android:layout_marginEnd="10dp"
-                    android:src="@drawable/nsbmlogo" />
+                    android:src="@drawable/nsbmlogo"
+                    android:contentDescription="@string/nsbm_logo" />
 
             </androidx.appcompat.widget.Toolbar>
 
             <Button
                 android:id="@+id/myButton"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
                 android:layout_gravity="start"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="15dp"
                 android:background="@drawable/back"
                 android:backgroundTint="#ffffff"
+                android:contentDescription="@string/back_button_reader"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Button
                 android:id="@+id/editBtn"
-                android:layout_width="18dp"
-                android:layout_height="18dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
                 android:layout_gravity="end"
                 android:layout_marginTop="-25dp"
                 android:layout_marginEnd="15dp"
                 android:background="@drawable/editicon"
                 android:backgroundTint="#ffffff"
+                android:contentDescription="@string/edit_button_reader"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -100,7 +104,7 @@
                 android:layout_height="118dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:text="SPORTS CLUBS"
+                android:text="@string/sports_clubs"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -111,7 +115,7 @@
                 android:layout_height="118dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:text="ACTIVITY BASED CLUBS"
+                android:text="@string/activity_based_clubs"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -122,7 +126,7 @@
                 android:layout_height="118dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:text="INTERNATIONAL CLUBS"
+                android:text="@string/international_clubs"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -133,7 +137,7 @@
                 android:layout_height="118dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:text="ACADEMIC CLUBS"
+                android:text="@string/academic_clubs"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -144,7 +148,7 @@
                 android:layout_height="118dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:text="RELIGIOUS CLUBS"
+                android:text="@string/religious_clubs"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
