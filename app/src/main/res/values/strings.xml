@@ -67,4 +67,6 @@
     <string name="nsbm_hockey_club">NSBM HOCKEY CLUB</string>
     <string name="nsbm_chess_club">NSBM CHESS CLUB</string>
     <string name="nsbm_volleyball_club">NSBM VOLLEYBALL CLUB</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
 </resources>
