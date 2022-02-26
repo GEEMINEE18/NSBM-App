@@ -10,26 +10,29 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyGreenApp">
         <activity
+            android:name=".BadmintonClubActivity"
+            android:exported="false" />
+        <activity
             android:name=".NewsPageActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".AcademicClubsActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".ActivityBasedClubsActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".InternationalClubsActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".ReligiousClubActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".SportsClubsActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".ClubAndSocietiesActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
