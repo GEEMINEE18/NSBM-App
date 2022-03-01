@@ -43,7 +43,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="ATHLETIC CLUB"
+                    android:text="PROFILE"
                     android:textColor="#161E65"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -86,99 +86,104 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_gravity="end"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:src="@drawable/athletic_logo" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    >
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_image"
+                        android:layout_width="308dp"
+                        android:layout_height="177dp"
+                        android:textColorHint="#808080"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.7">
+
+                        <ImageView
+                            android:layout_width="191dp"
+                            android:layout_height="173dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="-25dp"
+                            android:src="@drawable/bblogo" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            <EditText
+                android:id="@+id/profile_fname"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="40dp"
+                android:drawableEnd="@drawable/edit"
+                android:drawablePadding="5dp"
+                android:gravity="start"
+                android:text="First name"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:inputType="text"
+                android:textColorHint="#8e9094"
+                android:textCursorDrawable="@null" />
+
+            <EditText
+                android:id="@+id/profile_displayname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Display Name"
+                android:textCursorDrawable="@null"
+                android:textColorHint="#8e9094"
+                android:drawableEnd="@drawable/edit"
+                android:drawablePadding="5dp"
+                android:inputType="text"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="20dp"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:gravity="start" />
+
+            <EditText
+                android:id="@+id/profile_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textCursorDrawable="@null"
+                android:drawableEnd="@drawable/edit"
+                android:textColorHint="#8e9094"
+                android:drawablePadding="5dp"
+                android:inputType="textEmailAddress"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="20dp"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:gravity="start" />
 
             <TextView
-                android:id="@+id/text"
-                android:layout_width="188dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="start"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="-70dp"
-                android:text="@string/register_form"
+                android:text="Registered Club/Societies"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="20dp"
+                android:textSize="18dp"
+                android:textStyle="bold"
                 android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <!-- ENTER USERNAME -->
-            <EditText
-                android:id="@+id/ffnBbReg"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="55dp"
-                android:layout_marginEnd="30dp"
-                android:autofillHints=""
-                android:hint="@string/full_name"
-                android:inputType="text"
-                android:minHeight="48dp" />
-
-            <!-- ENTER EMAIL -->
-            <EditText
-                android:id="@+id/emailBbReg"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginEnd="30dp"
-                android:autofillHints=""
-                android:hint="@string/email"
-                android:inputType="text"
-                android:minHeight="48dp"
-                tools:ignore="TextFields" />
-
-            <!-- ENTER STUDENT ID -->
-            <EditText
-                android:id="@+id/stdidBbReg"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginEnd="30dp"
-                android:autofillHints=""
-                android:hint="@string/student_id"
-                android:inputType="text"
-                android:minHeight="48dp" />
-
-            <!-- ENTER BATCH -->
-            <EditText
-                android:id="@+id/batchBbReg"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginEnd="30dp"
-                android:autofillHints=""
-                android:hint="@string/batch"
-                android:inputType="text"
-                android:minHeight="48dp" />
-
-            <!-- ENTER DEGREE -->
-            <EditText
-                android:id="@+id/degreeBbReg"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginEnd="30dp"
-                android:autofillHints=""
-                android:hint="@string/degree"
-                android:inputType="text"
-                android:minHeight="48dp" />
-
-            <Button
-                android:id="@+id/sportsBtn"
-                android:layout_width="100dp"
-                android:layout_height="56dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="30dp"
-                android:text="@string/submit"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
+                android:gravity="start" />
 
         </LinearLayout>
     </ScrollView>
