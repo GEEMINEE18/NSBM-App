@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyGreenApp">
         <activity
+            android:name=".bottom_navigation"
+            android:exported="false" />
+        <activity
             android:name=".bottom_nav"
             android:exported="false" />
         <activity
