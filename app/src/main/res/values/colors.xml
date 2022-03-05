@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="NSBMGreen">#3AB54A</color>
     <color name="NSBMBlue">#1B579F</color>
+    <color name="transparent">#00000000</color>
 </resources>

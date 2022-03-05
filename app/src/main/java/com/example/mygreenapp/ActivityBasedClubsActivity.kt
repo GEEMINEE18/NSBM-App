@@ -8,11 +8,8 @@ class ActivityBasedClubsActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activitybased_club)
-
-        //This is the back button
-        val myBtn = findViewById<Button>(R.id.myButton)
-        myBtn.setOnClickListener {
-            finish()
-        }
+        //title bar back button
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        supportActionBar!!.title = "Activity Based Clubs"
     }
 }
