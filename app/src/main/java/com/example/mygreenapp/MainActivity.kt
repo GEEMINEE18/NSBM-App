@@ -7,6 +7,9 @@ import android.view.MenuItem
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -38,18 +41,12 @@ class MainActivity : AppCompatActivity() {
             true
         }
 
-        val button = findViewById<Button>(R.id.clubSocietyBtn)
-        val newsBtn = findViewById<Button>(R.id.newsBtn)
+        //Code for bottom nav
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNav)
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
+        val navController = navHostFragment.navController
+        bottomNavigationView.setupWithNavController(navController)
 
-        button.setOnClickListener {
-            val intent = Intent (this,ClubAndSocietiesActivity::class.java)
-            startActivity(intent)
-        }
-
-        newsBtn.setOnClickListener {
-            val intent = Intent (this,NewsPageActivity::class.java)
-            startActivity(intent)
-        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

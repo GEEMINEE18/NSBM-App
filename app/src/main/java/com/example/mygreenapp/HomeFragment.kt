@@ -1,10 +1,12 @@
 package com.example.mygreenapp
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,6 +28,26 @@ class HomeFragment : Fragment() {
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
+        }
+    }
+
+    // Created this new function for this to work
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        //Code for the buttons inside the fragment
+        //We have to add view.findViewById instead of findViewById
+        val button = view.findViewById<Button>(R.id.clubSocietyBtn)
+        val newsBtn = view.findViewById<Button>(R.id.newsBtn)
+
+        button.setOnClickListener {
+            //Intent works when we replace "this" with "requireContext()"
+            val intent = Intent (requireContext(),ClubAndSocietiesActivity::class.java)
+            startActivity(intent)
+        }
+
+        newsBtn.setOnClickListener {
+            val intent = Intent (requireContext(),NewsPageActivity::class.java)
+            startActivity(intent)
         }
     }
 
