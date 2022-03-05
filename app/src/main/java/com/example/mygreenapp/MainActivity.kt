@@ -21,6 +21,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        //eliminating the shadow in bottom nav
+        bottomNav.background = null
+        //disabling the place holder in the bottom nav
+        bottomNav.menu.getItem(2).isEnabled = false
 
         //For the drawerLayout to work we should include: id 'kotlin-android-extensions' in build.gradle(Module) plugins section
         toggle = ActionBarDrawerToggle(this,drawerLayout,R.string.open,R.string.close)

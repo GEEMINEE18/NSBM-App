@@ -4,11 +4,16 @@
     <item
         android:id="@+id/homeFragment"
         android:icon="@drawable/ic_home"
-        android:title="Home" />
+        android:title="Home"/>
     <item
         android:id="@+id/calendarFragment"
         android:icon="@drawable/ic_calendar"
         android:title="Calendar" />
+
+    <item
+        android:id="@+id/placeholder"
+        android:title="" />
+
     <item
         android:id="@+id/notificationFragment"
         android:icon="@drawable/ic_notifications"
