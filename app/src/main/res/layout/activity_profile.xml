@@ -110,7 +110,7 @@
                             android:layout_height="150dp"
                             android:layout_gravity="center"
                             android:layout_marginTop="-25dp"
-                            android:src="@drawable/profilepic" />
+                            android:src="@drawable/pic1" />
 
                         <Button
                             android:id="@+id/camButton"

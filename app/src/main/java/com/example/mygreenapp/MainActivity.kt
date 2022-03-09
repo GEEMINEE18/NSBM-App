@@ -1,5 +1,6 @@
 package com.example.mygreenapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
@@ -8,6 +9,7 @@ import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -67,13 +69,16 @@ class MainActivity : AppCompatActivity() {
             onAddMainButtonClicked()
         }
         addEventBtn.setOnClickListener {
-            Toast.makeText(this,"Add event button clicked",Toast.LENGTH_SHORT).show()
+            val intent = Intent (this,AddEventActivity::class.java)
+            startActivity(intent)
         }
         addPostBtn.setOnClickListener {
-            Toast.makeText(this,"Add post button clicked",Toast.LENGTH_SHORT).show()
+            val intent = Intent (this,AddPostActivity::class.java)
+            startActivity(intent)
         }
         addMeetingBtn.setOnClickListener {
-            Toast.makeText(this,"Add meeting button clicked",Toast.LENGTH_SHORT).show()
+            val intent = Intent (this,AddMeetingActivity::class.java)
+            startActivity(intent)
         }
 
     }
