@@ -77,37 +77,52 @@
             android:exported="false" />
         <activity
             android:name=".activity_soccer_club"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".SportsClubsActivity"/>
         <activity
             android:name=".activity_rugby_club"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".SportsClubsActivity"/>
         <activity
             android:name=".activity_netball_club"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".SportsClubsActivity"/>
         <activity
             android:name=".activity_martial_arts_club"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".SportsClubsActivity"/>
         <activity
             android:name=".activity_hockey_club"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".SportsClubsActivity"/>
         <activity
             android:name=".activity_fitness_club"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".SportsClubsActivity"/>
         <activity
             android:name=".activity_cricket_club"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".SportsClubsActivity"/>
         <activity
             android:name=".activity_archery_club"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".SportsClubsActivity"/>
         <activity
             android:name=".activity_chess_club"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".SportsClubsActivity"/>
+        <activity
+            android:name=".BasketballClubActivity"
+            android:exported="false"
+            android:parentActivityName=".SportsClubsActivity"/>
         <activity
             android:name=".activity_athletic_club"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".SportsClubsActivity"/>
         <activity
             android:name=".BadmintonClubActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".SportsClubsActivity"/>
         <activity
             android:name=".NewsPageActivity"
             android:exported="false"

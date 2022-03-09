@@ -7,5 +7,7 @@ class BadmintonClubActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_badminton_club)
+
+        supportActionBar!!.title = "Badminton Club"
     }
 }

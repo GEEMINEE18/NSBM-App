@@ -7,5 +7,7 @@ class activity_athletic_club : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_athletic_club)
+
+        supportActionBar!!.title = "Athletic Club"
     }
 }
