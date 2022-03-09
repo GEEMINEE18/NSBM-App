@@ -36,6 +36,8 @@
                 android:id="@+id/searchView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:queryHint="Search"
+                android:iconifiedByDefault="false"
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="10dp"

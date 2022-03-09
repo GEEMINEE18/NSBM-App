@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="start"
+            tools:ignore="MissingConstraints">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#1D981D"
+                android:gravity="top">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="RUGBY CLUB"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="#161E65"/>
+
+                <Button
+                    android:id="@+id/menuBtn"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/menu"
+                    android:layout_gravity="start"
+                    android:backgroundTint="#1D981D"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_gravity="end"
+                    android:src="@drawable/nsbmlogo"/>
+
+            </androidx.appcompat.widget.Toolbar>
+
+
+            <Button
+                android:id="@+id/myButton"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/back"
+                android:backgroundTint="#ffffff"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/editBtn"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="-25dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/editicon"
+                android:backgroundTint="#ffffff"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageView
+                android:layout_width="376dp"
+                android:layout_height="206dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/pic1" />
+
+            <TextView
+                android:id="@+id/bbDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="\nDescription"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="22dp"
+                android:layout_marginStart="25dp"/>
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="\nThat is the code NSBM Rugby club follows and it has earned many achievements because of that. Thus, the rugby club is one of the most highlighted clubs in the university since their non-stop victories under the NSBM name. Skipper Geshan Pethiyagoda and his deputy Charitha Nanayakkara leads the squad this year while the squad of 2019 consists around
+                35 determined players. Behind all these, the guidance to play a clean game and motivation to play hard is given by our master in charge Mr. Baratha Dodankotuwa and Ms. Sulari Fernando.
+                \n\nThe club emerged as winners in many platforms in the tournaments held last year including Mora 7s, ICBT 7s, KDU 10s and one international tournament, UiTM international sports tournament organized by the University of Technology MARA,
+                Shah Alam, Malaysia. Under the captaincy of Kasun Wimalasuriya and his deputy Selaka Molligoda. In this year the club has won its’ first championship at the Mora 7s which was held on 19th of February at the Havelock park.Beauty in this tournament
+                was that both NSBM teams qualified to face each other in the final segment of the bowl category, and both emerged as champions and runners up. The second win in this year was a huge one, the last years bowl champions at UiTM international sports tournament has bounced back to become the runners up at cup stage defeating many offshore universities in Asia.
+                “Success isn't always about greatness. It's about consistency. Consistent hard work leads to success. Greatness will come” as a wise man once said, players work hard for these achievements. Its not just a game it’s a way of life. Rugby is a 100% physical game, so you must have both mental and physical endurance. If you’re tough and you want it to be contested, this is the place for you because only the toughest will make it to the end. Once you step into the field you can’t back down because everyone has their role to play inside the team. When it comes to a nail-biting situation these players will play their heart out for one goal and that is to make sure that they seal a victory. It requires a lot of determination
+                and passion and luckily the mighty Greens of NSBM has what it takes to shine bright at the end of the day.\n\n"
+                android:textAlignment="textStart"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="10dp"
+                android:textSize="19sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/LinearLayout02"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="180dp"
+                android:layout_alignParentBottom="true">
+
+                <Button
+                    android:id="@+id/Button02"
+                    android:layout_width="100dp"
+                    android:layout_height="56dp"
+                    android:layout_marginEnd="5dp"
+                    android:text="FOLLOW"/>
+
+                <Button
+                    android:id="@+id/Button03"
+                    android:layout_width="110dp"
+                    android:layout_height="56dp"
+                    android:text="REGISTER" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="154dp"
+                android:layout_gravity="fill_horizontal"
+                android:gravity="center"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/bbDescriptionP1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/app_name"
+                    android:paddingTop="15dp"
+                    android:src="@drawable/pic1" />
+
+                <ImageView
+                    android:id="@+id/bbDescriptionP2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/app_name"
+                    android:paddingTop="15dp"
+                    android:src="@drawable/pic1" />
+
+                <ImageView
+                    android:id="@+id/bbDescriptionP3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/app_name"
+                    android:paddingTop="15dp"
+                    android:src="@drawable/pic1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="154dp"
+                android:layout_gravity="fill_horizontal"
+                android:gravity="center"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/bbDescriptionP4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/app_name"
+                    android:paddingTop="15dp"
+                    android:src="@drawable/pic1" />
+
+                <ImageView
+                    android:id="@+id/bbDescriptionP5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/app_name"
+                    android:paddingTop="15dp"
+                    android:src="@drawable/pic1" />
+
+                <ImageView
+                    android:id="@+id/bbDescriptionP6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/app_name"
+                    android:paddingTop="15dp"
+                    android:src="@drawable/pic1" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
