@@ -27,7 +27,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="ATHLETIC CLUB"
+                    android:text="NSBM HINDU SOCIETY"
                     android:textStyle="bold"
                     android:textSize="20sp"
                     android:textColor="#161E65"/>
@@ -112,8 +112,7 @@
                 android:id="@+id/text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="\nNSBM Athletic Club is established under the NSBM Students’ Affairs Unit with intention of promoting track events, field events and road race (marathon) among the NSBM undergraduates. NSBM athletic club rich with national level, school level athletes who are from short distance running, middle distance running, long distance running, throwing events, jumping events and hurdle events.
-                              \n\nNSBM athletic club mold strong athletes to take the leadership in the corporate sector with accelerated speed of adapting to scenario, team working and completing the task accurately. Membership of the NSBM athletic club can be obtained from contacting the NSBM recreation center and taking part with practices continuously. NSBM athletic club organize its own athletic meets and take part in interuniversity level athletic meets and open, national level athletic meets.\n"
+                android:text="\nHindu Society Created as a Religious society to provide chances for the Hindu students to celebrate there festivals and to conduct their prayers at NSBM currently we have around 100 students joined with the above society.\n"
                 android:textAlignment="textStart"
                 android:layout_marginStart="25dp"
                 android:layout_marginEnd="10dp"

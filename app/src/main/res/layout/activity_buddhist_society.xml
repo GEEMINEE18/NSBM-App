@@ -27,7 +27,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="ATHLETIC CLUB"
+                    android:text="NSBM BUDDHIST SOCIETY"
                     android:textStyle="bold"
                     android:textSize="20sp"
                     android:textColor="#161E65"/>
@@ -112,8 +112,10 @@
                 android:id="@+id/text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="\nNSBM Athletic Club is established under the NSBM Students’ Affairs Unit with intention of promoting track events, field events and road race (marathon) among the NSBM undergraduates. NSBM athletic club rich with national level, school level athletes who are from short distance running, middle distance running, long distance running, throwing events, jumping events and hurdle events.
-                              \n\nNSBM athletic club mold strong athletes to take the leadership in the corporate sector with accelerated speed of adapting to scenario, team working and completing the task accurately. Membership of the NSBM athletic club can be obtained from contacting the NSBM recreation center and taking part with practices continuously. NSBM athletic club organize its own athletic meets and take part in interuniversity level athletic meets and open, national level athletic meets.\n"
+                android:text="\nBuddhist society of NSBM is the only association that represents all Buddhist students of the university and conducts all Buddhist events under the guidance of Senior Lecturer,Former Brigadier Sanath Wickrmamsingha and Lecturer Ms.Sulari Fernando.
+                              \n\nIt has been 3 years since we’ve started the Buddhist society with the opening of NSBM Green University town. Initially the Buddha statue was placed near the entrance of NSBM. Starting from that the society has conducted two Pirith ceremonies celebrating the anniversary of the university.
+                              \n\nDhamma sermons, blood donation camps, health camps, donation of spectacles, donation of budget packs to low income families and many other CSRs celebrating Vesak, Poson, other poya days and all other related occasions. And also the society conducts pirith chantings to welcome every new batch to the university.
+                              \n\nThe ultimate objective of all the activities by NSBM Buddhist Society is to witness religious citizens with a better motherland.\n"
                 android:textAlignment="textStart"
                 android:layout_marginStart="25dp"
                 android:layout_marginEnd="10dp"

@@ -27,7 +27,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="ATHLETIC CLUB"
+                    android:text="NSBM MUSIC CLUB"
                     android:textStyle="bold"
                     android:textSize="20sp"
                     android:textColor="#161E65"/>
@@ -112,8 +112,7 @@
                 android:id="@+id/text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="\nNSBM Athletic Club is established under the NSBM Students’ Affairs Unit with intention of promoting track events, field events and road race (marathon) among the NSBM undergraduates. NSBM athletic club rich with national level, school level athletes who are from short distance running, middle distance running, long distance running, throwing events, jumping events and hurdle events.
-                              \n\nNSBM athletic club mold strong athletes to take the leadership in the corporate sector with accelerated speed of adapting to scenario, team working and completing the task accurately. Membership of the NSBM athletic club can be obtained from contacting the NSBM recreation center and taking part with practices continuously. NSBM athletic club organize its own athletic meets and take part in interuniversity level athletic meets and open, national level athletic meets.\n"
+                android:text="\nMusic club of NSBM provides opportunities for students to showcase their talents in broad range of music activities. Students of similar passion for music come together and help each other learn and develop their skills in this field. Every year, members of the club get the chance to compose NSBM Siyapath Siya Udanaya –Aurudu Theme song, Poson Song etc. which promotes NSBM brand name. Members also get the chance to organize and perform in various Musical Shows to showcase their talents. Encore 2017, Haritha Iswara 2018 and Musical Show in 2019 to kick start the Opendays of NSBM are few examples of Musical events organized by Music Club of NSBM. They also perform in Religious Musical events like Poson Bakthi Gee and provide entertainment at other events organized by NSBM. Currently, it is guided by music loving Senior Lecturer – Mr. Dileepa Jayamanne (Master in charge) and dynamic Lecturer Ms. Ishani Karunaratna (Mistress in charge)\n"
                 android:textAlignment="textStart"
                 android:layout_marginStart="25dp"
                 android:layout_marginEnd="10dp"

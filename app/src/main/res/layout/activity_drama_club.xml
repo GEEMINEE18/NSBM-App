@@ -27,7 +27,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="ATHLETIC CLUB"
+                    android:text="NSBM DRAMA CLUB"
                     android:textStyle="bold"
                     android:textSize="20sp"
                     android:textColor="#161E65"/>
@@ -112,8 +112,8 @@
                 android:id="@+id/text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="\nNSBM Athletic Club is established under the NSBM Students’ Affairs Unit with intention of promoting track events, field events and road race (marathon) among the NSBM undergraduates. NSBM athletic club rich with national level, school level athletes who are from short distance running, middle distance running, long distance running, throwing events, jumping events and hurdle events.
-                              \n\nNSBM athletic club mold strong athletes to take the leadership in the corporate sector with accelerated speed of adapting to scenario, team working and completing the task accurately. Membership of the NSBM athletic club can be obtained from contacting the NSBM recreation center and taking part with practices continuously. NSBM athletic club organize its own athletic meets and take part in interuniversity level athletic meets and open, national level athletic meets.\n"
+                android:text="\nNSBM Drama Club is one of the most active clubs at NSBM with a wide group of active students reading for different degree programmes. The main intention of the club is to develop aesthetic capacity of the students. NSBM Drama Club is a great platform for students who are willing to reach pinnacle in stage drama acting.
+                              \n\nApart from the annual drama events such as Emotion 1, Emotion 2 and Backlash Drama club organizes workshops inviting the talented resource persons in the stage drama field in Sri Lanka.\n"
                 android:textAlignment="textStart"
                 android:layout_marginStart="25dp"
                 android:layout_marginEnd="10dp"

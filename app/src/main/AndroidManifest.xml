@@ -10,33 +10,102 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyGreenApp">
         <activity
+            android:name=".general_trivia_club"
+            android:exported="false" />
+        <activity
+            android:name=".wellbeing"
+            android:exported="false" />
+        <activity
+            android:name=".aerobics_club"
+            android:exported="false" />
+        <activity
+            android:name=".community_service_club"
+            android:exported="false" />
+        <activity
+            android:name=".oratory_debating_club"
+            android:exported="false" />
+        <activity
+            android:name=".nature_club"
+            android:exported="false" />
+        <activity
+            android:name=".green_task_force"
+            android:exported="false" />
+        <activity
+            android:name=".expolers_club"
+            android:exported="false" />
+        <activity
+            android:name=".graphics_painting_club"
+            android:exported="false" />
+        <activity
+            android:name=".literature_club"
+            android:exported="false" />
+        <activity
+            android:name=".dancing_club"
+            android:exported="false" />
+        <activity
+            android:name=".drama_club"
+            android:exported="false" />
+        <activity
+            android:name=".music_club"
+            android:exported="false" />
+        <activity
+            android:name=".media_club"
+            android:exported="false" />
+        <activity
+            android:name=".register_catholic_christian_society"
+            android:exported="false" />
+        <activity
+            android:name=".register_islamic_society"
+            android:exported="false" />
+        <activity
+            android:name=".register_hindu_society"
+            android:exported="false" />
+        <activity
+            android:name=".register_buddhist_society"
+            android:exported="false" />
+        <activity
+            android:name=".catholic_christian_society"
+            android:exported="false" />
+        <activity
+            android:name=".islamic_society"
+            android:exported="false" />
+        <activity
+            android:name=".hindu_society"
+            android:exported="false" />
+        <activity
+            android:name=".buddhist_society"
+            android:exported="false" />
+        <activity
+            android:name=".buddhist_club"
+            android:exported="false" />
+        <activity
             android:name=".NewsPageActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity"></activity>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".AcademicClubsActivity"
             android:exported="false"
-            android:parentActivityName=".ClubAndSocietiesActivity"></activity>
+            android:parentActivityName=".ClubAndSocietiesActivity" />
         <activity
             android:name=".ActivityBasedClubsActivity"
             android:exported="false"
-            android:parentActivityName=".ClubAndSocietiesActivity"></activity>
+            android:parentActivityName=".ClubAndSocietiesActivity" />
         <activity
             android:name=".InternationalClubsActivity"
             android:exported="false"
-            android:parentActivityName=".ClubAndSocietiesActivity"></activity>
+            android:parentActivityName=".ClubAndSocietiesActivity" />
         <activity
             android:name=".ReligiousClubActivity"
             android:exported="false"
-            android:parentActivityName=".ClubAndSocietiesActivity"></activity>
+            android:parentActivityName=".ClubAndSocietiesActivity" />
         <activity
             android:name=".SportsClubsActivity"
             android:exported="false"
-            android:parentActivityName=".ClubAndSocietiesActivity"></activity>
+            android:parentActivityName=".ClubAndSocietiesActivity" />
         <activity
             android:name=".ClubAndSocietiesActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity"></activity>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
