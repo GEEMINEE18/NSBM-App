@@ -9,7 +9,6 @@ import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -25,12 +24,9 @@ class MainActivity : AppCompatActivity() {
 
     //This is the on/off switch for the extended fab
     private var clicked = false
-
-
     //Gives the ability open the drawer by the Toggle button
     //lateinit: will initialize later
     lateinit var toggle: ActionBarDrawerToggle
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
