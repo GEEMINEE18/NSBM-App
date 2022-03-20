@@ -27,7 +27,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="FITNESS CLUB"
+                    android:text="NSBM FITNESS CLUB"
                     android:textStyle="bold"
                     android:textSize="20sp"
                     android:textColor="#161E65"/>

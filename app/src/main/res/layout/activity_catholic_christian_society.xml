@@ -28,6 +28,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="NSBM CATHOLIC &amp; CHRISTIAN SOCIETY"
+                    android:textAlignment="center"
                     android:textStyle="bold"
                     android:textSize="16dp"
                     android:textColor="#161E65"/>
@@ -96,7 +97,7 @@
                 android:layout_gravity="end"
                 android:layout_marginTop="-50dp"
                 android:layout_marginEnd="10dp"
-                android:src="@drawable/athletic_logo" />
+                android:src="@drawable/cathelic_logo" />
 
             <TextView
                 android:id="@+id/bbDescription"

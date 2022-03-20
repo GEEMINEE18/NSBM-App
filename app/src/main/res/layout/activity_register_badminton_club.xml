@@ -43,7 +43,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="BADMINTON CLUB"
+                    android:text="NSBM BADMINTON CLUB"
                     android:textColor="#161E65"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -90,7 +90,7 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_gravity="end"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="25dp"
                 android:layout_marginEnd="10dp"
                 android:src="@drawable/badminton_logo" />
 

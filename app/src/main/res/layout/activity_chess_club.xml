@@ -27,7 +27,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="CHESS CLUB"
+                    android:text="NSBM CHESS CLUB"
                     android:textStyle="bold"
                     android:textSize="20sp"
                     android:textColor="#161E65"/>

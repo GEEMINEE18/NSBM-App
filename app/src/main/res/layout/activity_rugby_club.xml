@@ -27,7 +27,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="RUGBY CLUB"
+                    android:text="NSBM RUGBY CLUB"
                     android:textStyle="bold"
                     android:textSize="20sp"
                     android:textColor="#161E65"/>
@@ -89,6 +89,15 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
                 android:src="@drawable/pic1" />
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="-50dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/rugby_logo" />
+
 
             <TextView
                 android:id="@+id/bbDescription"

@@ -10,6 +10,66 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyGreenApp">
         <activity
+            android:name=".register_general_knowledge_trivia_club"
+            android:exported="false" />
+        <activity
+            android:name=".register_wellbeing"
+            android:exported="false" />
+        <activity
+            android:name=".register_aerobics_club"
+            android:exported="false" />
+        <activity
+            android:name=".register_community_club"
+            android:exported="false" />
+        <activity
+            android:name=".register_oratory_club"
+            android:exported="false" />
+        <activity
+            android:name=".register_nature_club"
+            android:exported="false" />
+        <activity
+            android:name=".register_green_taskforce_club"
+            android:exported="false" />
+        <activity
+            android:name=".register_explorer_club"
+            android:exported="false" />
+        <activity
+            android:name=".register_graphics"
+            android:exported="false" />
+        <activity
+            android:name=".register_literature_club"
+            android:exported="false" />
+        <activity
+            android:name=".register_dancing_club"
+            android:exported="false" />
+        <activity
+            android:name=".register_drama_club"
+            android:exported="false" />
+        <activity
+            android:name=".register_music_club"
+            android:exported="false" />
+        <activity
+            android:name=".register_media_club"
+            android:exported="false" />
+        <activity
+            android:name=".register_vollyball_club"
+            android:exported="false" />
+        <activity
+            android:name=".volllyball_club"
+            android:exported="false" />
+        <activity
+            android:name=".register_tt_club"
+            android:exported="false" />
+        <activity
+            android:name=".tt_club"
+            android:exported="false" />
+        <activity
+            android:name=".swimming_club"
+            android:exported="false" />
+        <activity
+            android:name=".register_swimming_club"
+            android:exported="false" />
+        <activity
             android:name=".general_trivia_club"
             android:exported="false" />
         <activity
