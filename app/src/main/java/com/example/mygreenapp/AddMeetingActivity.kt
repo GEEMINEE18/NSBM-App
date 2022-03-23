@@ -1,43 +1,79 @@
 package com.example.mygreenapp
 
-import androidx.appcompat.app.AppCompatActivity
+import android.app.DatePickerDialog
+import android.app.TimePickerDialog
 import android.os.Bundle
-import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.TimePicker
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.mygreenapp.databinding.ActivityAddMeetingBinding
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_add_meeting.*
+import java.text.SimpleDateFormat
+import java.util.*
+
 
 class AddMeetingActivity : AppCompatActivity() {
 
     //Database variable declaration
     private lateinit var binding: ActivityAddMeetingBinding
     private lateinit var database: DatabaseReference
+    private lateinit var txtMeetingDate: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAddMeetingBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar!!.title = "Add New Meeting"
-        OnClickTime()
 
-        txtMeetingTitle.setOnClickListener {
 
+        txtMeetingDate = findViewById(R.id.txtMeetingDate)
+
+        val mycalendar = Calendar.getInstance()
+
+        val datePicker = DatePickerDialog.OnDateSetListener {view, year, month, dayofMonth ->
+            mycalendar.set(Calendar.YEAR,year)
+            mycalendar.set(Calendar.MONTH,month)
+            mycalendar.set(Calendar.DAY_OF_MONTH,dayofMonth)
+            updateLable(mycalendar)
+
+        }
+
+        //Meeting Time Text View pops up the Time Picker to select the Meeting Date
+        txtMeetingTime.setOnClickListener{
+            val cal = Calendar.getInstance()
+            val timeSetListener = TimePickerDialog.OnTimeSetListener{timePicker,hour ,minuite->
+                cal.set(Calendar.HOUR_OF_DAY, hour)
+                cal.set(Calendar.MINUTE, minuite)
+                //set time to Text View
+                txtMeetingTime.text = SimpleDateFormat("HH:mm").format(cal.time)
+            }
+            TimePickerDialog(this,timeSetListener, cal.get(Calendar.HOUR_OF_DAY), cal.get(Calendar.MINUTE),true).show()
+        }
+
+        //Meeting Date Text View pops up the calendar to select the Meeting Date
+        txtMeetingDate.setOnClickListener{
+            DatePickerDialog(this,datePicker, mycalendar.get(Calendar.YEAR),mycalendar.get(Calendar.MONTH),mycalendar.get(Calendar.DAY_OF_MONTH)).show()
         }
 
         binding.btnAddMeetingDb.setOnClickListener {
             val meetingTitle = binding.txtMeetingTitle.text.toString()
             val meetingDesc = binding.txtMeetingDesc.text.toString()
+            val meetingVenue = binding.txtVenue.text.toString()
+            val meetingDate = binding.txtMeetingDate.text.toString()
+            val meetingTime = binding.txtMeetingTime.text.toString()
 
             database = FirebaseDatabase.getInstance().getReference("Meeting")
-            val Meeting = Meeting(meetingTitle, meetingDesc)
+            val Meeting = Meeting(meetingTitle, meetingDesc, meetingVenue, meetingDate, meetingTime)
             database.child(meetingTitle).setValue(Meeting).addOnSuccessListener {
 
                 binding.txtMeetingTitle.text.clear()
                 binding.txtMeetingDesc.text.clear()
+                binding.txtVenue.text.clear()
+                binding.txtMeetingDate.setText("")
+                binding.txtMeetingTime.setText("")
 
                 Toast.makeText(this, "Meeting successfully added", Toast.LENGTH_SHORT).show()
 
@@ -46,39 +82,12 @@ class AddMeetingActivity : AppCompatActivity() {
                 Toast.makeText(this, "Failed to add meeting", Toast.LENGTH_SHORT).show()
 
             }
-
         }
-
-
     }
 
-        private fun OnClickTime() {
-            val textView = findViewById<TextView>(R.id.textView)
-            val timePicker = findViewById<TimePicker>(R.id.timePicker)
-            timePicker.setOnTimeChangedListener { _, hour, minute ->
-                var hour = hour
-                var am_pm = ""
-                // AM_PM decider logic
-                when {
-                    hour == 0 -> {
-                        hour += 12
-                        am_pm = "AM"
-                    }
-                    hour == 12 -> am_pm = "PM"
-                    hour > 12 -> {
-                        hour -= 12
-                        am_pm = "PM"
-                    }
-                    else -> am_pm = "AM"
-                }
-                if (textView != null) {
-                    val hour = if (hour < 10) "0" + hour else hour
-                    val min = if (minute < 10) "0" + minute else minute
-                    // display format of time
-                    val msg = "Time is: $hour : $min $am_pm"
-                    textView.text = msg
-                    textView.visibility = ViewGroup.VISIBLE
-            }
-        }
+    private fun updateLable(mycalendar: Calendar) {
+        val myFormat = "dd-MM-yyyy"
+        val sdf = SimpleDateFormat(myFormat,Locale.UK)
+        txtMeetingDate.setText(sdf.format(mycalendar.time))
     }
 }
