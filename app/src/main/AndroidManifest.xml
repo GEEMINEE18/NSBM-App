@@ -82,10 +82,6 @@
             android:exported="false"
             android:parentActivityName=".SportsClubsActivity" />
         <activity
-            android:name=".activity_rugby_club"
-            android:exported="false"
-            android:parentActivityName=".SportsClubsActivity" />
-        <activity
             android:name=".activity_netball_club"
             android:exported="false"
             android:parentActivityName=".SportsClubsActivity" />
@@ -102,27 +98,11 @@
             android:exported="false"
             android:parentActivityName=".SportsClubsActivity" />
         <activity
-            android:name=".activity_cricket_club"
-            android:exported="false"
-            android:parentActivityName=".SportsClubsActivity" />
-        <activity
             android:name=".activity_archery_club"
             android:exported="false"
             android:parentActivityName=".SportsClubsActivity" />
         <activity
             android:name=".activity_chess_club"
-            android:exported="false"
-            android:parentActivityName=".SportsClubsActivity" />
-        <activity
-            android:name=".BasketballClubActivity"
-            android:exported="false"
-            android:parentActivityName=".SportsClubsActivity" />
-        <activity
-            android:name=".activity_athletic_club"
-            android:exported="false"
-            android:parentActivityName=".SportsClubsActivity" />
-        <activity
-            android:name=".BadmintonClubActivity"
             android:exported="false"
             android:parentActivityName=".SportsClubsActivity" />
         <activity
@@ -146,14 +126,6 @@
             android:exported="false"
             android:parentActivityName=".ClubAndSocietiesActivity" />
         <activity
-            android:name=".SportsClubsActivity"
-            android:exported="false"
-            android:parentActivityName=".ClubAndSocietiesActivity" />
-        <activity
-            android:name=".ClubAndSocietiesActivity"
-            android:exported="false"
-            android:parentActivityName=".MainActivity" />
-        <activity
             android:name=".MainActivity"
             android:exported="true" >
             <intent-filter>
@@ -162,6 +134,44 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ClubAndSocietiesActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".SportsClubsActivity"
+            android:exported="false"
+            android:parentActivityName=".ClubAndSocietiesActivity" />
+        <activity
+            android:name=".activity_athletic_club"
+            android:exported="false"
+            android:parentActivityName=".SportsClubsActivity" />
+        <activity
+            android:name=".BasketballClubActivity"
+            android:exported="false"
+            android:parentActivityName=".SportsClubsActivity" />
+        <activity
+            android:name=".BadmintonClubActivity"
+            android:exported="false"
+            android:parentActivityName=".SportsClubsActivity" />
+        <activity
+            android:name=".activity_rugby_club"
+            android:exported="false"
+            android:parentActivityName=".SportsClubsActivity" />
+        <activity
+            android:name=".swimming_club"
+            android:exported="false"
+            android:parentActivityName=".SportsClubsActivity" />
+        <activity
+            android:name=".activity_cricket_club"
+            android:exported="false"
+            android:parentActivityName=".SportsClubsActivity" />
+        <activity
+            android:name=".tt_club"
+            android:exported="false"
+            android:parentActivityName=".SportsClubsActivity" />
+
+
     </application>
 
 </manifest>
