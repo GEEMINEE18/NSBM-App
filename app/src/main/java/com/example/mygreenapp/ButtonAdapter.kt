@@ -4,7 +4,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 
 
 class ButtonAdapter(private val mList: List<ButtonViewModel>, private val listener: OnItemClickListener) : RecyclerView.Adapter<ButtonAdapter.ViewHolder>() {
@@ -24,6 +26,13 @@ class ButtonAdapter(private val mList: List<ButtonViewModel>, private val listen
 
         val itemsViewModel = mList[position]
 
+        val currentUrl: String = itemsViewModel.image
+
+        // sets the image to the imageview from our itemHolder class
+        Glide.with(holder.imageView.getContext())
+            .load(currentUrl)
+            .into(holder.imageView);
+
         // sets the text to the textview from our itemHolder class
         holder.titleView.text = itemsViewModel.title
     }
@@ -35,6 +44,7 @@ class ButtonAdapter(private val mList: List<ButtonViewModel>, private val listen
 
     // Holds the views for adding it to image and text
     inner class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView), View.OnClickListener {
+        val imageView: ImageView = itemView.findViewById(R.id.imgRecycler)
         val titleView: Button = itemView.findViewById(R.id.btnRecycler)
 
         init {

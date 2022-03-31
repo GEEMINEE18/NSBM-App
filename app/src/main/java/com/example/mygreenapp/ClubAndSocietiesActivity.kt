@@ -22,6 +22,7 @@ class ClubAndSocietiesActivity : AppCompatActivity(), ButtonAdapter.OnItemClickL
         webScrape.execute()
 
         // Initialize arrays for storing information from the website
+        var imgList = webScrape.getImageList()
         var titleList = webScrape.getTitleList()
 
         val listSize = titleList.size
@@ -38,7 +39,7 @@ class ClubAndSocietiesActivity : AppCompatActivity(), ButtonAdapter.OnItemClickL
         // This loop will create 20 Views containing
         // the image with the count of view
         for (i in 0 until listSize) {
-            data.add(ButtonViewModel(titleList[i]))
+            data.add(ButtonViewModel(imgList[i], titleList[i]))
         }
 
         // This will pass the ArrayList to our Adapter
@@ -89,5 +90,7 @@ class ClubAndSocietiesActivity : AppCompatActivity(), ButtonAdapter.OnItemClickL
     override fun onItemClick(position: Int) {
         Toast.makeText(this, "Item $position clicked", Toast.LENGTH_SHORT).show()
         println("Item $position clicked")
+        val intent = Intent (this,SportsClubsActivity::class.java)
+        startActivity(intent)
     }
 }
