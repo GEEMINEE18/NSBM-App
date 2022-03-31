@@ -15,8 +15,7 @@ class ClubAndSocietiesActivity : AppCompatActivity(), ButtonAdapter.OnItemClickL
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.title = "Clubs and Societies"
 
-        // Webscrape
-
+        // WebScrape
 
         var webScrape = ButtonScrape()
         webScrape.execute()
@@ -24,6 +23,7 @@ class ClubAndSocietiesActivity : AppCompatActivity(), ButtonAdapter.OnItemClickL
         // Initialize arrays for storing information from the website
         var imgList = webScrape.getImageList()
         var titleList = webScrape.getTitleList()
+        var urlList = webScrape.getUrlList()
 
         val listSize = titleList.size
 
@@ -39,7 +39,7 @@ class ClubAndSocietiesActivity : AppCompatActivity(), ButtonAdapter.OnItemClickL
         // This loop will create 20 Views containing
         // the image with the count of view
         for (i in 0 until listSize) {
-            data.add(ButtonViewModel(imgList[i], titleList[i]))
+            data.add(ButtonViewModel(imgList[i], titleList[i], urlList[i]))
         }
 
         // This will pass the ArrayList to our Adapter
@@ -87,10 +87,15 @@ class ClubAndSocietiesActivity : AppCompatActivity(), ButtonAdapter.OnItemClickL
         }*/
     }
 
-    override fun onItemClick(position: Int) {
-        Toast.makeText(this, "Item $position clicked", Toast.LENGTH_SHORT).show()
-        println("Item $position clicked")
-        val intent = Intent (this,SportsClubsActivity::class.java)
-        startActivity(intent)
+    override fun onItemClick(position: Int, text: String, url: String) {
+        Toast.makeText(this, "$text button clicked", Toast.LENGTH_SHORT).show()
+        println("Item $position $text clicked")
+
+        var hiddenUrl = url
+
+        // Create a session and send value
+        val intent = Intent(this,ClubsAndSocietiesSecond::class.java);
+        intent.putExtra("url", hiddenUrl)
+        startActivity(intent);
     }
 }

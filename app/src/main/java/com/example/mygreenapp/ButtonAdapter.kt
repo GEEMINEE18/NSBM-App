@@ -3,8 +3,9 @@ package com.example.mygreenapp
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
@@ -35,6 +36,7 @@ class ButtonAdapter(private val mList: List<ButtonViewModel>, private val listen
 
         // sets the text to the textview from our itemHolder class
         holder.titleView.text = itemsViewModel.title
+        holder.urlList.text =itemsViewModel.url
     }
 
     // return the number of the items in the list
@@ -44,22 +46,27 @@ class ButtonAdapter(private val mList: List<ButtonViewModel>, private val listen
 
     // Holds the views for adding it to image and text
     inner class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView), View.OnClickListener {
+        private val cardView: CardView = itemView.findViewById(R.id.button_layout)
         val imageView: ImageView = itemView.findViewById(R.id.imgRecycler)
-        val titleView: Button = itemView.findViewById(R.id.btnRecycler)
+        val titleView: TextView = itemView.findViewById(R.id.txtRecycler)
+        val urlList: TextView = itemView.findViewById(R.id.txtHiddenUrl)
 
         init {
-            titleView.setOnClickListener(this)
+            cardView.setOnClickListener(this)
         }
 
         override fun onClick(v: View?) {
+            // take adapter position and text
             val position: Int = bindingAdapterPosition
+            val text: String = titleView.text as String
+            val url: String = urlList.text as String
             if (position != RecyclerView.NO_POSITION) {
-                listener.onItemClick(position)
+                listener.onItemClick(position, text, url)
             }
         }
     }
 
     interface OnItemClickListener {
-        fun onItemClick(position: Int)
+        fun onItemClick(position: Int, text: String, url: String)
     }
 }
