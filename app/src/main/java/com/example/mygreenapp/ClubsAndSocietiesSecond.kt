@@ -55,5 +55,11 @@ class ClubsAndSocietiesSecond : AppCompatActivity(), ButtonAdapter.OnItemClickLi
     override fun onItemClick(position: Int, text: String, url: String) {
         Toast.makeText(this, "$text button clicked", Toast.LENGTH_SHORT).show()
         println("Item $position $text clicked")
+        var hiddenUrl = url
+
+        // Create a session and send value
+        val intent = Intent(this,ClubsAndSocietiesFinal::class.java);
+        intent.putExtra("url", hiddenUrl)
+        startActivity(intent);
     }
 }

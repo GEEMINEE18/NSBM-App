@@ -32,7 +32,7 @@ class ButtonAdapter(private val mList: List<ButtonViewModel>, private val listen
         // sets the image to the imageview from our itemHolder class
         Glide.with(holder.imageView.getContext())
             .load(currentUrl)
-            .into(holder.imageView);
+            .into(holder.imageView)
 
         // sets the text to the textview from our itemHolder class
         holder.titleView.text = itemsViewModel.title
