@@ -1,16 +1,13 @@
 package com.example.mygreenapp
 
-import ButtonAdapter
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import kotlin.concurrent.thread
 
-class ClubAndSocietiesActivity : AppCompatActivity() {
+class ClubAndSocietiesActivity : AppCompatActivity(), ButtonAdapter.OnItemClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.clubandsocieties)
@@ -45,10 +42,12 @@ class ClubAndSocietiesActivity : AppCompatActivity() {
         }
 
         // This will pass the ArrayList to our Adapter
-        val adapter = ButtonAdapter(data)
+        val adapter = ButtonAdapter(data, this)
 
         // Setting the Adapter with the recyclerview
         recyclerview.adapter = adapter
+
+
 
 
 
@@ -85,28 +84,10 @@ class ClubAndSocietiesActivity : AppCompatActivity() {
             val intent = Intent (this,AcademicClubsActivity::class.java)
             startActivity(intent)
         }*/
+    }
 
-
-        thread {
-            Thread.sleep(1000)
-            val recycledButton = findViewById<Button>(R.id.btnRecycler)
-
-            recycledButton.setOnClickListener {
-                val intent = Intent (this,SportsClubsActivity::class.java)
-                startActivity(intent)
-            }
-        }
-
-
-
-        // Recycled Buttons
-
-        /*val recycledButton = findViewById<Button>(R.id.btnRecycler)
-
-        recycledButton.setOnClickListener {
-            val intent = Intent (this,SportsClubsActivity::class.java)
-            startActivity(intent)
-        }*/
-
+    override fun onItemClick(position: Int) {
+        Toast.makeText(this, "Item $position clicked", Toast.LENGTH_SHORT).show()
+        println("Item $position clicked")
     }
 }

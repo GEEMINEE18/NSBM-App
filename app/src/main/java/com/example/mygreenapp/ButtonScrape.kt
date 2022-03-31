@@ -33,7 +33,7 @@ class ButtonScrape() : AsyncTask<Void, Void, String>() {
     fun getTitleList(): ArrayList<String> {
         while (confirmCount == 0)
         {
-            println("Waiting for webscrape")
+            //println("Waiting for webscrape")
         }
         return titleList
     }

@@ -1,13 +1,13 @@
+package com.example.mygreenapp
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.recyclerview.widget.RecyclerView
-import com.example.mygreenapp.ButtonViewModel
-import com.example.mygreenapp.R
 
 
-class ButtonAdapter(private val mList: List<ButtonViewModel>) : RecyclerView.Adapter<ButtonAdapter.ViewHolder>() {
+class ButtonAdapter(private val mList: List<ButtonViewModel>, private val listener: OnItemClickListener) : RecyclerView.Adapter<ButtonAdapter.ViewHolder>() {
 
     // create new views
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -34,7 +34,22 @@ class ButtonAdapter(private val mList: List<ButtonViewModel>) : RecyclerView.Ada
     }
 
     // Holds the views for adding it to image and text
-    class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView) {
+    inner class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView), View.OnClickListener {
         val titleView: Button = itemView.findViewById(R.id.btnRecycler)
+
+        init {
+            titleView.setOnClickListener(this)
+        }
+
+        override fun onClick(v: View?) {
+            val position: Int = bindingAdapterPosition
+            if (position != RecyclerView.NO_POSITION) {
+                listener.onItemClick(position)
+            }
+        }
+    }
+
+    interface OnItemClickListener {
+        fun onItemClick(position: Int)
     }
 }
