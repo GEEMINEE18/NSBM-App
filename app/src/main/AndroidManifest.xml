@@ -34,7 +34,7 @@
         <activity
             android:name=".ClubsAndSocietiesSecond"
             android:exported="false"
-            android:parentActivityName=".ClubAndSocietiesActivity" />
+            android:parentActivityName=".ClubsAndSocietiesActivity" />
         <activity
             android:name=".AddMeetingActivity"
             android:exported="false"
@@ -154,37 +154,24 @@
             android:exported="false"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".AcademicClubsActivity"
-            android:exported="false"
-            android:parentActivityName=".ClubAndSocietiesActivity" />
-        <activity
-            android:name=".ActivityBasedClubsActivity"
-            android:exported="false"
-            android:parentActivityName=".ClubAndSocietiesActivity" />
-        <activity
             android:name=".InternationalClubsActivity"
             android:exported="false"
-            android:parentActivityName=".ClubAndSocietiesActivity" />
+            android:parentActivityName=".ClubsAndSocietiesActivity" />
         <activity
             android:name=".ReligiousClubActivity"
             android:exported="false"
-            android:parentActivityName=".ClubAndSocietiesActivity" />
+            android:parentActivityName=".ClubsAndSocietiesActivity" />
         <activity
             android:name=".SportsClubsActivity"
             android:exported="false"
-            android:parentActivityName=".ClubAndSocietiesActivity" />
+            android:parentActivityName=".ClubsAndSocietiesActivity" />
         <activity
-            android:name=".ClubAndSocietiesActivity"
+            android:name=".ClubsAndSocietiesActivity"
             android:exported="false"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:exported="false" >
         </activity>
     </application>
 

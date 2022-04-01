@@ -41,7 +41,7 @@ class HomeFragment : Fragment() {
 
         button.setOnClickListener {
             //Intent works when we replace "this" with "requireContext()"
-            val intent = Intent (requireContext(),ClubAndSocietiesActivity::class.java)
+            val intent = Intent (requireContext(),ClubsAndSocietiesActivity::class.java)
             startActivity(intent)
         }
 
