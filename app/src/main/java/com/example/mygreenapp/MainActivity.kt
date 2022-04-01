@@ -44,8 +44,7 @@ class MainActivity : AppCompatActivity() {
 
         navView.setNavigationItemSelectedListener {
             when(it.itemId){
-                R.id.miItem1 -> Toast.makeText(applicationContext,
-                    "Clicked Item 1",Toast.LENGTH_SHORT).show()
+                R.id.miItem1 -> startActivity(Intent(this,ProfileActivity::class.java))
                 R.id.miItem2 -> Toast.makeText(applicationContext,
                     "Clicked Item 2",Toast.LENGTH_SHORT).show()
                 R.id.miItem3 -> Toast.makeText(applicationContext,
