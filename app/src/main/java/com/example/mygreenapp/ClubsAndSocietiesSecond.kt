@@ -56,10 +56,12 @@ class ClubsAndSocietiesSecond : AppCompatActivity(), ButtonAdapter.OnItemClickLi
         Toast.makeText(this, "$text button clicked", Toast.LENGTH_SHORT).show()
         println("Item $position $text clicked")
         var hiddenUrl = url
+        var pageTitle = text
 
         // Create a session and send value
         val intent = Intent(this,ClubsAndSocietiesFinal::class.java);
         intent.putExtra("url", hiddenUrl)
+        intent.putExtra("title", text)
         startActivity(intent);
     }
 }
