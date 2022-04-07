@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#1D981D"
+            android:gravity="top">
+
+            <Button
+                android:id="@+id/menuBtn"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/menu"
+                android:backgroundTint="#1D981D"
+                android:contentDescription="@string/menu_button" />
+
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="right"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/nsbmlogo"
+                android:contentDescription="@string/nsbm_logo" />
+        </androidx.appcompat.widget.Toolbar>
+
+        <Button
+            android:id="@+id/editBtn"
+            android:layout_width="48dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/editicon"
+            android:backgroundTint="#ffffff"
+            android:contentDescription="@string/edit_button_reader"
+            android:layout_constraintLeft_toLeftOf="parent"
+            android:layout_constraintRight_toRightOf="parent"
+            android:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/myButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="start"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="-45dp"
+            android:background="@drawable/back"
+            android:backgroundTint="#ffffff"
+            android:contentDescription="@string/back_button_reader" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="384dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:text="YOUE DETAILS CANNOT BE EDITED"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="188dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            android:text="Name"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- ENTER FIRST NAME -->
+        <EditText
+            android:id="@+id/ffnBbReg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="30dp"
+            android:autofillHints=""
+            android:hint="Tishan"
+            android:inputType="text"
+            android:minHeight="48dp" />
+
+
+        <!-- ENTER LAST NAME -->
+        <EditText
+            android:id="@+id/emailBbReg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:autofillHints=""
+            android:hint="Liyanage"
+            android:inputType="text"
+            android:minHeight="48dp" />
+        <TextView
+            android:id="@+id/text3"
+            android:layout_width="188dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            android:text="Email"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- ENTER EMAIL -->
+        <EditText
+            android:id="@+id/stdidBbReg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:autofillHints=""
+            android:hint="tishanliyanage@gmail.com"
+            android:inputType="text"
+            android:minHeight="48dp" />
+
+
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

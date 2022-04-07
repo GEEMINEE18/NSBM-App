@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#1D981D"
+            android:gravity="top">
+
+            <Button
+                android:id="@+id/menuBtn"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/menu"
+                android:backgroundTint="#1D981D"
+                android:contentDescription="@string/menu_button" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="SETTINGS"
+                android:textColor="#161E65"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="right"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/nsbmlogo"
+                android:contentDescription="@string/nsbm_logo" />
+        </androidx.appcompat.widget.Toolbar>
+
+        <Button
+            android:id="@+id/editBtn"
+            android:layout_width="48dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/editicon"
+            android:backgroundTint="#ffffff"
+            android:contentDescription="@string/edit_button_reader"
+            android:layout_constraintLeft_toLeftOf="parent"
+            android:layout_constraintRight_toRightOf="parent"
+            android:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/myButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="start"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="-45dp"
+            android:background="@drawable/back"
+            android:backgroundTint="#ffffff"
+            android:contentDescription="@string/back_button_reader" />
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="188dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="15dp"
+            android:text="PERSONAL"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- ENTER PERSONAL DETAILS -->
+        <EditText
+            android:id="@+id/ffnBbReg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="30dp"
+            android:autofillHints=""
+            android:hint="personal details"
+            android:inputType="text"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="188dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="15dp"
+            android:text="CURRENT PROFILE"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- ENTER STUDENT/STAFF USER -->
+        <EditText
+            android:id="@+id/emailBbReg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:autofillHints=""
+            android:hint="Student/Staff user"
+            android:inputType="text"
+            android:minHeight="48dp" />
+        <TextView
+            android:id="@+id/text3"
+            android:layout_width="188dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="15dp"
+            android:text="HELP"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- ENTER ABOUT -->
+        <EditText
+            android:id="@+id/stdidBbReg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:autofillHints=""
+            android:hint="About"
+            android:inputType="text"
+            android:minHeight="48dp" />
+
+        <!-- ENTER feedback -->
+        <EditText
+            android:id="@+id/batchBbReg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:autofillHints=""
+            android:hint="Feedback"
+            android:inputType="text"
+            android:minHeight="48dp" />
+
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

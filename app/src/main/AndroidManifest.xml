@@ -139,6 +139,9 @@
             android:name=".buddhist_club"
             android:exported="false" />
         <activity
+            android:name=".bottom_navigation"
+            android:exported="false" />
+        <activity
             android:name=".NewsPageActivity"
             android:exported="false"
             android:parentActivityName=".MainActivity" />

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="414dp"
+        android:layout_height="616dp"
+        android:gravity="start"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#1D981D"
+            android:gravity="top">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="MAP"
+                android:textColor="#161E65"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/menuBtn"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/menu"
+                android:backgroundTint="#1D981D"
+                android:contentDescription="@string/menu_button"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="@string/nsbm_logo"
+                android:src="@drawable/nsbmlogo" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <Button
+            android:id="@+id/myButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="start"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/back"
+            android:backgroundTint="#ffffff"
+            android:contentDescription="@string/back_button_reader"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <Button
+            android:id="@+id/editBtn"
+            android:layout_width="48dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="-45dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/editicon"
+            android:backgroundTint="#ffffff"
+            android:contentDescription="@string/edit_button_reader"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/searchview" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Faculty of Comupting"
+            android:textSize="25dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="25dp"
+            android:text="Second Floor"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/Button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="start"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="140dp"
+            android:background="@drawable/back"
+            android:backgroundTint="#ffffff"
+            android:contentDescription="@string/back_button_reader"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="279dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="-170dp"
+            android:contentDescription="@string/example_image_reader"
+            android:src="@drawable/pic1" />
+
+        <Button
+            android:id="@+id/editBtn2"
+            android:layout_width="48dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="-165dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/arrow_right"
+            android:backgroundTint="#ffffff"
+            android:contentDescription="@string/edit_button_reader"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:layout_marginTop="140dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/radio7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="01" />
+
+            <RadioButton
+                android:id="@+id/radio8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:id="@+id/radio9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:id="@+id/radio10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
