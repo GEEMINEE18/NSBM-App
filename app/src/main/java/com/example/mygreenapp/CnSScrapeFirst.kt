@@ -3,7 +3,7 @@ package com.example.mygreenapp
 import android.os.AsyncTask
 import org.jsoup.Jsoup
 
-class ButtonScrape() : AsyncTask<Void, Void, String>() {
+class CnSScrapeFirst() : AsyncTask<Void, Void, String>() {
 
     // Initialize arrays for storing information from the website
     private var titleList = ArrayList<String>()

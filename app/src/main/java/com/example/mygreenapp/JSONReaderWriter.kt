@@ -3,13 +3,20 @@ package com.example.mygreenapp
 import com.google.gson.Gson
 import java.io.BufferedReader
 import java.io.File
+import kotlin.math.log
 
 class ReadWriteJSON(fileName: String) {
 
     // Initialize arrays for storing information from the website
-    private var imagesFirst = ArrayList<String>()
-    private var titlesFirst = ArrayList<String>()
-    private var urlsFirst = ArrayList<String>()
+    private var images = ArrayList<String>()
+    private var titles = ArrayList<String>()
+    private var urls = ArrayList<String>()
+    // CnS Final page specific
+    private var banner = String()
+    private var logo = String()
+    private var description1 = String()
+    private var description2 = String()
+    //
     var listSize : Int = 0
     private var f = fileName
     private var confirmCount = 0
@@ -29,7 +36,7 @@ class ReadWriteJSON(fileName: String) {
         }
 
         //Create a Object of Buttons class
-        var buttons = Buttons(images, titles, urls, listSize)
+        var buttons = CnSButtonsFirst(images, titles, urls, listSize)
         //Create a Object of Gson
         var gson = Gson()
         //Convert the Json object to JsonString
@@ -48,10 +55,10 @@ class ReadWriteJSON(fileName: String) {
         val inputString = bufferedReader.use { it.readText() }
 
         //Convert the Json File to Gson Object
-        var buttons = gson.fromJson(inputString, Buttons::class.java)
-        imagesFirst = buttons.image
-        titlesFirst = buttons.title
-        urlsFirst = buttons.url
+        var buttons = gson.fromJson(inputString, CnSButtonsFirst::class.java)
+        images = buttons.image
+        titles = buttons.title
+        urls = buttons.url
         listSize = buttons.listSize
 
         confirmCount = 1
@@ -66,15 +73,15 @@ class ReadWriteJSON(fileName: String) {
         val inputString = bufferedReader.use { it.readText() }
 
         //Convert the Json File to Gson Object
-        var buttons = gson.fromJson(inputString, ButtonsWithParent::class.java)
+        var buttons = gson.fromJson(inputString, CnSButtonsSecond::class.java)
         var clickedUrl = url
         // This thing doesn't work without exception handling.
         try {
             for (i in 0..buttons.listSize) {
                 if(clickedUrl == buttons.parentUrl[i]) {
-                    imagesFirst.add(buttons.image[i])
-                    titlesFirst.add(buttons.title[i])
-                    urlsFirst.add(buttons.url[i])
+                    images.add(buttons.image[i])
+                    titles.add(buttons.title[i])
+                    urls.add(buttons.url[i])
                     listSize++
                 }
             }
@@ -102,7 +109,65 @@ class ReadWriteJSON(fileName: String) {
         }
 
         //Create a Object of Buttons class
-        var buttons = ButtonsWithParent(images, titles, urls, parentUrls, listSize)
+        var buttons = CnSButtonsSecond(images, titles, urls, parentUrls, listSize)
+        //Create a Object of Gson
+        var gson = Gson()
+        //Convert the Json object to JsonString
+        var jsonString: String = gson.toJson(buttons)
+        //Initialize the File Writer and write into file
+        val file = File(fileName)
+        file.writeText(jsonString)
+    }
+
+    fun readJSONDataCnSFinal(url: String) {
+        //Creating a new Gson object to read data
+        var gson = Gson()
+        //Read the PostJSON.json file
+        val bufferedReader: BufferedReader = File(f).bufferedReader()
+        // Read the text from bufferReader and store in String variable
+        val inputString = bufferedReader.use { it.readText() }
+
+        //Convert the Json File to Gson Object
+        var buttons = gson.fromJson(inputString, CnSButtonsFinal::class.java)
+        var clickedUrl = url
+        // This thing doesn't work without exception handling.
+        try {
+            for (i in 0..buttons.listSize) {
+                if(clickedUrl == buttons.parentUrl[i]) {
+                    banner = buttons.banner[i]
+                    logo = buttons.logo[i]
+                    description1 = buttons.description1[i]
+                    description2 = buttons.description2[i]
+                    listSize++
+                }
+            }
+        } catch (e: IndexOutOfBoundsException) {
+            e.printStackTrace()
+        }
+
+        confirmCount = 1
+    }
+
+    fun writeJSONtoFileCnSFinal(fileName: String, listSize: Int, bannerList: ArrayList<String>, logoList: ArrayList<String>, description1List: ArrayList<String>, description2List: ArrayList<String>, parentUrlList: ArrayList<String>) {
+
+        // Define temporary arrays
+        var banners = ArrayList<String>()
+        var logos = ArrayList<String>()
+        var description1 = ArrayList<String>()
+        var description2 = ArrayList<String>()
+        var parentUrls = ArrayList<String>()
+
+        // Write to array
+        for (i in 0 until listSize) {
+            banners.add(bannerList[i])
+            logos.add(logoList[i])
+            description1.add(description1List[i])
+            description2.add(description2List[i])
+            parentUrls.add(parentUrlList[i])
+        }
+
+        //Create a Object of Buttons class
+        var buttons = CnSButtonsFinal(banners, logos, description1, description2, parentUrls, listSize)
         //Create a Object of Gson
         var gson = Gson()
         //Convert the Json object to JsonString
@@ -119,7 +184,7 @@ class ReadWriteJSON(fileName: String) {
         {
             //println("Waiting for webscrape")
         }
-        return imagesFirst
+        return images
     }
 
     fun getTitleList(): ArrayList<String> {
@@ -127,7 +192,7 @@ class ReadWriteJSON(fileName: String) {
         {
             //println("Waiting for webscrape")
         }
-        return titlesFirst
+        return titles
     }
 
     fun getUrlList(): ArrayList<String> {
@@ -135,7 +200,7 @@ class ReadWriteJSON(fileName: String) {
         {
             //println("Waiting for webscrape")
         }
-        return urlsFirst
+        return urls
     }
 
     @JvmName("getListSize1")
@@ -145,5 +210,38 @@ class ReadWriteJSON(fileName: String) {
             //println("Waiting for webscrape")
         }
         return listSize
+    }
+
+    // Cns Final specific
+    fun getBannerImage(): String {
+        while (confirmCount == 0)
+        {
+
+        }
+        return banner
+    }
+
+    fun getLogoImage(): String {
+        while (confirmCount == 0)
+        {
+
+        }
+        return logo
+    }
+
+    fun getDescription1(): String {
+        while (confirmCount == 0)
+        {
+
+        }
+        return description1
+    }
+
+    fun getDescription2(): String {
+        while (confirmCount == 0)
+        {
+
+        }
+        return description2
     }
 }

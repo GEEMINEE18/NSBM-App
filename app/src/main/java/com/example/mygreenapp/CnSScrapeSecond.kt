@@ -3,7 +3,7 @@ package com.example.mygreenapp
 import android.os.AsyncTask
 import org.jsoup.Jsoup
 
-class ButtonScrapeSecond(private var previousUrlList: ArrayList<String>) : AsyncTask<Void, Void, String>() {
+class CnSScrapeSecond(private var previousUrlList: ArrayList<String>) : AsyncTask<Void, Void, String>() {
 
     // Initialize arrays for storing information from the website
     private var titleList = ArrayList<String>()
@@ -17,7 +17,7 @@ class ButtonScrapeSecond(private var previousUrlList: ArrayList<String>) : Async
 
     override fun doInBackground(vararg params: Void?): String? {
 
-        // Nested loop to take all the data inside every club and society
+        // Nested loop to take all the data inside clubs and societies page 2
         for (i in 0 until previousUrlList.size) {
             var doc = Jsoup.connect(previousUrlList[i]).get()
             var allInfo = doc.getElementsByClass("sc-content-wrapper")

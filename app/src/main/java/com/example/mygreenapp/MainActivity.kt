@@ -73,7 +73,7 @@ class MainActivity : AppCompatActivity() {
             var jsonWriter = ReadWriteJSON(cnsFileName)
 
             // JSON for ClubsNSocieties
-            var cnsScrape = ButtonScrape()
+            var cnsScrape = CnSScrapeFirst()
             cnsScrape.execute()
 
             // Initialize arrays for storing information from the website
@@ -93,7 +93,7 @@ class MainActivity : AppCompatActivity() {
             var jsonWriterSecond = ReadWriteJSON(cnsFileNameSecond)
 
             // JSON for ClubsNSocieties
-            var cnsScrapeSecond = ButtonScrapeSecond(cnsUrlList)
+            var cnsScrapeSecond = CnSScrapeSecond(cnsUrlList)
             cnsScrapeSecond.execute()
 
             // Initialize arrays for storing information from the website
@@ -105,6 +105,28 @@ class MainActivity : AppCompatActivity() {
             val cnsListSizeSecond = cnsTitleListSecond.size
 
             jsonWriterSecond.writeJSONtoFileWithURL(cnsFileNameSecond, cnsListSizeSecond, cnsImageListSecond, cnsTitleListSecond, cnsUrlListSecond, cnsParentUrlListSecond)
+
+            // CnS Page 3 scrape
+
+            // Get the file Location and name where Json File gets stored
+            val cnsFileNameFinal = filesDir.path + "/CnSDataFinal.json"
+            // call write Json method
+            var jsonWriterFinal = ReadWriteJSON(cnsFileNameFinal)
+
+            // JSON for ClubsNSocieties
+            var cnsScrapeFinal = CnSScrapeFinal(cnsUrlListSecond)
+            cnsScrapeFinal.execute()
+
+            // Initialize arrays for storing information from the website
+            var cnsBannerListFinal = cnsScrapeFinal.getBannerImage()
+            var cnsLogoListFinal = cnsScrapeFinal.getLogoImage()
+            var cnsDescription1ListFinal = cnsScrapeFinal.getDescription1()
+            var cnsDescription2ListFinal = cnsScrapeFinal.getDescription2()
+            var cnsParentUrlListFinal = cnsScrapeFinal.getParentUrlList()
+
+            val cnsListSizeFinal = cnsBannerListFinal.size
+
+            jsonWriterFinal.writeJSONtoFileCnSFinal(cnsFileNameFinal, cnsListSizeFinal, cnsBannerListFinal, cnsLogoListFinal, cnsDescription1ListFinal, cnsDescription2ListFinal, cnsParentUrlListFinal)
 
         }
 

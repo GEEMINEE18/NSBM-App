@@ -25,15 +25,19 @@ class ClubsAndSocietiesFinal : AppCompatActivity() {
         val hiddenUrl = intent.getStringExtra("url")
         val pageTitle = intent.getStringExtra("title")
 
-        // WebScrape
+        // Get the file Location and name where Json File gets stored
+        val fileName = filesDir.path + "/CnSDataFinal.json"
+        // Read the written Json File
+        var reader = ReadWriteJSON(fileName)
+        // Send the url of the clicked parent button to the ReadWriteJSON file
+        if (hiddenUrl != null) {
+            reader.readJSONDataCnSFinal(hiddenUrl)
+        }
 
-        var webScrape = ClubAndSocietyPageScrape(hiddenUrl.toString())
-        webScrape.execute()
-
-        var bannerImage = webScrape.getBannerImage()
-        var logoImage = webScrape.getLogoImage()
-        var firstDescription = webScrape.getDescription1()
-        var secondDescription = webScrape.getDescription2()
+        var bannerImage = reader.getBannerImage()
+        var logoImage = reader.getLogoImage()
+        var firstDescription = reader.getDescription1()
+        var secondDescription = reader.getDescription2()
 
         var imgBanner = findViewById<ImageView>(R.id.imgCSBanner)
         var imgLogo = findViewById<ImageView>(R.id.imgCSLogo)
