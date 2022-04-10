@@ -18,17 +18,18 @@ class ClubsAndSocietiesSecond : AppCompatActivity(), ButtonAdapter.OnItemClickLi
         // Get value from ClubAndSocietiesActivity
         val hiddenUrl = intent.getStringExtra("url")
 
-        // WebScrape
-
-        var webScrape = ButtonScrapeSecond(hiddenUrl.toString())
-        webScrape.execute()
-
-        // Initialize arrays for storing information from the website
-        var imgList = webScrape.getImageList()
-        var titleList = webScrape.getTitleList()
-        var urlList = webScrape.getUrlList()
-
-        val listSize = titleList.size
+        // Get the file Location and name where Json File gets stored
+        val fileName = filesDir.path + "/CnSDataSecond.json"
+        // Read the written Json File
+        var reader = ReadWriteJSON(fileName)
+        // Send the url of the clicked parent button to the ReadWriteJSON file
+        if (hiddenUrl != null) {
+            reader.readJSONDataWithURL(hiddenUrl)
+        }
+        var imgList = reader.getImageList()
+        var titleList = reader.getTitleList()
+        var urlList = reader.getUrlList()
+        var listSize = reader.getListSize()
 
         // getting the recyclerview by its id
         val recyclerview = findViewById<RecyclerView>(R.id.buttonRecyclerView)
@@ -55,12 +56,10 @@ class ClubsAndSocietiesSecond : AppCompatActivity(), ButtonAdapter.OnItemClickLi
     override fun onItemClick(position: Int, text: String, url: String) {
         Toast.makeText(this, "$text button clicked", Toast.LENGTH_SHORT).show()
         println("Item $position $text clicked")
-        var hiddenUrl = url
-        var pageTitle = text
 
         // Create a session and send value
         val intent = Intent(this,ClubsAndSocietiesFinal::class.java);
-        intent.putExtra("url", hiddenUrl)
+        intent.putExtra("url", url)
         intent.putExtra("title", text)
         startActivity(intent);
     }

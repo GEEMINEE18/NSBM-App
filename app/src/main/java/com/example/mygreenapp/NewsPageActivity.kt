@@ -14,13 +14,11 @@ class NewsPageActivity: AppCompatActivity() {
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.title = "News"
 
-        var webScrape = NewsScrape()
-        webScrape.execute()
+        var reader = NewsReaderWriter(this)
 
-        // Initialize arrays for storing information from the website
-        var imgList = webScrape.getImageList()
-        var titleList = webScrape.getTitleList()
-        var descriptionList = webScrape.getDescriptionList()
+        var titleList = reader.readFromTitleArray()
+        var descriptionList = reader.readFromDescriptionArray()
+        var imageList = reader.readFromImageArray()
 
         val listSize = titleList.size
 
@@ -36,7 +34,7 @@ class NewsPageActivity: AppCompatActivity() {
         // This loop will create 20 Views containing
         // the image with the count of view
         for (i in 0 until listSize) {
-            data.add(NewsViewModel(imgList[i], titleList[i], descriptionList[i]))
+            data.add(NewsViewModel(imageList[i], titleList[i], descriptionList[i]))
         }
 
         // This will pass the ArrayList to our Adapter

@@ -9,7 +9,6 @@ import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
-
 class ButtonAdapter(private val mList: List<ButtonViewModel>, private val listener: OnItemClickListener) : RecyclerView.Adapter<ButtonAdapter.ViewHolder>() {
 
     // create new views

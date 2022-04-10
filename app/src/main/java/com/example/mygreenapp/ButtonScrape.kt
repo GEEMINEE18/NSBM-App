@@ -9,7 +9,7 @@ class ButtonScrape() : AsyncTask<Void, Void, String>() {
     private var titleList = ArrayList<String>()
     private var imageList = ArrayList<String>()
     private var urlList = ArrayList<String>()
-    private var confirmCount =0
+    private var confirmCount = 0
 
     override fun doInBackground(vararg params: Void?): String? {
         var doc = Jsoup.connect("https://www.nsbm.ac.lk/life-at-nsbm/clubs-societies/").get()

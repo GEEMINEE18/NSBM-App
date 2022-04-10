@@ -15,17 +15,15 @@ class ClubsAndSocietiesActivity : AppCompatActivity(), ButtonAdapter.OnItemClick
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.title = "Clubs and Societies"
 
-        // WebScrape
-
-        var webScrape = ButtonScrape()
-        webScrape.execute()
-
-        // Initialize arrays for storing information from the website
-        var imgList = webScrape.getImageList()
-        var titleList = webScrape.getTitleList()
-        var urlList = webScrape.getUrlList()
-
-        val listSize = titleList.size
+        // Get the file Location and name where Json File gets stored
+        val fileName = filesDir.path + "/CnSData.json"
+        // Read the written Json File
+        var reader = ReadWriteJSON(fileName)
+        reader.readJSONData()
+        var imgList = reader.getImageList()
+        var titleList = reader.getTitleList()
+        var urlList = reader.getUrlList()
+        var listSize = reader.getListSize()
 
         // getting the recyclerview by its id
         val recyclerview = findViewById<RecyclerView>(R.id.buttonRecyclerView)
@@ -47,44 +45,6 @@ class ClubsAndSocietiesActivity : AppCompatActivity(), ButtonAdapter.OnItemClick
 
         // Setting the Adapter with the recyclerview
         recyclerview.adapter = adapter
-
-
-
-
-
-
-        // Hardcoded buttons
-
-        /*val sportsBtn = findViewById<Button>(R.id.sportsBtn)
-        val religiousBtn = findViewById<Button>(R.id.religiousBtn)
-        val internationalBtn = findViewById<Button>(R.id.internationalBtn)
-        val activityBtn = findViewById<Button>(R.id.activityBtn)
-        val academicBtn = findViewById<Button>(R.id.academicBtn)
-
-        sportsBtn.setOnClickListener {
-            val intent = Intent (this,SportsClubsActivity::class.java)
-            startActivity(intent)
-        }
-
-        religiousBtn.setOnClickListener {
-            val intent = Intent(this,ReligiousClubActivity::class.java)
-            startActivity(intent)
-        }
-
-        internationalBtn.setOnClickListener {
-            val intent = Intent (this,InternationalClubsActivity::class.java)
-            startActivity(intent)
-        }
-
-        activityBtn.setOnClickListener {
-            val intent = Intent (this,ActivityBasedClubsActivity::class.java)
-            startActivity(intent)
-        }
-
-        academicBtn.setOnClickListener {
-            val intent = Intent (this,AcademicClubsActivity::class.java)
-            startActivity(intent)
-        }*/
     }
 
     override fun onItemClick(position: Int, text: String, url: String) {

@@ -13,7 +13,7 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
-import java.io.File
+import java.time.LocalDateTime
 
 class MainActivity : AppCompatActivity() {
 
@@ -31,6 +31,83 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
+        // Create ReaderWriter object
+        var newsWriter = NewsReaderWriter(this)
+
+        newsWriter.checkFiles()
+
+        var yearNow = LocalDateTime.now().year
+        var dayNow = LocalDateTime.now().dayOfYear
+        var yearLast = newsWriter.loadLastSyncYear()
+        var dayLast = newsWriter.loadLastSyncDay()
+
+        // yearNow != yearLast && dayNow != dayLast
+        if (yearNow != yearLast && dayNow != dayLast)
+        {
+            // News Scrape
+
+            var webScrape = NewsScrape()
+            webScrape.execute()
+
+            // Initialize arrays for storing information from the website
+            var newsImageList = webScrape.getImageList()
+            var newsTitleList = webScrape.getTitleList()
+            var newsDescriptionList = webScrape.getDescriptionList()
+
+            // Write to the text file
+            newsWriter.writeToImageArray(newsImageList)
+            newsWriter.writeToTitleArray(newsTitleList)
+            newsWriter.writeToDescriptionArray(newsDescriptionList)
+
+            // Write the last sync date to the files if websync completed
+            newsWriter.saveCurrentYear()
+            newsWriter.saveCurrentDay()
+
+            // CnS Page 1 scrape
+
+            // Get the file Location and name where Json File gets stored
+            val cnsFileName = filesDir.path + "/CnSData.json"
+            // call write Json method
+            var jsonWriter = ReadWriteJSON(cnsFileName)
+
+            // JSON for ClubsNSocieties
+            var cnsScrape = ButtonScrape()
+            cnsScrape.execute()
+
+            // Initialize arrays for storing information from the website
+            var cnsImageList = cnsScrape.getImageList()
+            var cnsTitleList = cnsScrape.getTitleList()
+            var cnsUrlList = cnsScrape.getUrlList()
+
+            val cnsListSize = cnsTitleList.size
+
+            jsonWriter.writeJSONtoFile(cnsFileName, cnsListSize, cnsImageList, cnsTitleList, cnsUrlList)
+
+            // CnS Page 2 scrape
+
+            // Get the file Location and name where Json File gets stored
+            val cnsFileNameSecond = filesDir.path + "/CnSDataSecond.json"
+            // call write Json method
+            var jsonWriterSecond = ReadWriteJSON(cnsFileNameSecond)
+
+            // JSON for ClubsNSocieties
+            var cnsScrapeSecond = ButtonScrapeSecond(cnsUrlList)
+            cnsScrapeSecond.execute()
+
+            // Initialize arrays for storing information from the website
+            var cnsImageListSecond = cnsScrapeSecond.getImageList()
+            var cnsTitleListSecond = cnsScrapeSecond.getTitleList()
+            var cnsUrlListSecond = cnsScrapeSecond.getUrlList()
+            var cnsParentUrlListSecond = cnsScrapeSecond.getParentUrlList()
+
+            val cnsListSizeSecond = cnsTitleListSecond.size
+
+            jsonWriterSecond.writeJSONtoFileWithURL(cnsFileNameSecond, cnsListSizeSecond, cnsImageListSecond, cnsTitleListSecond, cnsUrlListSecond, cnsParentUrlListSecond)
+
+        }
+
 
         //eliminating the shadow in bottom nav
         bottomNav.background = null
