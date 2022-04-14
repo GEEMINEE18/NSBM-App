@@ -2,12 +2,12 @@ package com.example.mygreenapp
 
 import android.app.ProgressDialog
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.util.Patterns
 import android.widget.Toast
 import androidx.appcompat.app.ActionBar
+import androidx.appcompat.app.AppCompatActivity
 import com.example.mygreenapp.databinding.ActivityRegisterBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
@@ -52,30 +52,16 @@ class RegisterActivity : AppCompatActivity() {
 
         //handle click, begin register
         binding.btnRegister.setOnClickListener {
+
             //validate data
             validateData()
         }
     }
 
     private fun validateData() {
-        //get data
+
         email = binding.txtEmail.text.toString().trim()
         password = binding.txtPassword.text.toString().trim()
-
-        val name = binding.txtName.text.toString()
-        val stdId = binding.txtStdId.text.toString()
-        val batch = binding.txtBatch.text.toString()
-        database = FirebaseDatabase.getInstance().getReference("Register")
-        val Register = Register(name, stdId, batch, email)
-        database.child(name).setValue(Register).addOnSuccessListener {
-
-            binding.txtName.text.clear()
-            binding.txtStdId.text.clear()
-            binding.txtBatch.text.clear()
-            binding.txtEmail.text.clear()
-            binding.txtPassword.text.clear()
-        }
-
 
         //Validate data
         if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
@@ -96,6 +82,7 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     private fun firebaseRegister() {
+
         //show progress
         progressDialog.show()
 
@@ -107,11 +94,23 @@ class RegisterActivity : AppCompatActivity() {
                 //get current user
                 val firebaseUser = firebaseAuth.currentUser
                 val email = firebaseUser!!.email
+                val userId = firebaseUser.uid
+
+                val name = binding.txtName.text.toString()
+                val stdId = binding.txtStdId.text.toString()
+                val batch = binding.txtBatch.text.toString()
+
+                database = FirebaseDatabase.getInstance().getReference("User")
+                val Register = Register(name, stdId, batch, email, isAdmin = false)
+                database.child(userId).setValue(Register)
+
                 Toast.makeText(this,"Registered with $email",Toast.LENGTH_SHORT).show()
 
-                //Open profile activity
-                startActivity(Intent(this,LoadingActivity::class.java))
-                finish()
+                val isAdmin = "false"
+
+                val intent = Intent(this@RegisterActivity,MainActivity::class.java)
+                intent.putExtra("isAdmin", isAdmin)
+                startActivity(intent)
             }
             .addOnFailureListener {e->
                 //Failed to register
