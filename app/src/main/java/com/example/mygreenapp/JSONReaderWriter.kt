@@ -5,7 +5,7 @@ import java.io.BufferedReader
 import java.io.File
 import kotlin.math.log
 
-class ReadWriteJSON(fileName: String) {
+class JSONReaderWriter(fileName: String) {
 
     // Initialize arrays for storing information from the website
     private var images = ArrayList<String>()

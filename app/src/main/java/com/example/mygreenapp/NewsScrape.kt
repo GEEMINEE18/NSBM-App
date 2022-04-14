@@ -1,5 +1,6 @@
 package com.example.mygreenapp
 
+import android.app.ProgressDialog
 import android.os.AsyncTask
 import org.jsoup.Jsoup
 

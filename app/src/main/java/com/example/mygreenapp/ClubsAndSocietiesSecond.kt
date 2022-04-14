@@ -21,8 +21,8 @@ class ClubsAndSocietiesSecond : AppCompatActivity(), ButtonAdapter.OnItemClickLi
         // Get the file Location and name where Json File gets stored
         val fileName = filesDir.path + "/CnSDataSecond.json"
         // Read the written Json File
-        var reader = ReadWriteJSON(fileName)
-        // Send the url of the clicked parent button to the ReadWriteJSON file
+        var reader = JSONReaderWriter(fileName)
+        // Send the url of the clicked parent button to the JSONReaderWriter file
         if (hiddenUrl != null) {
             reader.readJSONDataWithURL(hiddenUrl)
         }

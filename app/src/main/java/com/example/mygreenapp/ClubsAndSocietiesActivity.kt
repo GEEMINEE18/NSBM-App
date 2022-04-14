@@ -18,7 +18,7 @@ class ClubsAndSocietiesActivity : AppCompatActivity(), ButtonAdapter.OnItemClick
         // Get the file Location and name where Json File gets stored
         val fileName = filesDir.path + "/CnSData.json"
         // Read the written Json File
-        var reader = ReadWriteJSON(fileName)
+        var reader = JSONReaderWriter(fileName)
         reader.readJSONData()
         var imgList = reader.getImageList()
         var titleList = reader.getTitleList()

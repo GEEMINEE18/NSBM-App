@@ -32,8 +32,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-        // Create ReaderWriter object
+        /*// Create ReaderWriter object
         var newsWriter = NewsReaderWriter(this)
 
         newsWriter.checkFiles()
@@ -44,7 +43,7 @@ class MainActivity : AppCompatActivity() {
         var dayLast = newsWriter.loadLastSyncDay()
 
         // yearNow != yearLast && dayNow != dayLast
-        if (yearNow != yearLast && dayNow != dayLast)
+        if (true)
         {
             // News Scrape
 
@@ -70,7 +69,7 @@ class MainActivity : AppCompatActivity() {
             // Get the file Location and name where Json File gets stored
             val cnsFileName = filesDir.path + "/CnSData.json"
             // call write Json method
-            var jsonWriter = ReadWriteJSON(cnsFileName)
+            var jsonWriter = JSONReaderWriter(cnsFileName)
 
             // JSON for ClubsNSocieties
             var cnsScrape = CnSScrapeFirst()
@@ -90,7 +89,7 @@ class MainActivity : AppCompatActivity() {
             // Get the file Location and name where Json File gets stored
             val cnsFileNameSecond = filesDir.path + "/CnSDataSecond.json"
             // call write Json method
-            var jsonWriterSecond = ReadWriteJSON(cnsFileNameSecond)
+            var jsonWriterSecond = JSONReaderWriter(cnsFileNameSecond)
 
             // JSON for ClubsNSocieties
             var cnsScrapeSecond = CnSScrapeSecond(cnsUrlList)
@@ -111,7 +110,7 @@ class MainActivity : AppCompatActivity() {
             // Get the file Location and name where Json File gets stored
             val cnsFileNameFinal = filesDir.path + "/CnSDataFinal.json"
             // call write Json method
-            var jsonWriterFinal = ReadWriteJSON(cnsFileNameFinal)
+            var jsonWriterFinal = JSONReaderWriter(cnsFileNameFinal)
 
             // JSON for ClubsNSocieties
             var cnsScrapeFinal = CnSScrapeFinal(cnsUrlListSecond)
@@ -127,8 +126,7 @@ class MainActivity : AppCompatActivity() {
             val cnsListSizeFinal = cnsBannerListFinal.size
 
             jsonWriterFinal.writeJSONtoFileCnSFinal(cnsFileNameFinal, cnsListSizeFinal, cnsBannerListFinal, cnsLogoListFinal, cnsDescription1ListFinal, cnsDescription2ListFinal, cnsParentUrlListFinal)
-
-        }
+        }*/
 
 
         //eliminating the shadow in bottom nav
