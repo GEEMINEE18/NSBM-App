@@ -9,10 +9,13 @@ import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.core.view.isVisible
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_main.*
+import java.util.HashMap
 
 class MainActivity : AppCompatActivity() {
 
@@ -34,6 +37,17 @@ class MainActivity : AppCompatActivity() {
         bottomNav.background = null
         //disabling the place holder in the bottom nav
         bottomNav.menu.getItem(2).isEnabled = false
+
+        //Admin variable
+        val isAdmin = intent.getStringExtra("isAdmin")
+        val dummyAdmin = intent.getStringExtra("dummyAdmin")
+
+        if (isAdmin == "false" || dummyAdmin == "false"){
+            fabMain.visibility = View.INVISIBLE
+        }
+        else{
+            fabMain.visibility = View.VISIBLE
+        }
 
         //For the drawerLayout to work we should include: id 'kotlin-android-extensions' in build.gradle(Module) plugins section
         toggle = ActionBarDrawerToggle(this,drawerLayout,R.string.open,R.string.close)

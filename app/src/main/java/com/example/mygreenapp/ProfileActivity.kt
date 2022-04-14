@@ -4,12 +4,12 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.app.ActionBar
-import com.example.mygreenapp.databinding.ActivityProfile2Binding
+import com.example.mygreenapp.databinding.ActivityProfileBinding
 import com.google.firebase.auth.FirebaseAuth
 
 class ProfileActivity : AppCompatActivity() {
     //ViewBinding
-    private lateinit var binding: ActivityProfile2Binding
+    private lateinit var binding: ActivityProfileBinding
 
     //ActionBar
     private lateinit var actionBar: ActionBar
@@ -19,7 +19,7 @@ class ProfileActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityProfile2Binding.inflate(layoutInflater)
+        binding = ActivityProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         //configure ActionBar
