@@ -101,15 +101,15 @@ class RegisterActivity : AppCompatActivity() {
                 val batch = binding.txtBatch.text.toString()
 
                 database = FirebaseDatabase.getInstance().getReference("User")
-                val Register = Register(name, stdId, batch, email, isAdmin = false)
-                database.child(userId).setValue(Register)
+                val register = Register(name, stdId, batch, email, isAdmin = false)
+                database.child(userId).setValue(register)
 
                 Toast.makeText(this,"Registered with $email",Toast.LENGTH_SHORT).show()
 
-                val isAdmin = "false"
+                val userLogin = "false"
 
-                val intent = Intent(this@RegisterActivity,MainActivity::class.java)
-                intent.putExtra("isAdmin", isAdmin)
+                val intent = Intent(this@RegisterActivity,LoadingActivity::class.java)
+                intent.putExtra("userLogin", userLogin)
                 startActivity(intent)
             }
             .addOnFailureListener {e->
