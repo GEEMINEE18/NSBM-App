@@ -39,7 +39,7 @@ class HomeFragment : Fragment() {
         val button = view.findViewById<Button>(R.id.clubSocietyBtn)
         val newsBtn = view.findViewById<Button>(R.id.newsBtn)
 
-        /*button.setOnClickListener {
+        button.setOnClickListener {
             //Intent works when we replace "this" with "requireContext()"
             val intent = Intent (requireContext(),ClubsAndSocietiesActivity::class.java)
             startActivity(intent)
@@ -48,7 +48,7 @@ class HomeFragment : Fragment() {
         newsBtn.setOnClickListener {
             val intent = Intent (requireContext(),NewsPageActivity::class.java)
             startActivity(intent)
-        }*/
+        }
     }
 
     override fun onCreateView(

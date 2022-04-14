@@ -3,11 +3,13 @@ package com.example.mygreenapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.view.View.INVISIBLE
 import android.view.View.VISIBLE
 import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.TextView
+import kotlinx.android.synthetic.main.activity_main.*
 import java.time.LocalDateTime
 
 class LoadingActivity : AppCompatActivity() {
@@ -20,6 +22,10 @@ class LoadingActivity : AppCompatActivity() {
         var progressBar = findViewById<ProgressBar>(R.id.progressBar)
         var progressDialog = findViewById<TextView>(R.id.txtProgress)
 
+        // Take Admin variables from Login activity and redirect to Main
+        val userLogin = intent.getStringExtra("userLogin")
+        val userCurrent = intent.getStringExtra("userCurrent")
+
         enterButton.setOnClickListener {
             progressBar.visibility = VISIBLE
             progressDialog.visibility = VISIBLE
@@ -29,7 +35,10 @@ class LoadingActivity : AppCompatActivity() {
             progressBar.visibility = INVISIBLE
             progressDialog.visibility = INVISIBLE
 
-            startActivity(Intent(this,MainActivity::class.java))
+            val intent = Intent(this@LoadingActivity, MainActivity::class.java)
+            intent.putExtra("userLogin", userLogin)
+            intent.putExtra("userCurrent", userCurrent)
+            startActivity(intent)
             finish()
         }
     }
@@ -47,7 +56,7 @@ class LoadingActivity : AppCompatActivity() {
         var dayLast = newsWriter.loadLastSyncDay()
 
         // yearNow != yearLast && dayNow != dayLast
-        if (true)
+        if (yearNow != yearLast && dayNow != dayLast)
         {
             // News Scrape
 

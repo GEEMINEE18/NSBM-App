@@ -13,7 +13,6 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
-import java.time.LocalDateTime
 
 class MainActivity : AppCompatActivity() {
 
@@ -36,6 +35,17 @@ class MainActivity : AppCompatActivity() {
         bottomNav.background = null
         //disabling the place holder in the bottom nav
         bottomNav.menu.getItem(2).isEnabled = false
+
+        //Admin variable
+        val userLogin = intent.getStringExtra("userLogin")
+        val userCurrent = intent.getStringExtra("userCurrent")
+
+        if (userLogin == "false" || userCurrent == "false"){
+            fabMain.visibility = View.INVISIBLE
+        }
+        else{
+            fabMain.visibility = View.VISIBLE
+        }
 
         //For the drawerLayout to work we should include: id 'kotlin-android-extensions' in build.gradle(Module) plugins section
         toggle = ActionBarDrawerToggle(this,drawerLayout,R.string.open,R.string.close)

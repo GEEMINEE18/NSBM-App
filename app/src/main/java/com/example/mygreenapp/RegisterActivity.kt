@@ -110,7 +110,7 @@ class RegisterActivity : AppCompatActivity() {
                 Toast.makeText(this,"Registered with $email",Toast.LENGTH_SHORT).show()
 
                 //Open profile activity
-                startActivity(Intent(this,MainActivity::class.java))
+                startActivity(Intent(this,LoadingActivity::class.java))
                 finish()
             }
             .addOnFailureListener {e->
