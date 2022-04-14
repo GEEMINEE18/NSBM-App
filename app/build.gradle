@@ -72,4 +72,6 @@ dependencies {
     implementation("androidx.cardview:cardview:1.0.0")
     // Recycler view
     implementation("androidx.recyclerview:recyclerview:1.2.1")
+    // GSON
+    implementation 'com.google.code.gson:gson:2.8.9'
 }

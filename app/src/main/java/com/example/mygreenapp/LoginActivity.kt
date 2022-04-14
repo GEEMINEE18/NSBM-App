@@ -92,7 +92,7 @@ class LoginActivity : AppCompatActivity() {
                 Toast.makeText(this,"Logged in as $email",Toast.LENGTH_SHORT).show()
 
                 //Open profile activity
-                startActivity(Intent(this,MainActivity::class.java))
+                startActivity(Intent(this,LoadingActivity::class.java))
                 finish()
             }
             .addOnFailureListener { e->
@@ -109,7 +109,7 @@ class LoginActivity : AppCompatActivity() {
         val firebaseUser = firebaseAuth.currentUser
         if (firebaseUser !=null){
             //user is already logged in
-            startActivity(Intent(this,MainActivity::class.java))
+            startActivity(Intent(this,LoadingActivity::class.java))
             finish()
         }
     }
