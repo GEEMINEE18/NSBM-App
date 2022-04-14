@@ -20,22 +20,42 @@ class CnSScrapeFinal(private var previousUrlList: ArrayList<String>) : AsyncTask
         // Nested loop to take all the data inside clubs and societies page 2
         for (i in 0 until previousUrlList.size) {
             var doc = Jsoup.connect(previousUrlList[i]).get()
-            // Define all the image, text elements
+
+            /*
+                The Clubs and societies pages in the NSBM website is in two formats. Because of this reason, we have to check if the selected page has the first
+                format or the second and adjust accordingly. The if functions do exactly that
+            */
             var imageInfo = doc.getElementsByClass("widget widget_revslider")
-            var descriptionInfo = doc.getElementsByClass("znColumnElement-innerContent")
+            if (imageInfo.toString() == "") {
+                imageInfo = doc.getElementsByClass("kl-blog-single-head-wrapper")
+                for (j in imageInfo) {
+                    val bannerImage = (j.getElementsByTag("a").attr("href"))
+                    bannerImageList.add(bannerImage)
+                }
+            } else {
+                for (j in imageInfo) {
+                    val bannerImage = ("https:"+j.getElementsByTag("img").attr("src"))
+                    bannerImageList.add(bannerImage)
+                }
+            }
+
+            var descriptionInfo = doc.getElementsByClass("zn_pb_wrapper clearfix zn_sortable_content")
+            if (descriptionInfo.toString() == "") {
+                descriptionInfo = doc.getElementsByClass("itemBody kl-blog-post-body kl-blog-cols-1")
+                for (j in descriptionInfo) {
+                    val description1 = doc.getElementsByTag("p").text()
+                    description1List.add(description1)
+                }
+
+            } else {
+                for (j in descriptionInfo) {
+                    val description1 = doc.getElementsByTag("p").text()
+                    description1List.add(description1)
+                }
+            }
 
             val logoImage = doc.getElementsByClass("image-boxes-img img-responsive cover-fit-img").attr("src")
             val description2 = doc.getElementsByClass("eluid51b8f3f9            col-md-6 col-sm-6   znColumnElement").text()
-
-            // These two loops are defined to make sure only the correct info is retrieved
-            for (j in imageInfo) {
-                val bannerImage = ("https:"+j.getElementsByTag("img").attr("src"))
-                bannerImageList.add(bannerImage)
-            }
-            for (k in descriptionInfo) {
-                val description1 = doc.getElementsByTag("p").text()
-                description1List.add(description1)
-            }
 
             logoImageList.add(logoImage)
             description2List.add(description2)

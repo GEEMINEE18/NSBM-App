@@ -28,6 +28,9 @@ class LoadingActivity : AppCompatActivity() {
 
             progressBar.visibility = INVISIBLE
             progressDialog.visibility = INVISIBLE
+
+            startActivity(Intent(this,MainActivity::class.java))
+            finish()
         }
     }
 
@@ -44,7 +47,7 @@ class LoadingActivity : AppCompatActivity() {
         var dayLast = newsWriter.loadLastSyncDay()
 
         // yearNow != yearLast && dayNow != dayLast
-        if (yearNow != yearLast && dayNow != dayLast)
+        if (true)
         {
             // News Scrape
 
@@ -128,8 +131,5 @@ class LoadingActivity : AppCompatActivity() {
 
             jsonWriterFinal.writeJSONtoFileCnSFinal(cnsFileNameFinal, cnsListSizeFinal, cnsBannerListFinal, cnsLogoListFinal, cnsDescription1ListFinal, cnsDescription2ListFinal, cnsParentUrlListFinal)
         }
-
-        startActivity(Intent(this,MainActivity::class.java))
-        finish()
     }
 }

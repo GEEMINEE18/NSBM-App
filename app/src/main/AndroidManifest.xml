@@ -50,9 +50,6 @@
             android:exported="false"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".profile"
-            android:exported="false" />
-        <activity
             android:name=".ClubsAndSocietiesActivity"
             android:exported="false"
             android:parentActivityName=".MainActivity" />

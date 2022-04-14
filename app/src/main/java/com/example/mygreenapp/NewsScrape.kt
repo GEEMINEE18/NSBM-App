@@ -23,7 +23,7 @@ class NewsScrape() : AsyncTask<Void, Void, String>() {
             var webTitle = i.getElementsByClass("itemHeader kl-blog-item-header").text()
             var webDescription = i.getElementsByClass("itemIntroText kl-blog-item-content").text()
             // the println function is used only for checking if the values are retrieved or not
-            println(webImg)
+            // println(webImg)
             // Add the scraped data into the arrays
             imgList.add(webImg)
             titleList.add(webTitle)
@@ -42,7 +42,7 @@ class NewsScrape() : AsyncTask<Void, Void, String>() {
     fun getImageList(): ArrayList<String> {
         while (confirmCount == 0)
         {
-            println("Waiting for webscrape")
+            //println("Waiting for webscrape")
         }
         return imgList
     }
@@ -51,7 +51,7 @@ class NewsScrape() : AsyncTask<Void, Void, String>() {
     fun getTitleList(): ArrayList<String> {
         while (confirmCount == 0)
         {
-            println("Waiting for webscrape")
+            //println("Waiting for webscrape")
         }
         return titleList
     }
@@ -59,7 +59,7 @@ class NewsScrape() : AsyncTask<Void, Void, String>() {
     fun getDescriptionList(): ArrayList<String> {
         while (confirmCount == 0)
         {
-            println("Waiting for webscrape")
+            //println("Waiting for webscrape")
         }
         return descriptionList
     }
