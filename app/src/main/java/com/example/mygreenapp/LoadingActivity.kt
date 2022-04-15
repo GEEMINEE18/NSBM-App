@@ -1,15 +1,13 @@
 package com.example.mygreenapp
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.view.View.INVISIBLE
 import android.view.View.VISIBLE
 import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.TextView
-import kotlinx.android.synthetic.main.activity_main.*
+import androidx.appcompat.app.AppCompatActivity
 import java.time.LocalDateTime
 
 class LoadingActivity : AppCompatActivity() {
