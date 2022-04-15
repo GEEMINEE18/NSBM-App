@@ -99,9 +99,10 @@ class RegisterActivity : AppCompatActivity() {
                 val name = binding.txtName.text.toString()
                 val stdId = binding.txtStdId.text.toString()
                 val batch = binding.txtBatch.text.toString()
+                val following = arrayListOf("NSBM Music Club","NSBM Drama Club")
 
                 database = FirebaseDatabase.getInstance().getReference("User")
-                val register = Register(name, stdId, batch, email, isAdmin = false)
+                val register = Register(name, stdId, batch, email, isAdmin = false, following)
                 database.child(userId).setValue(register)
 
                 Toast.makeText(this,"Registered with $email",Toast.LENGTH_SHORT).show()

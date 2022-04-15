@@ -50,7 +50,7 @@ class LoginActivity : AppCompatActivity() {
 
         //init firebaseAuth
         firebaseAuth = FirebaseAuth.getInstance()
-        checkUser()
+        //checkUser()
 
         //handle click, open register activity
         binding.lblNoAccount.setOnClickListener {
@@ -103,7 +103,7 @@ class LoginActivity : AppCompatActivity() {
             }
     }
 
-    private fun checkUser() {
+    /*private fun checkUser() {
         //if user is already logged in go to Main activity
         //get current user
         val firebaseUser = firebaseAuth.currentUser
@@ -114,7 +114,7 @@ class LoginActivity : AppCompatActivity() {
             intent.putExtra("userCurrent", userCurrent)
             startActivity(intent)
         }
-    }
+    }*/
 
     private fun checkIfAdmin(){
 

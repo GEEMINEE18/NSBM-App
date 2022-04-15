@@ -65,14 +65,16 @@ class AddMeetingActivity : AppCompatActivity() {
             val meetingTime = binding.txtMeetingTime.text.toString()
 
             database = FirebaseDatabase.getInstance().getReference("Meeting")
+            val max = database.child("Meeting")
+            print(max)
             val Meeting = Meeting(meetingTitle, meetingDesc, meetingVenue, meetingDate, meetingTime)
-            database.child(meetingTitle).setValue(Meeting).addOnSuccessListener {
+            database.setValue(Meeting).addOnSuccessListener {
 
                 binding.txtMeetingTitle.text.clear()
                 binding.txtMeetingDesc.text.clear()
                 binding.txtVenue.text.clear()
-                binding.txtMeetingDate.setText("")
-                binding.txtMeetingTime.setText("")
+                binding.txtMeetingDate.text = ""
+                binding.txtMeetingTime.text = ""
 
                 Toast.makeText(this, "Meeting successfully added", Toast.LENGTH_SHORT).show()
 
@@ -87,6 +89,6 @@ class AddMeetingActivity : AppCompatActivity() {
     private fun updateLable(mycalendar: Calendar) {
         val myFormat = "dd-MM-yyyy"
         val sdf = SimpleDateFormat(myFormat,Locale.UK)
-        txtMeetingDate.setText(sdf.format(mycalendar.time))
+        txtMeetingDate.text = sdf.format(mycalendar.time)
     }
 }
