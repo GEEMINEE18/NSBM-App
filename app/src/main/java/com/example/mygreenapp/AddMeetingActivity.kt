@@ -2,13 +2,18 @@ package com.example.mygreenapp
 
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mygreenapp.databinding.ActivityAddMeetingBinding
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_add_meeting.*
 import java.text.SimpleDateFormat
 import java.util.*
@@ -18,8 +23,13 @@ class AddMeetingActivity : AppCompatActivity() {
 
     //Database variable declaration
     private lateinit var binding: ActivityAddMeetingBinding
-    private lateinit var database: DatabaseReference
+    private lateinit var meetingNode: DatabaseReference
+    private lateinit var userNode:DatabaseReference
     private lateinit var txtMeetingDate: TextView
+
+    //FirebaseAuth
+    private lateinit var firebaseAuth: FirebaseAuth
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,16 +37,18 @@ class AddMeetingActivity : AppCompatActivity() {
         setContentView(binding.root)
         supportActionBar!!.title = "Add New Meeting"
 
+        //init firebaseAuth
+        firebaseAuth = FirebaseAuth.getInstance()
 
         txtMeetingDate = findViewById(R.id.txtMeetingDate)
 
-        val mycalendar = Calendar.getInstance()
+        val myCalendar = Calendar.getInstance()
 
         val datePicker = DatePickerDialog.OnDateSetListener {view, year, month, dayofMonth ->
-            mycalendar.set(Calendar.YEAR,year)
-            mycalendar.set(Calendar.MONTH,month)
-            mycalendar.set(Calendar.DAY_OF_MONTH,dayofMonth)
-            updateLable(mycalendar)
+            myCalendar.set(Calendar.YEAR,year)
+            myCalendar.set(Calendar.MONTH,month)
+            myCalendar.set(Calendar.DAY_OF_MONTH,dayofMonth)
+            updateLabel(myCalendar)
 
         }
 
@@ -54,7 +66,7 @@ class AddMeetingActivity : AppCompatActivity() {
 
         //Meeting Date Text View pops up the calendar to select the Meeting Date
         txtMeetingDate.setOnClickListener{
-            DatePickerDialog(this,datePicker, mycalendar.get(Calendar.YEAR),mycalendar.get(Calendar.MONTH),mycalendar.get(Calendar.DAY_OF_MONTH)).show()
+            DatePickerDialog(this,datePicker, myCalendar.get(Calendar.YEAR),myCalendar.get(Calendar.MONTH),myCalendar.get(Calendar.DAY_OF_MONTH)).show()
         }
 
         binding.btnAddMeetingDb.setOnClickListener {
@@ -64,31 +76,61 @@ class AddMeetingActivity : AppCompatActivity() {
             val meetingDate = binding.txtMeetingDate.text.toString()
             val meetingTime = binding.txtMeetingTime.text.toString()
 
-            database = FirebaseDatabase.getInstance().getReference("Meeting")
-            val max = database.child("Meeting")
-            print(max)
-            val Meeting = Meeting(meetingTitle, meetingDesc, meetingVenue, meetingDate, meetingTime)
-            database.setValue(Meeting).addOnSuccessListener {
+            meetingNode = FirebaseDatabase.getInstance().getReference("Meeting")
+            meetingNode.get().addOnSuccessListener { it ->
+                Log.i("firebase", "Got value ${it.value}")
+                //get the meeting number nodes to an array and splitting it up to count
+                var array = it.value.toString()
+                // " }, " To get only the outer nodes
+                var delimiter = "},"
+                val getMax = array.split(delimiter).size + 1
+                val max = getMax.toString()
+                print(max)
 
-                binding.txtMeetingTitle.text.clear()
-                binding.txtMeetingDesc.text.clear()
-                binding.txtVenue.text.clear()
-                binding.txtMeetingDate.text = ""
-                binding.txtMeetingTime.text = ""
+                val firebaseUser = firebaseAuth.currentUser
+                val email = firebaseUser!!.email
+                val userId = firebaseUser.uid
 
-                Toast.makeText(this, "Meeting successfully added", Toast.LENGTH_SHORT).show()
+                //Code to get if userLogin variable true or false from the database
+                userNode = Firebase.database.reference
+                userNode.child("User").child(userId).child("hosting").get().addOnSuccessListener {
+                    Log.i("firebase", "Got value ${it.value}")
+                    val clubName = it.value.toString()
 
-            }.addOnFailureListener {
 
-                Toast.makeText(this, "Failed to add meeting", Toast.LENGTH_SHORT).show()
+                    val meeting = Meeting(
+                        meetingTitle,
+                        meetingDesc,
+                        meetingVenue,
+                        meetingDate,
+                        meetingTime,
+                        clubName
+                    )
+                    meetingNode.child(max).setValue(meeting).addOnSuccessListener {
 
+                        binding.txtMeetingTitle.text.clear()
+                        binding.txtMeetingDesc.text.clear()
+                        binding.txtVenue.text.clear()
+                        binding.txtMeetingDate.text = ""
+                        binding.txtMeetingTime.text = ""
+
+                        Toast.makeText(this, "Meeting successfully added", Toast.LENGTH_SHORT)
+                            .show()
+
+                    }.addOnFailureListener {
+
+                        Toast.makeText(this, "Failed to add meeting", Toast.LENGTH_SHORT).show()
+
+                    }
+                }
             }
         }
     }
 
-    private fun updateLable(mycalendar: Calendar) {
+    private fun updateLabel(myCalendar: Calendar) {
         val myFormat = "dd-MM-yyyy"
         val sdf = SimpleDateFormat(myFormat,Locale.UK)
-        txtMeetingDate.text = sdf.format(mycalendar.time)
+        txtMeetingDate.text = sdf.format(myCalendar.time)
     }
 }
+
