@@ -12,12 +12,14 @@ import com.example.mygreenapp.databinding.ActivityRegisterBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.firestore.FirebaseFirestore
 
 class RegisterActivity : AppCompatActivity() {
 
     //ViewBinding
     private  lateinit var binding: ActivityRegisterBinding
     private lateinit var database: DatabaseReference
+    private lateinit var fStore: FirebaseFirestore
 
     //ActionBar
     private lateinit var actionBar: ActionBar
@@ -99,18 +101,17 @@ class RegisterActivity : AppCompatActivity() {
                 val name = binding.txtName.text.toString()
                 val stdId = binding.txtStdId.text.toString()
                 val batch = binding.txtBatch.text.toString()
-                val following = arrayListOf("NSBM Music Club","NSBM Drama Club")
 
-                database = FirebaseDatabase.getInstance().getReference("User")
-                val register = Register(name, stdId, batch, email, isAdmin = false, following)
-                database.child(userId).setValue(register)
+                fStore = FirebaseFirestore.getInstance()
+                val register = Register(name,stdId,batch,email,hosting = "",isHost = false)
+                fStore.collection("users").document(userId).set(register)
 
                 Toast.makeText(this,"Registered with $email",Toast.LENGTH_SHORT).show()
 
-                val userLogin = "false"
+                val host = "false"
 
                 val intent = Intent(this@RegisterActivity,LoadingActivity::class.java)
-                intent.putExtra("userLogin", userLogin)
+                intent.putExtra("host", host)
                 startActivity(intent)
             }
             .addOnFailureListener {e->

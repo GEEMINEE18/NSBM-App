@@ -23,7 +23,7 @@ class LoadingActivity : AppCompatActivity() {
         var progressDialog = findViewById<TextView>(R.id.txtProgress)
 
         // Take Admin variables from Login activity and redirect to Main
-        val userLogin = intent.getStringExtra("userLogin")
+        val host = intent.getStringExtra("host")
         val userCurrent = intent.getStringExtra("userCurrent")
 
         enterButton.setOnClickListener {
@@ -36,7 +36,7 @@ class LoadingActivity : AppCompatActivity() {
             progressDialog.visibility = INVISIBLE
 
             val intent = Intent(this@LoadingActivity, MainActivity::class.java)
-            intent.putExtra("userLogin", userLogin)
+            intent.putExtra("host", host)
             intent.putExtra("userCurrent", userCurrent)
             startActivity(intent)
             finish()
@@ -55,8 +55,8 @@ class LoadingActivity : AppCompatActivity() {
         var yearLast = newsWriter.loadLastSyncYear()
         var dayLast = newsWriter.loadLastSyncDay()
 
-        // yearNow != yearLast && dayNow != dayLast
-        if (yearNow != yearLast && dayNow != dayLast)
+        // yearNow != yearLast || dayNow != dayLast
+        if (yearNow != yearLast || dayNow != dayLast)
         {
             // News Scrape
 
