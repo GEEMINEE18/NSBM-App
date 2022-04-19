@@ -10,9 +10,12 @@ import android.widget.Toast
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mygreenapp.databinding.ActivityLoginBinding
+import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.ktx.database
+import com.google.firebase.firestore.DocumentSnapshot
+import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
 
 class LoginActivity : AppCompatActivity() {
@@ -21,6 +24,7 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var binding:ActivityLoginBinding
 
     private lateinit var database: DatabaseReference
+    private lateinit var fStore: FirebaseFirestore
 
     //ActionBar
     private lateinit var actionBar: ActionBar
@@ -117,19 +121,16 @@ class LoginActivity : AppCompatActivity() {
     }*/
 
     private fun checkIfAdmin(){
-
-        progressDialog.dismiss()
         val firebaseUser = firebaseAuth.currentUser
         val email = firebaseUser!!.email
         val userId = firebaseUser.uid
 
-        //Code to get if userLogin variable true or false from the database
-        database = Firebase.database.reference
-        database.child("User").child(userId).child("admin").get().addOnSuccessListener {
-            Log.i("firebase", "Got value ${it.value}")
-            val userLogin = it.value.toString()
+        fStore = FirebaseFirestore.getInstance()
+        fStore.collection("users").document(userId).get().addOnCompleteListener { task: Task<DocumentSnapshot> ->
+            val document = task.result
+            val host = document.get("host").toString()
 
-            if(userLogin == "true"){
+            if(host == "true"){
                 Toast.makeText(this,"You are an Admin",Toast.LENGTH_SHORT).show()
             }
             else{
@@ -139,7 +140,7 @@ class LoginActivity : AppCompatActivity() {
             Toast.makeText(this,"Logged in as $email",Toast.LENGTH_SHORT).show()
 
             val intent = Intent(this@LoginActivity,LoadingActivity::class.java)
-            intent.putExtra("userLogin", userLogin)
+            intent.putExtra("host", host)
             startActivity(intent)
 
         }

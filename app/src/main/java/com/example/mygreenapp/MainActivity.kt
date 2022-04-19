@@ -37,10 +37,10 @@ class MainActivity : AppCompatActivity() {
         bottomNav.menu.getItem(2).isEnabled = false
 
         //Admin variable
-        val userLogin = intent.getStringExtra("userLogin")
+        val host = intent.getStringExtra("host")
         val userCurrent = intent.getStringExtra("userCurrent")
 
-        if (userLogin == "false" || userCurrent == "false"){
+        if (host == "false" || userCurrent == "false"){
             fabMain.visibility = View.INVISIBLE
         }
         else{

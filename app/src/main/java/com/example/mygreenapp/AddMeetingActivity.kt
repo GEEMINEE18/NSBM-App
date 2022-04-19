@@ -13,6 +13,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ktx.database
+import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_add_meeting.*
 import java.text.SimpleDateFormat
@@ -23,7 +24,7 @@ class AddMeetingActivity : AppCompatActivity() {
 
     //Database variable declaration
     private lateinit var binding: ActivityAddMeetingBinding
-    private lateinit var meetingNode: DatabaseReference
+    private lateinit var meetingNode: FirebaseFirestore
     private lateinit var userNode:DatabaseReference
     private lateinit var txtMeetingDate: TextView
 
@@ -76,54 +77,18 @@ class AddMeetingActivity : AppCompatActivity() {
             val meetingDate = binding.txtMeetingDate.text.toString()
             val meetingTime = binding.txtMeetingTime.text.toString()
 
-            meetingNode = FirebaseDatabase.getInstance().getReference("Meeting")
-            meetingNode.get().addOnSuccessListener { it ->
-                Log.i("firebase", "Got value ${it.value}")
-                //get the meeting number nodes to an array and splitting it up to count
-                var array = it.value.toString()
-                // " }, " To get only the outer nodes
-                var delimiter = "},"
-                val getMax = array.split(delimiter).size + 1
-                val max = getMax.toString()
-                print(max)
+            meetingNode = FirebaseFirestore.getInstance()
+            val meeting = Meeting(meetingTitle,meetingDesc,meetingVenue,meetingDate,meetingTime, clubName = "")
+            meetingNode.collection("meeting").document().set(meeting)
 
-                val firebaseUser = firebaseAuth.currentUser
-                val email = firebaseUser!!.email
-                val userId = firebaseUser.uid
+            binding.txtMeetingTitle.text.clear()
+            binding.txtMeetingDesc.text.clear()
+            binding.txtVenue.text.clear()
+            binding.txtMeetingDate.text = ""
+            binding.txtMeetingTime.text = ""
 
-                //Code to get if userLogin variable true or false from the database
-                userNode = Firebase.database.reference
-                userNode.child("User").child(userId).child("hosting").get().addOnSuccessListener {
-                    Log.i("firebase", "Got value ${it.value}")
-                    val clubName = it.value.toString()
+            Toast.makeText(this, "Meeting successfully added", Toast.LENGTH_SHORT).show()
 
-
-                    val meeting = Meeting(
-                        meetingTitle,
-                        meetingDesc,
-                        meetingVenue,
-                        meetingDate,
-                        meetingTime,
-                        clubName
-                    )
-                    meetingNode.child(max).setValue(meeting).addOnSuccessListener {
-
-                        binding.txtMeetingTitle.text.clear()
-                        binding.txtMeetingDesc.text.clear()
-                        binding.txtVenue.text.clear()
-                        binding.txtMeetingDate.text = ""
-                        binding.txtMeetingTime.text = ""
-
-                        Toast.makeText(this, "Meeting successfully added", Toast.LENGTH_SHORT)
-                            .show()
-
-                    }.addOnFailureListener {
-
-                        Toast.makeText(this, "Failed to add meeting", Toast.LENGTH_SHORT).show()
-
-                    }
-                }
-            }
         }
     }
 
