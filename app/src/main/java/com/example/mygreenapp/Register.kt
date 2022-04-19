@@ -5,5 +5,6 @@ data class Register(
     val stdId: String? = null,
     val batch: String? = null,
     val email: String? = null,
-    val hosting: String? = null,
-    val isHost: Boolean? = null)
+    val headOf: String? = null,
+    val isHost: Boolean? = null,
+    val following: ArrayList<String>? = null)

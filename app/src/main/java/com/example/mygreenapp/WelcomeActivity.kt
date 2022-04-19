@@ -1,14 +1,10 @@
 package com.example.mygreenapp
 
-import android.app.ProgressDialog
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
 import android.util.Log
 import android.widget.Toast
-import androidx.appcompat.app.ActionBar
-import com.example.mygreenapp.databinding.ActivityLoginBinding
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
@@ -16,7 +12,6 @@ import com.google.firebase.database.ktx.database
 import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
-import kotlinx.coroutines.delay
 import java.util.*
 import kotlin.concurrent.schedule
 
@@ -34,7 +29,7 @@ class WelcomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_welcome)
 
         //Delay the welcome activity for 1.5 seconds
-        Timer().schedule(1500){
+        Timer().schedule(1000){
             //init firebaseAuth
             firebaseAuth = FirebaseAuth.getInstance()
             checkUser()

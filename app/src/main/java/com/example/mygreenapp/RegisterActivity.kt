@@ -17,7 +17,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 class RegisterActivity : AppCompatActivity() {
 
     //ViewBinding
-    private  lateinit var binding: ActivityRegisterBinding
+    private lateinit var binding: ActivityRegisterBinding
     private lateinit var database: DatabaseReference
     private lateinit var fStore: FirebaseFirestore
 
@@ -66,19 +66,16 @@ class RegisterActivity : AppCompatActivity() {
         password = binding.txtPassword.text.toString().trim()
 
         //Validate data
-        if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             //invalid email format
             binding.txtEmail.error = "Invalid email format"
-        }
-        else if (TextUtils.isEmpty(password)){
+        } else if (TextUtils.isEmpty(password)) {
             //Password is not entered
             binding.txtPassword.error = "Please enter password"
-        }
-        else if(password.length<6){
+        } else if (password.length < 6) {
             //password is short
             binding.txtPassword.error = "Password must be at least more than 6 characters"
-        }
-        else{
+        } else {
             firebaseRegister()
         }
     }
@@ -101,22 +98,25 @@ class RegisterActivity : AppCompatActivity() {
                 val name = binding.txtName.text.toString()
                 val stdId = binding.txtStdId.text.toString()
                 val batch = binding.txtBatch.text.toString()
+                val following = ArrayList<String>()
+                following.add("")
 
                 fStore = FirebaseFirestore.getInstance()
-                val register = Register(name,stdId,batch,email,hosting = "",isHost = false)
+                val register = Register(name, stdId, batch, email, headOf = "", isHost = false, following)
                 fStore.collection("users").document(userId).set(register)
 
-                Toast.makeText(this,"Registered with $email",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Registered with $email", Toast.LENGTH_SHORT).show()
 
                 val host = "false"
 
-                val intent = Intent(this@RegisterActivity,LoadingActivity::class.java)
+                val intent = Intent(this@RegisterActivity, LoadingActivity::class.java)
                 intent.putExtra("host", host)
                 startActivity(intent)
             }
-            .addOnFailureListener {e->
+            .addOnFailureListener { e ->
                 //Failed to register
-                Toast.makeText(this,"Registration failed due to ${e.message}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Registration failed due to ${e.message}", Toast.LENGTH_SHORT)
+                    .show()
 
             }
     }

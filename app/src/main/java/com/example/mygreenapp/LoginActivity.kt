@@ -4,7 +4,6 @@ import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
-import android.util.Log
 import android.util.Patterns
 import android.widget.Toast
 import androidx.appcompat.app.ActionBar
@@ -13,17 +12,14 @@ import com.example.mygreenapp.databinding.ActivityLoginBinding
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.ktx.database
 import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.ktx.Firebase
 
 class LoginActivity : AppCompatActivity() {
 
     //ViewBinding
     private lateinit var binding:ActivityLoginBinding
 
-    private lateinit var database: DatabaseReference
     private lateinit var fStore: FirebaseFirestore
 
     //ActionBar
@@ -106,19 +102,6 @@ class LoginActivity : AppCompatActivity() {
                 Toast.makeText(this,"Login failed due to ${e.message}",Toast.LENGTH_SHORT).show()
             }
     }
-
-    /*private fun checkUser() {
-        //if user is already logged in go to Main activity
-        //get current user
-        val firebaseUser = firebaseAuth.currentUser
-        if (firebaseUser !=null){
-            //user is already logged in
-            val userCurrent = "false"
-            val intent = Intent(this@LoginActivity,LoadingActivity::class.java)
-            intent.putExtra("userCurrent", userCurrent)
-            startActivity(intent)
-        }
-    }*/
 
     private fun checkIfAdmin(){
         val firebaseUser = firebaseAuth.currentUser
