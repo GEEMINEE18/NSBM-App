@@ -11,11 +11,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.ktx.database
 import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.ktx.Firebase
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -46,107 +43,39 @@ class NotificationFragment : Fragment() {
         firebaseAuth = FirebaseAuth.getInstance()
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        val firebaseUser = firebaseAuth.currentUser
-        val email = firebaseUser!!.email
-        val userId = firebaseUser.uid
-
-        fStore = FirebaseFirestore.getInstance()
-        // Get the document [userId] in the collection "users"
-        fStore.collection("users").document(userId).get().addOnCompleteListener { task: Task<DocumentSnapshot> ->
-            val doc = task.result
-            // Get the "following" list of the current user into an array
-            val followList = doc.get("following") as ArrayList<*>
-            // Database reference to the "meeting" collection
-            val meetingRef=  fStore.collection("meeting")
-
-            for (i in 0 until followList.size) {
-                val query = meetingRef.whereEqualTo("clubName", followList[i])
-                query.get().addOnSuccessListener { documents ->
-                    for (document in documents) {
-                        // id is the meeting id
-                        println(document.id)
-                        // data is an array which contains all the data inside the meeting
-                        println(document.data)
-                    }
-                }
-                    .addOnFailureListener { exception ->
-                        Log.w(TAG, "Error getting documents: ", exception)
-                    }
-            }
-
-
-        }
-
-
-
-
-
-        /*val listSize = titleList.size
-
-
-
-
-        // RecyclerView
 
         // getting the recyclerview by its id
         val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerNotification)
 
-        // this creates a vertical layout Manager
-        recyclerView.layoutManager = LinearLayoutManager(requireContext())
-
         // ArrayList of class ItemsViewModel
         val data = ArrayList<NotificationViewModel>()
 
-        // This loop will create 20 Views containing
-        // the image with the count of view
-        for (i in 0 until listSize) {
-            data.add(NotificationViewModel(imageList[i], titleList[i], descriptionList[i]))
+        // this is the only way
+        getData() { result->
+
+            var clubName = result[2]
+            var title = result[4]
+            var description = result[5]
+            var date = result[3]
+            var time = result[0]
+            var venue = result[1]
+
+            // this creates a vertical layout Manager
+            recyclerView.layoutManager = LinearLayoutManager(requireContext())
+
+            // This loop will create 20 Views containing
+            // the image with the count of view
+            data.add(NotificationViewModel(clubName, title, description, date, time, venue))
         }
 
         // This will pass the ArrayList to our Adapter
-        val adapter = NewsAdapter(data)
+        val adapter = NotificationAdapter(data)
 
         // Setting the Adapter with the recyclerview
-        recyclerView.adapter = adapter*/
+        recyclerView.adapter = adapter
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -174,5 +103,56 @@ class NotificationFragment : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+
+    // This function is used to callback values retrieved inside the onSuccessListener of firebase retrieval
+    private fun getData(callback: (ArrayList<String>) -> Unit) {
+
+        val firebaseUser = firebaseAuth.currentUser
+        val email = firebaseUser!!.email
+        val userId = firebaseUser.uid
+
+        // Data array and map
+        var dataArray = ArrayList<String>()
+        var dataMap = HashMap<String, String>()
+
+        // Separate arrays to store all data
+        var timeList = ArrayList<String>()
+        var venueList = ArrayList<String>()
+        var clubList = ArrayList<String>()
+        var dateList = ArrayList<String>()
+        var titleList = ArrayList<String>()
+        var descriptionList = ArrayList<String>()
+
+        fStore = FirebaseFirestore.getInstance()
+        // Get the document [userId] in the collection "users"
+        fStore.collection("users").document(userId).get().addOnCompleteListener { task: Task<DocumentSnapshot> ->
+            val doc = task.result
+            // Get the "following" list of the current user into an array
+            val followList = doc.get("following") as ArrayList<*>
+            // Database reference to the "meeting" collection
+            val meetingRef =  fStore.collection("meeting")
+
+            for (i in 0 until followList.size) {
+                val query = meetingRef.whereEqualTo("clubName", followList[i])
+                query.get().addOnSuccessListener { documents ->
+                    for (document in documents) {
+                        // id is the meeting id
+                        // println(document.id)
+                        // data is an array which contains all the data inside the meeting
+                        // println(document.data)
+                        dataMap = document.data as HashMap<String, String>
+                        // Below is an example of a retrieved datamap
+                        // {meetingTime=14:44, meetingVenue=HSDKFHSDKJFH, clubName=NSBM Music Club, meetingDate=23-04-2022, meetingTitle=adkfjd, meetingDesc=Q}
+                        dataArray = ArrayList(dataMap.values)
+                        callback(dataArray)
+                    }
+                }
+                    .addOnFailureListener { exception ->
+                        Log.w(TAG, "Error getting documents: ", exception)
+                    }
+            }
+        }
+
     }
 }

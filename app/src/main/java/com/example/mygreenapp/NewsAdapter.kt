@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
-class NewsAdapter(private val mList: List<NewsViewModel>) : RecyclerView.Adapter<NewsAdapter.ViewHolder>() {
+class NewsAdapter(private val mList: ArrayList<NewsViewModel>) : RecyclerView.Adapter<NewsAdapter.ViewHolder>() {
 
     // create new views
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
