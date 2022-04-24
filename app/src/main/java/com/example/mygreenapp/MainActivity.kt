@@ -31,6 +31,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+
         //eliminating the shadow in bottom nav
         bottomNav.background = null
         //disabling the place holder in the bottom nav
@@ -51,8 +53,6 @@ class MainActivity : AppCompatActivity() {
         toggle = ActionBarDrawerToggle(this,drawerLayout,R.string.open,R.string.close)
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
-
-        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
         navView.setNavigationItemSelectedListener {
             when(it.itemId){

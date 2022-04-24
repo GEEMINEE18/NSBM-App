@@ -38,14 +38,16 @@
 
             <TextView
                 android:id="@+id/txtCSTitle"
-                android:layout_width="match_parent"
+                android:layout_width="252dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="28dp"
                 android:layout_marginEnd="112dp"
                 android:text="CS Name"
+                android:textAlignment="center"
                 android:textSize="30sp"
                 app:layout_constraintEnd_toStartOf="@+id/imgCSLogo"
+                app:layout_constraintHorizontal_bias="0.113"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imgCSBanner" />
 
@@ -94,7 +96,8 @@
                 android:layout_marginEnd="16dp"
                 android:text="Follow"
                 app:layout_constraintEnd_toStartOf="@+id/btnRegister"
-                app:layout_constraintTop_toBottomOf="@+id/imgCSLogo" />
+                app:layout_constraintTop_toBottomOf="@+id/imgCSLogo"
+                android:visibility="invisible"/>
 
             <Button
                 android:id="@+id/btnRegister"

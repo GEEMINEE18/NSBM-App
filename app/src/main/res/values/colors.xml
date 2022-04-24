@@ -18,4 +18,17 @@
     <color name="light_blue_A200">#FF40C4FF</color>
     <color name="light_blue_A400">#FF00B0FF</color>
     <color name="black_overlay">#66000000</color>
+    <!--Material.io-->
+    <color name="primaryColor">#3ab54a</color>
+    <color name="primaryLightColor">#72e879</color>
+    <color name="primaryDarkColor">#00841b</color>
+    <color name="secondaryColor">#1b579f</color>
+    <color name="secondaryLightColor">#5883d1</color>
+    <color name="secondaryDarkColor">#002f70</color>
+    <color name="primaryTextColor">#000000</color>
+    <color name="secondaryTextColor">#ffffff</color>
+    <!--Custom-->
+    <color name="darkGrey">#1e1e1e</color>
+    <color name="lightGrey">#cccccc</color>
+    <color name="lightBlack">#222222</color>
 </resources>

@@ -90,10 +90,10 @@ class AddMeetingActivity : AppCompatActivity() {
             val meetingDate = binding.txtMeetingDate.text.toString()
             val meetingTime = binding.txtMeetingTime.text.toString()
 
-            // Getting user's "headOf" value
             fStore.collection("users").document(userId).get()
                 .addOnCompleteListener { task: Task<DocumentSnapshot> ->
                     val document = task.result
+                    // Getting user's "headOf" value
                     val clubName = document.get("headOf").toString()
 
                     val meeting = Meeting(
