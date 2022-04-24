@@ -51,7 +51,7 @@ class LoadingActivity : AppCompatActivity() {
         var dayLast = newsWriter.loadLastSyncDay()
 
         // yearNow != yearLast || dayNow != dayLast
-        if (true)
+        if (yearNow != yearLast || dayNow != dayLast)
         {
             // News Scrape
 
