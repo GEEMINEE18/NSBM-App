@@ -20,6 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
+            android:textStyle="italic"
             android:text="Club Name"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -31,6 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="12dp"
+            android:textStyle="bold"
             android:text="Meeting Title"
             android:textSize="30sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -42,6 +44,7 @@
             android:layout_height="71dp"
             android:layout_marginStart="16dp"
             android:layout_marginBottom="12dp"
+            android:textStyle=""
             android:text="Meeting Description"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

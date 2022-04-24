@@ -125,6 +125,7 @@ class LoginActivity : AppCompatActivity() {
             val intent = Intent(this@LoginActivity,LoadingActivity::class.java)
             intent.putExtra("host", host)
             startActivity(intent)
+            finish()
 
         }
     }

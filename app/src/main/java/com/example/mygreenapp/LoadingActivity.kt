@@ -2,10 +2,8 @@ package com.example.mygreenapp
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View.INVISIBLE
 import android.view.View.VISIBLE
 import android.widget.Button
-import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import java.time.LocalDateTime
@@ -16,23 +14,22 @@ class LoadingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_loading)
 
+        var syncButton = findViewById<Button>(R.id.btnSync)
         var enterButton = findViewById<Button>(R.id.btnEnter)
-        var progressBar = findViewById<ProgressBar>(R.id.progressBar)
-        var progressDialog = findViewById<TextView>(R.id.txtProgress)
+        var syncText = findViewById<TextView>(R.id.txtSyncDialog)
 
         // Take Admin variables from Login activity and redirect to Main
         val host = intent.getStringExtra("host")
         val userCurrent = intent.getStringExtra("userCurrent")
 
-        enterButton.setOnClickListener {
-            progressBar.visibility = VISIBLE
-            progressDialog.visibility = VISIBLE
-
+        syncButton.setOnClickListener {
             scrape()
+            syncText.visibility = VISIBLE
+            enterButton.isEnabled = true
+            enterButton.isClickable = true
+        }
 
-            progressBar.visibility = INVISIBLE
-            progressDialog.visibility = INVISIBLE
-
+        enterButton.setOnClickListener {
             val intent = Intent(this@LoadingActivity, MainActivity::class.java)
             intent.putExtra("host", host)
             intent.putExtra("userCurrent", userCurrent)
@@ -44,7 +41,7 @@ class LoadingActivity : AppCompatActivity() {
     private fun scrape() {
 
         // Create ReaderWriter object
-        var newsWriter = NewsReaderWriter(this)
+        val newsWriter = NewsReaderWriter(this)
 
         newsWriter.checkFiles()
 
@@ -54,17 +51,17 @@ class LoadingActivity : AppCompatActivity() {
         var dayLast = newsWriter.loadLastSyncDay()
 
         // yearNow != yearLast || dayNow != dayLast
-        if (yearNow != yearLast || dayNow != dayLast)
+        if (true)
         {
             // News Scrape
 
-            var webScrape = NewsScrape()
+            val webScrape = NewsScrape(this@LoadingActivity)
             webScrape.execute()
 
             // Initialize arrays for storing information from the website
-            var newsImageList = webScrape.getImageList()
-            var newsTitleList = webScrape.getTitleList()
-            var newsDescriptionList = webScrape.getDescriptionList()
+            val newsImageList = webScrape.getImageList()
+            val newsTitleList = webScrape.getTitleList()
+            val newsDescriptionList = webScrape.getDescriptionList()
 
             // Write to the text file
             newsWriter.writeToImageArray(newsImageList)
@@ -83,7 +80,7 @@ class LoadingActivity : AppCompatActivity() {
             var jsonWriter = JSONReaderWriter(cnsFileName)
 
             // JSON for ClubsNSocieties
-            var cnsScrape = CnSScrapeFirst()
+            var cnsScrape = CnSScrapeFirst(this)
             cnsScrape.execute()
 
             // Initialize arrays for storing information from the website
@@ -103,7 +100,7 @@ class LoadingActivity : AppCompatActivity() {
             var jsonWriterSecond = JSONReaderWriter(cnsFileNameSecond)
 
             // JSON for ClubsNSocieties
-            var cnsScrapeSecond = CnSScrapeSecond(cnsUrlList)
+            var cnsScrapeSecond = CnSScrapeSecond(this, cnsUrlList)
             cnsScrapeSecond.execute()
 
             // Initialize arrays for storing information from the website
@@ -124,7 +121,7 @@ class LoadingActivity : AppCompatActivity() {
             var jsonWriterFinal = JSONReaderWriter(cnsFileNameFinal)
 
             // JSON for ClubsNSocieties
-            var cnsScrapeFinal = CnSScrapeFinal(cnsUrlListSecond)
+            var cnsScrapeFinal = CnSScrapeFinal(this, cnsUrlListSecond)
             cnsScrapeFinal.execute()
 
             // Initialize arrays for storing information from the website

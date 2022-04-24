@@ -1,9 +1,11 @@
 package com.example.mygreenapp
 
+import android.app.ProgressDialog
+import android.content.Context
 import android.os.AsyncTask
 import org.jsoup.Jsoup
 
-class CnSScrapeFinal(private var previousUrlList: ArrayList<String>) : AsyncTask<Void, Void, String>() {
+class CnSScrapeFinal(val context: Context, private var previousUrlList: ArrayList<String>) : AsyncTask<Void, Void, String>() {
 
     // Initialize arrays for storing information from the website
     private var bannerImageList = ArrayList<String>()
@@ -12,8 +14,23 @@ class CnSScrapeFinal(private var previousUrlList: ArrayList<String>) : AsyncTask
     private var description2List = ArrayList<String>()
     // URL list which contains data on which parent is the current URL from
     private var parentUrlList = ArrayList<String>()
+    //progressDialog
+    private lateinit var progressDialog: ProgressDialog
 
     private var confirmCount = 0
+
+    override fun onPreExecute() {
+        super.onPreExecute()
+
+        //configure progress dialog
+        progressDialog = ProgressDialog(context)
+        progressDialog.setTitle("Please Wait")
+        progressDialog.setMessage("Retrieving Clubs and Societies third page data...")
+        progressDialog.setCanceledOnTouchOutside(false)
+
+        //show progress
+        progressDialog.show()
+    }
 
     override fun doInBackground(vararg params: Void?): String? {
 
@@ -65,6 +82,12 @@ class CnSScrapeFinal(private var previousUrlList: ArrayList<String>) : AsyncTask
         confirmCount = 1
 
         return null
+    }
+
+    override fun onPostExecute(result: String?) {
+        super.onPostExecute(result)
+
+        progressDialog.dismiss()
     }
 
     // Getters

@@ -1,16 +1,32 @@
 package com.example.mygreenapp
 
 import android.app.ProgressDialog
+import android.content.Context
 import android.os.AsyncTask
 import org.jsoup.Jsoup
 
-class NewsScrape() : AsyncTask<Void, Void, String>() {
+class NewsScrape(val context: Context) : AsyncTask<Void, Void, String>() {
 
     // Initialize arrays for storing information from the website
     private var imgList = ArrayList<String>()
     private var titleList = ArrayList<String>()
     private var descriptionList = ArrayList<String>()
     private var confirmCount = 0
+    //progressDialog
+    private lateinit var progressDialog: ProgressDialog
+
+    override fun onPreExecute() {
+        super.onPreExecute()
+
+        //configure progress dialog
+        progressDialog = ProgressDialog(context)
+        progressDialog.setTitle("Please Wait")
+        progressDialog.setMessage("Retrieving news...")
+        progressDialog.setCanceledOnTouchOutside(false)
+
+        //show progress
+        progressDialog.show()
+    }
 
     override fun doInBackground(vararg params: Void?): String? {
         var doc = Jsoup.connect("https://www.nsbm.ac.lk/news/").get()
@@ -35,6 +51,12 @@ class NewsScrape() : AsyncTask<Void, Void, String>() {
         // println("The size of title list in webscrape class is "+titleList.size)
 
         return null
+    }
+
+    override fun onPostExecute(result: String?) {
+        super.onPostExecute(result)
+
+        progressDialog.dismiss()
     }
 
     // Getters

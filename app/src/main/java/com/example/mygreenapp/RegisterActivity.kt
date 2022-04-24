@@ -112,6 +112,7 @@ class RegisterActivity : AppCompatActivity() {
                 val intent = Intent(this@RegisterActivity, LoadingActivity::class.java)
                 intent.putExtra("host", host)
                 startActivity(intent)
+                finish()
             }
             .addOnFailureListener { e ->
                 //Failed to register
