@@ -32,6 +32,7 @@
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/drawable/ic_home.xml" value="0.3135" />
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/drawable/ic_settings.xml" value="0.1975" />
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout-v28/button_layout.xml" value="0.18177083333333333" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/about_page.xml" value="0.35625" />
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/academicclub_mainpage.xml" value="0.23333333333333334" />
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/activity_add_event.xml" value="0.35625" />
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/activity_add_meeting.xml" value="0.3507692307692308" />
@@ -60,13 +61,19 @@
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/button_layout.xml" value="0.35625" />
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/card_layout.xml" value="0.33" />
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/clubandsocieties.xml" value="0.3046875" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/currentprofile_page.xml" value="0.35625" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/event_page.xml" value="0.35625" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/feedback_page.xml" value="0.35625" />
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/fragment_home.xml" value="0.23333333333333334" />
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/fragment_notification.xml" value="0.34629629629629627" />
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/fragment_time_picker.xml" value="0.35625" />
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/internationalclub_mainpage.xml" value="0.34629629629629627" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/map_page.xml" value="0.35625" />
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/nav_header.xml" value="0.18177083333333333" />
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/news_page.xml" value="0.3162162162162162" />
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/notification_layout.xml" value="0.35625" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/settings2_page.xml" value="0.35625" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/settings_page.xml" value="0.35625" />
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/sportsclub_mainpage.xml" value="0.35625" />
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/web_card_layout.xml" value="0.35625" />
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/menu/bottom_nav_menu.xml" value="0.34629629629629627" />
