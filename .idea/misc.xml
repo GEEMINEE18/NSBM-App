@@ -31,6 +31,7 @@
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/drawable/ic_event.xml" value="0.3135" />
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/drawable/ic_home.xml" value="0.3135" />
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/drawable/ic_settings.xml" value="0.1975" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout-v28/button_layout.xml" value="0.18177083333333333" />
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/academicclub_mainpage.xml" value="0.23333333333333334" />
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/activity_add_event.xml" value="0.35625" />
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/activity_add_meeting.xml" value="0.3507692307692308" />
@@ -52,6 +53,7 @@
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/activity_register_aerobics_club.xml" value="0.35625" />
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/activity_register_archery_club.xml" value="0.35625" />
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/activity_rugby_club.xml" value="0.35625" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/activity_welcome.xml" value="0.18177083333333333" />
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/activitybased_club.xml" value="0.35625" />
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/basketball_regform.xml" value="0.34629629629629627" />
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/basketballclub_description.xml" value="0.19166666666666668" />
@@ -62,6 +64,7 @@
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/fragment_notification.xml" value="0.34629629629629627" />
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/fragment_time_picker.xml" value="0.35625" />
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/internationalclub_mainpage.xml" value="0.34629629629629627" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/nav_header.xml" value="0.18177083333333333" />
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/news_page.xml" value="0.3162162162162162" />
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/notification_layout.xml" value="0.35625" />
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/sportsclub_mainpage.xml" value="0.35625" />

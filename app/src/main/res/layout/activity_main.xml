@@ -92,7 +92,8 @@
             android:visibility="invisible"
             app:layout_constraintEnd_toStartOf="@+id/addPostBtn"
             app:layout_constraintTop_toTopOf="@+id/addPostBtn"
-            app:srcCompat="@drawable/ic_event" />
+            app:srcCompat="@drawable/ic_event"
+            android:contentDescription="@string/add_event_button" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/addPostBtn"
@@ -106,7 +107,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/ic_post" />
+            app:srcCompat="@drawable/ic_post"
+            android:contentDescription="@string/add_post_button" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/addMeetingBtn"
@@ -119,7 +121,8 @@
             android:visibility="invisible"
             app:layout_constraintStart_toEndOf="@+id/addPostBtn"
             app:layout_constraintTop_toTopOf="@+id/addPostBtn"
-            app:srcCompat="@drawable/ic_meeting" />
+            app:srcCompat="@drawable/ic_meeting"
+            android:contentDescription="@string/add_meeting_button" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.navigation.NavigationView

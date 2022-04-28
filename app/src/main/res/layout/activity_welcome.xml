@@ -14,5 +14,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/nsbmlogo" />
+        app:srcCompat="@drawable/nsbmlogo"
+        android:contentDescription="@string/nsbmlogo" />
 </androidx.constraintlayout.widget.ConstraintLayout>

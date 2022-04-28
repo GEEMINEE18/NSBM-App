@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="Register"
+        android:text="@string/register"
         style="@style/TextAppearance.MaterialComponents.Headline4"/>
 
     <TextView
@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="Register as a new user"
+        android:text="@string/register_as_a_new_user"
         android:layout_below="@id/lblRegisterTitle"
         style="@style/TextAppearance.MaterialComponents.Caption"/>
 
@@ -35,8 +35,9 @@
             android:id="@+id/txtName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Name"
-            android:inputType="text"/>
+            android:hint="@string/name"
+            android:inputType="text"
+            android:autofillHints="" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -51,8 +52,9 @@
             android:id="@+id/txtStdId"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Student ID"
-            android:inputType="number"/>
+            android:hint="@string/student_id"
+            android:inputType="number"
+            android:autofillHints="" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -67,7 +69,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
-            android:hint="Batch"/>
+            android:hint="@string/batch"
+            android:autofillHints="" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -82,8 +85,9 @@
             android:id="@+id/txtEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email"
-            android:inputType="textEmailAddress"/>
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:autofillHints="" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -100,7 +104,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
-            android:hint="Password"/>
+            android:hint="@string/password"
+            android:autofillHints="" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -111,6 +116,6 @@
         android:layout_below="@id/boxPassword"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:text="Register" />
+        android:text="@string/register" />
 
 </RelativeLayout>

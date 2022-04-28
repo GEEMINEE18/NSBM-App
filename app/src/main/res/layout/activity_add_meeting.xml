@@ -14,7 +14,7 @@
         android:autofillHints=""
         android:clickable="false"
         android:ems="10"
-        android:hint="Meeting Title"
+        android:hint="@string/meeting_title"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,11 +26,12 @@
         android:layout_height="48dp"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:hint="Meeting Description"
+        android:hint="@string/meeting_description"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtMeetingTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/txtMeetingTitle"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/txtVenue"
@@ -38,11 +39,12 @@
         android:layout_height="48dp"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:hint="Venue"
+        android:hint="@string/venue"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtMeetingDesc" />
+        app:layout_constraintTop_toBottomOf="@+id/txtMeetingDesc"
+        android:autofillHints="" />
 
     <TextView
         android:id="@+id/txtMeetingDate"
@@ -50,9 +52,9 @@
         android:layout_height="48dp"
         android:layout_marginTop="32dp"
         android:ems="10"
-        android:hint="DD/MM/YYYY"
+        android:hint="@string/dd_mm_yyyy"
         android:inputType="date"
-        android:textSize="18dp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtVenue" />
@@ -62,9 +64,9 @@
         android:layout_width="323dp"
         android:layout_height="48dp"
         android:ems="10"
-        android:hint="00:00"
+        android:hint="@string/_00_00"
         android:inputType="time"
-        android:textSize="20dp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lblMeetingTime" />
@@ -75,7 +77,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="276dp"
         android:layout_marginTop="48dp"
-        android:text="Add"
+        android:text="@string/add"
         android:textColor="#311B92"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtMeetingTime" />
@@ -85,7 +87,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:text="Meeting Date"
+        android:text="@string/meeting_date"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.125"
         app:layout_constraintStart_toStartOf="parent"
@@ -95,7 +97,7 @@
         android:id="@+id/lblMeetingTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Meeting Time"
+        android:text="@string/meeting_time"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.126"
         app:layout_constraintStart_toStartOf="parent"
