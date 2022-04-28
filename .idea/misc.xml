@@ -5,9 +5,15 @@
       <map>
         <entry key="..\:/1 Local Disk D/NSBM-App/app/src/main/res/drawable/ic_add.xml" value="0.1135" />
         <entry key="..\:/1 Local Disk D/NSBM-App/app/src/main/res/layout/academicclub_mainpage.xml" value="0.33" />
+        <entry key="..\:/1 Local Disk D/NSBM-App/app/src/main/res/layout/activity_add_meeting.xml" value="0.22541156606162938" />
+        <entry key="..\:/1 Local Disk D/NSBM-App/app/src/main/res/layout/activity_login.xml" value="0.22541156606162938" />
         <entry key="..\:/1 Local Disk D/NSBM-App/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/1 Local Disk D/NSBM-App/app/src/main/res/layout/activity_profile.xml" value="0.22830269345874304" />
+        <entry key="..\:/1 Local Disk D/NSBM-App/app/src/main/res/layout/activity_profile2.xml" value="0.22830269345874304" />
+        <entry key="..\:/1 Local Disk D/NSBM-App/app/src/main/res/layout/activity_register.xml" value="0.22830269345874304" />
         <entry key="..\:/1 Local Disk D/NSBM-App/app/src/main/res/layout/activity_test.xml" value="0.2640625" />
         <entry key="..\:/1 Local Disk D/NSBM-App/app/src/main/res/layout/activity_test2.xml" value="0.278125" />
+        <entry key="..\:/1 Local Disk D/NSBM-App/app/src/main/res/layout/activity_welcome.xml" value="0.22830269345874304" />
         <entry key="..\:/1 Local Disk D/NSBM-App/app/src/main/res/layout/activitybased_club.xml" value="0.278125" />
         <entry key="..\:/1 Local Disk D/NSBM-App/app/src/main/res/layout/basketball_regform.xml" value="0.278125" />
         <entry key="..\:/1 Local Disk D/NSBM-App/app/src/main/res/layout/clubandsocieties.xml" value="0.278125" />
@@ -19,87 +25,58 @@
         <entry key="..\:/1 Local Disk D/NSBM-App/app/src/main/res/layout/sportsclub_mainpage.xml" value="0.22830269345874304" />
         <entry key="..\:/1 Local Disk D/NSBM-App/app/src/main/res/menu/bottom_nav_menu.xml" value="0.10560068405301411" />
         <entry key="..\:/1 Local Disk D/NSBM-App/app/src/main/res/menu/nav_drawer_menu.xml" value="0.22830269345874304" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3135" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/drawable/edit.xml" value="0.3135" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/drawable/ic_calendar.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/drawable/ic_event.xml" value="0.3135" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/drawable/ic_home.xml" value="0.3135" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/drawable/ic_settings.xml" value="0.1975" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout-v28/button_layout.xml" value="0.18177083333333333" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/academicclub_mainpage.xml" value="0.23333333333333334" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/activity_add_event.xml" value="0.35625" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/activity_add_meeting.xml" value="0.3507692307692308" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/activity_add_post.xml" value="0.35625" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/activity_archery_club.xml" value="0.35625" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/activity_athletic_club.xml" value="0.35625" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/activity_badminton_club.xml" value="0.5" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/activity_clubs_and_societies_final.xml" value="0.35625" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/activity_clubs_and_societies_second.xml" value="0.35625" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/activity_clubs_and_societies_third.xml" value="0.35625" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/activity_general_trivia_club.xml" value="0.35625" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/activity_graphics_painting_club.xml" value="0.35625" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/activity_loading.xml" value="0.3421875" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/activity_login.xml" value="0.3371757925072046" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/activity_profile.xml" value="0.18125" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/activity_profile2.xml" value="0.35625" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/activity_register.xml" value="0.35625" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/activity_register_aerobics_club.xml" value="0.35625" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/activity_register_archery_club.xml" value="0.35625" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/activity_rugby_club.xml" value="0.35625" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/activity_welcome.xml" value="0.18177083333333333" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/activitybased_club.xml" value="0.35625" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/basketball_regform.xml" value="0.34629629629629627" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/basketballclub_description.xml" value="0.19166666666666668" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/button_layout.xml" value="0.35625" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/card_layout.xml" value="0.33" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/clubandsocieties.xml" value="0.3046875" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/fragment_home.xml" value="0.23333333333333334" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/fragment_notification.xml" value="0.34629629629629627" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/fragment_time_picker.xml" value="0.35625" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/internationalclub_mainpage.xml" value="0.34629629629629627" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/nav_header.xml" value="0.18177083333333333" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/news_page.xml" value="0.3162162162162162" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/notification_layout.xml" value="0.35625" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/sportsclub_mainpage.xml" value="0.35625" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/web_card_layout.xml" value="0.35625" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/menu/bottom_nav_menu.xml" value="0.34629629629629627" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/menu/nav_drawer_menu.xml" value="0.35625" />
         <entry key="..\:/MyGreenApp/app/src/main/res/drawable/searchview.xml" value="0.1385" />
         <entry key="..\:/MyGreenApp/app/src/main/res/layout/academicclub_mainpage.xml" value="0.25" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_aerobics_club.xml" value="0.25" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_archery_club.xml" value="0.16576086956521738" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_athletic_club.xml" value="0.264" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_badminton_club.xml" value="0.16576086956521738" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_bottom_navigation.xml" value="0.16576086956521738" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_buddhist_club.xml" value="0.25" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_buddhist_society.xml" value="0.25" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_catholic_christian_society.xml" value="0.25" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_chess_club.xml" value="0.16576086956521738" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_community_service_club.xml" value="0.25" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_cricket_club.xml" value="0.16576086956521738" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_dancing_club.xml" value="0.25" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_drama_club.xml" value="0.25" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_expolers_club.xml" value="0.25" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_fitness_club.xml" value="0.16576086956521738" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_foss_club.xml" value="0.16576086956521738" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_general_trivia_club.xml" value="0.25" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_graphics_painting_club.xml" value="0.25" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_green_task_force.xml" value="0.25" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_hindu_society.xml" value="0.25" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_hockey_club.xml" value="0.16576086956521738" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_ieee_club.xml" value="0.16576086956521738" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_innovators_club.xml" value="0.16576086956521738" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_islamic_society.xml" value="0.25" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_literature_club.xml" value="0.25" />
         <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_main.xml" value="0.264" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_martial_arts_club.xml" value="0.16576086956521738" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_media_club.xml" value="0.25" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_music_club.xml" value="0.25" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_nature_club.xml" value="0.2359375" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_netball_club.xml" value="0.16576086956521738" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_oratory_debating_club.xml" value="0.25" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_profile.xml" value="0.16576086956521738" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_register_aerobics_club.xml" value="0.25" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_register_archery_club.xml" value="0.264" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_register_athletic_club.xml" value="0.16576086956521738" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_register_badminton_club.xml" value="0.16576086956521738" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_register_buddhist_society.xml" value="0.2359375" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_register_catholic_christian_society.xml" value="0.25" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_register_chess_club.xml" value="0.264" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_register_community_club.xml" value="0.25" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_register_cricket_club.xml" value="0.16576086956521738" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_register_dancing_club.xml" value="0.25" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_register_drama_club.xml" value="0.25" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_register_explorer_club.xml" value="0.25" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_register_foss.xml" value="0.16576086956521738" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_register_general_knowledge_trivia_club.xml" value="0.25" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_register_graphics.xml" value="0.25" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_register_green_taskforce_club.xml" value="0.25" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_register_hindu_society.xml" value="0.2359375" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_register_hockey_club.xml" value="0.16576086956521738" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_register_ieee.xml" value="0.16576086956521738" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_register_innovators_club.xml" value="0.16576086956521738" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_register_islamic_society.xml" value="0.25" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_register_literature_club.xml" value="0.25" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_register_martialarts_club.xml" value="0.16576086956521738" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_register_media_club.xml" value="0.25" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_register_music_club.xml" value="0.25" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_register_nature_club.xml" value="0.25" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_register_netball_club.xml" value="0.16576086956521738" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_register_oratory_club.xml" value="0.25" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_register_rugby_club.xml" value="0.16576086956521738" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_register_soccer_club.xml" value="0.16576086956521738" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_register_swimming_club.xml" value="0.25" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_register_tt_club.xml" value="0.25" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_register_vollyball_club.xml" value="0.25" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_register_wellbeing.xml" value="0.25" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_registre_fitness_club.xml" value="0.16576086956521738" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_rugby_club.xml" value="0.16576086956521738" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_soccer_club.xml" value="0.16576086956521738" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_swimming_club.xml" value="0.2359375" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_tt_club.xml" value="0.25" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_volllyball_club.xml" value="0.25" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_wellbeing.xml" value="0.25" />
         <entry key="..\:/MyGreenApp/app/src/main/res/layout/activitybased_club.xml" value="0.25" />
         <entry key="..\:/MyGreenApp/app/src/main/res/layout/basketball_regform.xml" value="0.25" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/basketballclub_description.xml" value="0.16576086956521738" />
         <entry key="..\:/MyGreenApp/app/src/main/res/layout/clubandsocieties.xml" value="0.25" />
-        <entry key="..\:/MyGreenApp/app/src/main/res/layout/fragment_calendar.xml" value="0.25" />
         <entry key="..\:/MyGreenApp/app/src/main/res/layout/internationalclub_mainpage.xml" value="0.25" />
         <entry key="..\:/MyGreenApp/app/src/main/res/layout/news_page.xml" value="0.25" />
         <entry key="..\:/MyGreenApp/app/src/main/res/layout/religiousclub_mainpage.xml" value="0.25" />

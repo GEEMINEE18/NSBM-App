@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddMeetingActivity">
+
+    <EditText
+        android:id="@+id/txtMeetingTitle"
+        android:layout_width="323dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="28dp"
+        android:autofillHints=""
+        android:clickable="false"
+        android:ems="10"
+        android:hint="@string/meeting_title"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtMeetingDesc"
+        android:layout_width="323dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/meeting_description"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMeetingTitle"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/txtVenue"
+        android:layout_width="323dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/venue"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMeetingDesc"
+        android:autofillHints="" />
+
+    <TextView
+        android:id="@+id/txtMeetingDate"
+        android:layout_width="323dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="@string/dd_mm_yyyy"
+        android:inputType="date"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtVenue" />
+
+    <TextView
+        android:id="@+id/txtMeetingTime"
+        android:layout_width="323dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:hint="@string/_00_00"
+        android:inputType="time"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblMeetingTime" />
+
+    <Button
+        android:id="@+id/btnAddMeetingDb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="276dp"
+        android:layout_marginTop="48dp"
+        android:text="@string/add"
+        android:textColor="#311B92"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMeetingTime" />
+
+    <TextView
+        android:id="@+id/lblMeetingDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/meeting_date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.125"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtVenue" />
+
+    <TextView
+        android:id="@+id/lblMeetingTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/meeting_time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.126"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMeetingDate" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

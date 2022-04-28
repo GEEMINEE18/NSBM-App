@@ -3,14 +3,16 @@
 
     <item
         android:id="@+id/miItem1"
-        android:title="Item 1"></item>
+        android:icon="@drawable/ic_account"
+        android:title="@string/profile" />
 
     <item
         android:id="@+id/miItem2"
-        android:title="Item 2"></item>
+        android:icon="@drawable/ic_settings"
+        android:title="@string/settings" />
 
     <item
         android:id="@+id/miItem3"
-        android:title="Item 3"></item>
+        android:title="@string/item_3" />
 
 </menu>

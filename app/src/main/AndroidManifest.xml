@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.mygreenapp">
+    <!-- Internet Permission -->
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -10,174 +12,58 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyGreenApp">
         <activity
-            android:name=".register_general_knowledge_trivia_club"
-            android:exported="false" />
-        <activity
-            android:name=".register_wellbeing"
-            android:exported="false" />
-        <activity
-            android:name=".register_aerobics_club"
-            android:exported="false" />
-        <activity
-            android:name=".register_community_club"
-            android:exported="false" />
-        <activity
-            android:name=".register_oratory_club"
-            android:exported="false" />
-        <activity
-            android:name=".register_nature_club"
-            android:exported="false" />
-        <activity
-            android:name=".register_green_taskforce_club"
-            android:exported="false" />
-        <activity
-            android:name=".register_explorer_club"
-            android:exported="false" />
-        <activity
-            android:name=".register_graphics"
-            android:exported="false" />
-        <activity
-            android:name=".register_literature_club"
-            android:exported="false" />
-        <activity
-            android:name=".register_dancing_club"
-            android:exported="false" />
-        <activity
-            android:name=".register_drama_club"
-            android:exported="false" />
-        <activity
-            android:name=".register_music_club"
-            android:exported="false" />
-        <activity
-            android:name=".register_media_club"
-            android:exported="false" />
-        <activity
-            android:name=".register_vollyball_club"
-            android:exported="false" />
-        <activity
-            android:name=".volllyball_club"
-            android:exported="false" />
-        <activity
-            android:name=".register_tt_club"
-            android:exported="false" />
-        <activity
-            android:name=".tt_club"
-            android:exported="false" />
-        <activity
-            android:name=".swimming_club"
-            android:exported="false" />
-        <activity
-            android:name=".register_swimming_club"
-            android:exported="false" />
-        <activity
-            android:name=".general_trivia_club"
-            android:exported="false" />
-        <activity
-            android:name=".wellbeing"
-            android:exported="false" />
-        <activity
-            android:name=".aerobics_club"
-            android:exported="false" />
-        <activity
-            android:name=".community_service_club"
-            android:exported="false" />
-        <activity
-            android:name=".oratory_debating_club"
-            android:exported="false" />
-        <activity
-            android:name=".nature_club"
-            android:exported="false" />
-        <activity
-            android:name=".green_task_force"
-            android:exported="false" />
-        <activity
-            android:name=".expolers_club"
-            android:exported="false" />
-        <activity
-            android:name=".graphics_painting_club"
-            android:exported="false" />
-        <activity
-            android:name=".literature_club"
-            android:exported="false" />
-        <activity
-            android:name=".dancing_club"
-            android:exported="false" />
-        <activity
-            android:name=".drama_club"
-            android:exported="false" />
-        <activity
-            android:name=".music_club"
-            android:exported="false" />
-        <activity
-            android:name=".media_club"
-            android:exported="false" />
-        <activity
-            android:name=".register_catholic_christian_society"
-            android:exported="false" />
-        <activity
-            android:name=".register_islamic_society"
-            android:exported="false" />
-        <activity
-            android:name=".register_hindu_society"
-            android:exported="false" />
-        <activity
-            android:name=".register_buddhist_society"
-            android:exported="false" />
-        <activity
-            android:name=".catholic_christian_society"
-            android:exported="false" />
-        <activity
-            android:name=".islamic_society"
-            android:exported="false" />
-        <activity
-            android:name=".hindu_society"
-            android:exported="false" />
-        <activity
-            android:name=".buddhist_society"
-            android:exported="false" />
-        <activity
-            android:name=".buddhist_club"
-            android:exported="false" />
-        <activity
-            android:name=".bottom_navigation"
-            android:exported="false" />
-        <activity
-            android:name=".NewsPageActivity"
-            android:exported="false"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".AcademicClubsActivity"
-            android:exported="false"
-            android:parentActivityName=".ClubAndSocietiesActivity" />
-        <activity
-            android:name=".ActivityBasedClubsActivity"
-            android:exported="false"
-            android:parentActivityName=".ClubAndSocietiesActivity" />
-        <activity
-            android:name=".InternationalClubsActivity"
-            android:exported="false"
-            android:parentActivityName=".ClubAndSocietiesActivity" />
-        <activity
-            android:name=".ReligiousClubActivity"
-            android:exported="false"
-            android:parentActivityName=".ClubAndSocietiesActivity" />
-        <activity
-            android:name=".SportsClubsActivity"
-            android:exported="false"
-            android:parentActivityName=".ClubAndSocietiesActivity" />
-        <activity
-            android:name=".ClubAndSocietiesActivity"
-            android:exported="false"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".WelcomeActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".LoadingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false">
+        </activity>
+        <activity
+            android:name=".ClubsAndSocietiesFinal"
+            android:exported="false"
+            android:parentActivityName=".ClubsAndSocietiesSecond" />
+        <activity
+            android:name=".ClubsAndSocietiesSecond"
+            android:exported="false"
+            android:parentActivityName=".ClubsAndSocietiesActivity" />
+        <activity
+            android:name=".AddMeetingActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".AddPostActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".AddEventActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ClubsAndSocietiesActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".NewsPageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

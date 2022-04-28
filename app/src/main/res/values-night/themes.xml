@@ -1,16 +1,31 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.MyGreenApp" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <style name="Theme.MyGreenApp" parent="Theme.MaterialComponents.Light.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_200</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorPrimary">@color/primaryDarkColor</item>
+        <item name="colorPrimaryVariant">@color/primaryColor</item>
+        <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_200</item>
-        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorSecondary">@color/secondaryDarkColor</item>
+        <item name="colorSecondaryVariant">@color/secondaryColor</item>
+        <item name="colorOnSecondary">@color/white</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/secondaryDarkColor</item>
         <!-- Customize your theme here. -->
+        <item name="android:colorBackground">@color/darkGrey</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/white</item>
+        <item name="android:textColorTertiary">@color/white</item>
+        <item name="android:textColorHint">@color/lightGrey</item>
+        <item name="colorSurface">@color/darkGrey</item>
+        <item name="colorOnSurface">@color/black</item>
+        <item name="android:buttonTint">@color/white</item>
+        <item name="android:navigationBarColor">@color/secondaryDarkColor</item>
+        <item name="iconTint">@color/white</item>
+    </style>
+
+    <style name="ThemeOverlay.MyGreenApp.FullscreenContainer" parent="">
+        <item name="fullscreenBackgroundColor">@color/light_blue_900</item>
+        <item name="fullscreenTextColor">@color/light_blue_A400</item>
     </style>
 </resources>
