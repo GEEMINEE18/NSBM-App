@@ -4,7 +4,7 @@
     <string name="edit_button_reader">edit</string>
     <string name="back_button_reader">back</string>
     <string name="example_image_reader">example image</string>
-    <string name="long_text">The muhurath ceremony of the latest teledrama creation of renowned award winning director jayantha chandrasiri nannaththara teledrama produced by nsbm... Read more</string>
+    <string name="long_text">The muhurath ceremony of the latest teledrama creation of renowned award winning director jayantha chandrasiri nannaththara teledrama produced by nsbm… Read more</string>
     <string name="events">EVENTS</string>
     <string name="club_amp_societies"><![CDATA[CLUBS & SOCIETIES]]></string>
     <string name="news">NEWS</string>
@@ -85,4 +85,13 @@
     <string name="title_activity_loading">LoadingActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="login">Login</string>
+    <string name="login_to_your_account">Login to your account</string>
+    <string name="password">Password</string>
+    <string name="club_name">Club Name</string>
+    <string name="meeting_title">Meeting Title</string>
+    <string name="meeting_description">Meeting Description</string>
+    <string name="time">Time</string>
+    <string name="date">Date</string>
+    <string name="venue">Venue</string>
 </resources>

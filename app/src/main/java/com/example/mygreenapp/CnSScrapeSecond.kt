@@ -1,11 +1,14 @@
+@file:Suppress("DEPRECATION")
+
 package com.example.mygreenapp
 
+import android.annotation.SuppressLint
 import android.app.ProgressDialog
 import android.os.AsyncTask
 import android.content.Context
 import org.jsoup.Jsoup
 
-class CnSScrapeSecond(val context: Context, private var previousUrlList: ArrayList<String>) : AsyncTask<Void, Void, String>() {
+class CnSScrapeSecond(@SuppressLint("StaticFieldLeak") val context: Context, private var previousUrlList: ArrayList<String>) : AsyncTask<Void, Void, String>() {
 
     // Initialize arrays for storing information from the website
     private var titleList = ArrayList<String>()
@@ -19,6 +22,7 @@ class CnSScrapeSecond(val context: Context, private var previousUrlList: ArrayLi
     private var confirmCount =0
     // private var nameString = clubCategory?.lowercase()
 
+    @Deprecated("Deprecated in Java")
     override fun onPreExecute() {
         super.onPreExecute()
 
@@ -32,12 +36,13 @@ class CnSScrapeSecond(val context: Context, private var previousUrlList: ArrayLi
         progressDialog.show()
     }
 
+    @Deprecated("Deprecated in Java")
     override fun doInBackground(vararg params: Void?): String? {
 
         // Nested loop to take all the data inside clubs and societies page 2
         for (i in 0 until previousUrlList.size) {
-            var doc = Jsoup.connect(previousUrlList[i]).get()
-            var allInfo = doc.getElementsByClass("sc-content-wrapper")
+            val doc = Jsoup.connect(previousUrlList[i]).get()
+            val allInfo = doc.getElementsByClass("sc-content-wrapper")
             //println(allInfo)
 
             // This loop will look for all the elements in the variable allInfo
@@ -60,6 +65,7 @@ class CnSScrapeSecond(val context: Context, private var previousUrlList: ArrayLi
         return null
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onPostExecute(result: String?) {
         super.onPostExecute(result)
 
@@ -71,7 +77,7 @@ class CnSScrapeSecond(val context: Context, private var previousUrlList: ArrayLi
     fun getTitleList(): ArrayList<String> {
         while (confirmCount == 0)
         {
-            //println("Waiting for webscrape")
+            //println("Waiting for web-scrape")
         }
         return titleList
     }
@@ -79,7 +85,7 @@ class CnSScrapeSecond(val context: Context, private var previousUrlList: ArrayLi
     fun getImageList(): ArrayList<String> {
         while (confirmCount == 0)
         {
-            //println("Waiting for webscrape")
+            //println("Waiting for web-scrape")
         }
         return imageList
     }
@@ -87,7 +93,7 @@ class CnSScrapeSecond(val context: Context, private var previousUrlList: ArrayLi
     fun getUrlList(): ArrayList<String> {
         while (confirmCount == 0)
         {
-            //println("Waiting for webscrape")
+            //println("Waiting for web-scrape")
         }
         return urlList
     }
@@ -95,7 +101,7 @@ class CnSScrapeSecond(val context: Context, private var previousUrlList: ArrayLi
     fun getParentUrlList(): ArrayList<String> {
         while (confirmCount == 0)
         {
-            //println("Waiting for webscrape")
+            //println("Waiting for web-scrape")
         }
         return parentUrlList
     }
