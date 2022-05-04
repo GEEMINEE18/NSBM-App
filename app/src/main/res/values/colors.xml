@@ -31,4 +31,6 @@
     <color name="darkGrey">#1e1e1e</color>
     <color name="lightGrey">#cccccc</color>
     <color name="lightBlack">#222222</color>
+    <color name="backgroundBlue">#e3ffff</color>
+    <color name="backgroundGreen">#d5ffd1</color>
 </resources>

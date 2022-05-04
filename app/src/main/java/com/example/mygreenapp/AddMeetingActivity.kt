@@ -18,8 +18,9 @@ import java.util.*
 
 class AddMeetingActivity : AppCompatActivity() {
 
-    //Database variable declaration
     private lateinit var binding: ActivityAddMeetingBinding
+
+    //Database variable declaration
     private lateinit var fStore: FirebaseFirestore
     private lateinit var txtMeetingDate: TextView
 
