@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package com.example.mygreenapp
 
 import android.app.ProgressDialog
@@ -11,10 +13,10 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.mygreenapp.databinding.ActivityLoginBinding
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DatabaseReference
 import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FirebaseFirestore
 
+@Suppress("DEPRECATION")
 class LoginActivity : AppCompatActivity() {
 
     //ViewBinding

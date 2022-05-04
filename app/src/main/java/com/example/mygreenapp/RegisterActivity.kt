@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package com.example.mygreenapp
 
 import android.app.ProgressDialog
@@ -10,15 +12,12 @@ import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mygreenapp.databinding.ActivityRegisterBinding
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.firestore.FirebaseFirestore
 
 class RegisterActivity : AppCompatActivity() {
 
     //ViewBinding
     private lateinit var binding: ActivityRegisterBinding
-    private lateinit var database: DatabaseReference
     private lateinit var fStore: FirebaseFirestore
 
     //ActionBar

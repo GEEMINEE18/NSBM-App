@@ -18,12 +18,12 @@ class ClubsAndSocietiesActivity : AppCompatActivity(), ButtonAdapter.OnItemClick
         // Get the file Location and name where Json File gets stored
         val fileName = filesDir.path + "/CnSData.json"
         // Read the written Json File
-        var reader = JSONReaderWriter(fileName)
+        val reader = JSONReaderWriter(fileName)
         reader.readJSONData()
-        var imgList = reader.getImageList()
-        var titleList = reader.getTitleList()
-        var urlList = reader.getUrlList()
-        var listSize = reader.getListSize()
+        val imgList = reader.getImageList()
+        val titleList = reader.getTitleList()
+        val urlList = reader.getUrlList()
+        val listSize = reader.getListSize()
 
         // getting the recyclerview by its id
         val recyclerview = findViewById<RecyclerView>(R.id.buttonRecyclerView)
@@ -51,11 +51,9 @@ class ClubsAndSocietiesActivity : AppCompatActivity(), ButtonAdapter.OnItemClick
         Toast.makeText(this, "$text button clicked", Toast.LENGTH_SHORT).show()
         println("Item $position $text clicked")
 
-        var hiddenUrl = url
-
         // Create a session and send value
-        val intent = Intent(this,ClubsAndSocietiesSecond::class.java);
-        intent.putExtra("url", hiddenUrl)
-        startActivity(intent);
+        val intent = Intent(this,ClubsAndSocietiesSecond::class.java)
+        intent.putExtra("url", url)
+        startActivity(intent)
     }
 }

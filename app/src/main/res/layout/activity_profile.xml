@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,14 +11,14 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="You are logged in as"
+        android:text="@string/you_are_logged_in_as"
         style="@style/TextAppearance.MaterialComponents.Caption"/>
 
     <TextView
         android:id="@+id/lblProfileEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Email"
+        android:text="@string/email"
         style="@style/TextAppearance.MaterialComponents.Body1"/>
 
     <Button
@@ -27,6 +26,6 @@
         android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Logout"/>
+        android:text="@string/logout"/>
 
 </LinearLayout>

@@ -1,11 +1,14 @@
+@file:Suppress("DEPRECATION")
+
 package com.example.mygreenapp
 
+import android.annotation.SuppressLint
 import android.app.ProgressDialog
 import android.content.Context
 import android.os.AsyncTask
 import org.jsoup.Jsoup
 
-class NewsScrape(val context: Context) : AsyncTask<Void, Void, String>() {
+class NewsScrape(@SuppressLint("StaticFieldLeak") val context: Context) : AsyncTask<Void, Void, String>() {
 
     // Initialize arrays for storing information from the website
     private var imgList = ArrayList<String>()
@@ -15,6 +18,7 @@ class NewsScrape(val context: Context) : AsyncTask<Void, Void, String>() {
     //progressDialog
     private lateinit var progressDialog: ProgressDialog
 
+    @Deprecated("Deprecated in Java")
     override fun onPreExecute() {
         super.onPreExecute()
 
@@ -28,16 +32,17 @@ class NewsScrape(val context: Context) : AsyncTask<Void, Void, String>() {
         progressDialog.show()
     }
 
+    @Deprecated("Deprecated in Java")
     override fun doInBackground(vararg params: Void?): String? {
-        var doc = Jsoup.connect("https://www.nsbm.ac.lk/news/").get()
-        var allInfo = doc.getElementsByClass("col-sm-6 col-lg-4 blog-isotope-item kl-blog-column")
+        val doc = Jsoup.connect("https://www.nsbm.ac.lk/news/").get()
+        val allInfo = doc.getElementsByClass("col-sm-6 col-lg-4 blog-isotope-item kl-blog-column")
         //println(allInfo)
 
         // This loop will look for all the elements in the variable allInfo
         for (i in allInfo) {
-            var webImg = i.getElementsByTag("img").attr("src")
-            var webTitle = i.getElementsByClass("itemHeader kl-blog-item-header").text()
-            var webDescription = i.getElementsByClass("itemIntroText kl-blog-item-content").text()
+            val webImg = i.getElementsByTag("img").attr("src")
+            val webTitle = i.getElementsByClass("itemHeader kl-blog-item-header").text()
+            val webDescription = i.getElementsByClass("itemIntroText kl-blog-item-content").text()
             // the println function is used only for checking if the values are retrieved or not
             // println(webImg)
             // Add the scraped data into the arrays
@@ -48,11 +53,12 @@ class NewsScrape(val context: Context) : AsyncTask<Void, Void, String>() {
 
         confirmCount = 1
 
-        // println("The size of title list in webscrape class is "+titleList.size)
+        // println("The size of title list in web-scrape class is "+titleList.size)
 
         return null
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onPostExecute(result: String?) {
         super.onPostExecute(result)
 
@@ -64,7 +70,7 @@ class NewsScrape(val context: Context) : AsyncTask<Void, Void, String>() {
     fun getImageList(): ArrayList<String> {
         while (confirmCount == 0)
         {
-            //println("Waiting for webscrape")
+            //println("Waiting for web-scrape")
         }
         return imgList
     }
@@ -73,7 +79,7 @@ class NewsScrape(val context: Context) : AsyncTask<Void, Void, String>() {
     fun getTitleList(): ArrayList<String> {
         while (confirmCount == 0)
         {
-            //println("Waiting for webscrape")
+            //println("Waiting for web-scrape")
         }
         return titleList
     }
@@ -81,7 +87,7 @@ class NewsScrape(val context: Context) : AsyncTask<Void, Void, String>() {
     fun getDescriptionList(): ArrayList<String> {
         while (confirmCount == 0)
         {
-            //println("Waiting for webscrape")
+            //println("Waiting for web-scrape")
         }
         return descriptionList
     }

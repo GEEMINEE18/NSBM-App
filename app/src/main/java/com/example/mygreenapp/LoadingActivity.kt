@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package com.example.mygreenapp
 
 import android.content.Intent
@@ -14,9 +16,9 @@ class LoadingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_loading)
 
-        var syncButton = findViewById<Button>(R.id.btnSync)
-        var enterButton = findViewById<Button>(R.id.btnEnter)
-        var syncText = findViewById<TextView>(R.id.txtSyncDialog)
+        val syncButton = findViewById<Button>(R.id.btnSync)
+        val enterButton = findViewById<Button>(R.id.btnEnter)
+        val syncText = findViewById<TextView>(R.id.txtSyncDialog)
 
         // Take Admin variables from Login activity and redirect to Main
         val host = intent.getStringExtra("host")
@@ -45,10 +47,10 @@ class LoadingActivity : AppCompatActivity() {
 
         newsWriter.checkFiles()
 
-        var yearNow = LocalDateTime.now().year
-        var dayNow = LocalDateTime.now().dayOfYear
-        var yearLast = newsWriter.loadLastSyncYear()
-        var dayLast = newsWriter.loadLastSyncDay()
+        val yearNow = LocalDateTime.now().year
+        val dayNow = LocalDateTime.now().dayOfYear
+        val yearLast = newsWriter.loadLastSyncYear()
+        val dayLast = newsWriter.loadLastSyncDay()
 
         // yearNow != yearLast || dayNow != dayLast
         if (yearNow != yearLast || dayNow != dayLast)
@@ -68,7 +70,7 @@ class LoadingActivity : AppCompatActivity() {
             newsWriter.writeToTitleArray(newsTitleList)
             newsWriter.writeToDescriptionArray(newsDescriptionList)
 
-            // Write the last sync date to the files if websync completed
+            // Write the last sync date to the files if web-sync completed
             newsWriter.saveCurrentYear()
             newsWriter.saveCurrentDay()
 
@@ -77,16 +79,16 @@ class LoadingActivity : AppCompatActivity() {
             // Get the file Location and name where Json File gets stored
             val cnsFileName = filesDir.path + "/CnSData.json"
             // call write Json method
-            var jsonWriter = JSONReaderWriter(cnsFileName)
+            val jsonWriter = JSONReaderWriter(cnsFileName)
 
             // JSON for ClubsNSocieties
-            var cnsScrape = CnSScrapeFirst(this)
+            val cnsScrape = CnSScrapeFirst(this)
             cnsScrape.execute()
 
             // Initialize arrays for storing information from the website
-            var cnsImageList = cnsScrape.getImageList()
-            var cnsTitleList = cnsScrape.getTitleList()
-            var cnsUrlList = cnsScrape.getUrlList()
+            val cnsImageList = cnsScrape.getImageList()
+            val cnsTitleList = cnsScrape.getTitleList()
+            val cnsUrlList = cnsScrape.getUrlList()
 
             val cnsListSize = cnsTitleList.size
 
@@ -97,17 +99,17 @@ class LoadingActivity : AppCompatActivity() {
             // Get the file Location and name where Json File gets stored
             val cnsFileNameSecond = filesDir.path + "/CnSDataSecond.json"
             // call write Json method
-            var jsonWriterSecond = JSONReaderWriter(cnsFileNameSecond)
+            val jsonWriterSecond = JSONReaderWriter(cnsFileNameSecond)
 
             // JSON for ClubsNSocieties
-            var cnsScrapeSecond = CnSScrapeSecond(this, cnsUrlList)
+            val cnsScrapeSecond = CnSScrapeSecond(this, cnsUrlList)
             cnsScrapeSecond.execute()
 
             // Initialize arrays for storing information from the website
-            var cnsImageListSecond = cnsScrapeSecond.getImageList()
-            var cnsTitleListSecond = cnsScrapeSecond.getTitleList()
-            var cnsUrlListSecond = cnsScrapeSecond.getUrlList()
-            var cnsParentUrlListSecond = cnsScrapeSecond.getParentUrlList()
+            val cnsImageListSecond = cnsScrapeSecond.getImageList()
+            val cnsTitleListSecond = cnsScrapeSecond.getTitleList()
+            val cnsUrlListSecond = cnsScrapeSecond.getUrlList()
+            val cnsParentUrlListSecond = cnsScrapeSecond.getParentUrlList()
 
             val cnsListSizeSecond = cnsTitleListSecond.size
 
@@ -118,18 +120,18 @@ class LoadingActivity : AppCompatActivity() {
             // Get the file Location and name where Json File gets stored
             val cnsFileNameFinal = filesDir.path + "/CnSDataFinal.json"
             // call write Json method
-            var jsonWriterFinal = JSONReaderWriter(cnsFileNameFinal)
+            val jsonWriterFinal = JSONReaderWriter(cnsFileNameFinal)
 
             // JSON for ClubsNSocieties
-            var cnsScrapeFinal = CnSScrapeFinal(this, cnsUrlListSecond)
+            val cnsScrapeFinal = CnSScrapeFinal(this, cnsUrlListSecond)
             cnsScrapeFinal.execute()
 
             // Initialize arrays for storing information from the website
-            var cnsBannerListFinal = cnsScrapeFinal.getBannerImage()
-            var cnsLogoListFinal = cnsScrapeFinal.getLogoImage()
-            var cnsDescription1ListFinal = cnsScrapeFinal.getDescription1()
-            var cnsDescription2ListFinal = cnsScrapeFinal.getDescription2()
-            var cnsParentUrlListFinal = cnsScrapeFinal.getParentUrlList()
+            val cnsBannerListFinal = cnsScrapeFinal.getBannerImage()
+            val cnsLogoListFinal = cnsScrapeFinal.getLogoImage()
+            val cnsDescription1ListFinal = cnsScrapeFinal.getDescription1()
+            val cnsDescription2ListFinal = cnsScrapeFinal.getDescription2()
+            val cnsParentUrlListFinal = cnsScrapeFinal.getParentUrlList()
 
             val cnsListSizeFinal = cnsBannerListFinal.size
 

@@ -1,13 +1,13 @@
 package com.example.mygreenapp
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View.VISIBLE
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
@@ -21,6 +21,7 @@ class ClubsAndSocietiesFinal : AppCompatActivity() {
     private lateinit var fStore: FirebaseFirestore
     private lateinit var firebaseAuth: FirebaseAuth
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_clubs_and_societies_final)
@@ -39,7 +40,7 @@ class ClubsAndSocietiesFinal : AppCompatActivity() {
         // Get the file Location and name where Json File gets stored
         val fileName = filesDir.path + "/CnSDataFinal.json"
         // Read the written Json File
-        var reader = JSONReaderWriter(fileName)
+        val reader = JSONReaderWriter(fileName)
         // Send the url of the clicked parent button to the JSONReaderWriter file
         if (hiddenUrl != null) {
             reader.readJSONDataCnSFinal(hiddenUrl)
@@ -106,13 +107,13 @@ class ClubsAndSocietiesFinal : AppCompatActivity() {
             }
         }
 
-        var bannerImage = reader.getBannerImage()
-        var logoImage = reader.getLogoImage()
-        var firstDescription = reader.getDescription1()
-        var secondDescription = reader.getDescription2()
+        val bannerImage = reader.getBannerImage()
+        val logoImage = reader.getLogoImage()
+        val firstDescription = reader.getDescription1()
+        val secondDescription = reader.getDescription2()
 
-        var imgBanner = findViewById<ImageView>(R.id.imgCSBanner)
-        var imgLogo = findViewById<ImageView>(R.id.imgCSLogo)
+        val imgBanner = findViewById<ImageView>(R.id.imgCSBanner)
+        val imgLogo = findViewById<ImageView>(R.id.imgCSLogo)
 
         Glide.with(this@ClubsAndSocietiesFinal).load(bannerImage).into(imgBanner)
         Glide.with(this@ClubsAndSocietiesFinal).load(logoImage).into(imgLogo)

@@ -1,11 +1,14 @@
+@file:Suppress("DEPRECATION")
+
 package com.example.mygreenapp
 
+import android.annotation.SuppressLint
 import android.app.ProgressDialog
 import android.content.Context
 import android.os.AsyncTask
 import org.jsoup.Jsoup
 
-class CnSScrapeFinal(val context: Context, private var previousUrlList: ArrayList<String>) : AsyncTask<Void, Void, String>() {
+class CnSScrapeFinal(@SuppressLint("StaticFieldLeak") val context: Context, private var previousUrlList: ArrayList<String>) : AsyncTask<Void, Void, String>() {
 
     // Initialize arrays for storing information from the website
     private var bannerImageList = ArrayList<String>()
@@ -19,6 +22,7 @@ class CnSScrapeFinal(val context: Context, private var previousUrlList: ArrayLis
 
     private var confirmCount = 0
 
+    @Deprecated("Deprecated in Java")
     override fun onPreExecute() {
         super.onPreExecute()
 
@@ -32,11 +36,12 @@ class CnSScrapeFinal(val context: Context, private var previousUrlList: ArrayLis
         progressDialog.show()
     }
 
+    @Deprecated("Deprecated in Java")
     override fun doInBackground(vararg params: Void?): String? {
 
         // Nested loop to take all the data inside clubs and societies page 2
         for (i in 0 until previousUrlList.size) {
-            var doc = Jsoup.connect(previousUrlList[i]).get()
+            val doc = Jsoup.connect(previousUrlList[i]).get()
 
             /*
                 The Clubs and societies pages in the NSBM website is in two formats. Because of this reason, we have to check if the selected page has the first
@@ -84,6 +89,7 @@ class CnSScrapeFinal(val context: Context, private var previousUrlList: ArrayLis
         return null
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onPostExecute(result: String?) {
         super.onPostExecute(result)
 
@@ -95,7 +101,7 @@ class CnSScrapeFinal(val context: Context, private var previousUrlList: ArrayLis
     fun getBannerImage(): ArrayList<String> {
         while (confirmCount == 0)
         {
-            //println("Waiting for webscrape")
+            //println("Waiting for web-scrape")
         }
         return bannerImageList
     }
@@ -103,7 +109,7 @@ class CnSScrapeFinal(val context: Context, private var previousUrlList: ArrayLis
     fun getLogoImage(): ArrayList<String> {
         while (confirmCount == 0)
         {
-            //println("Waiting for webscrape")
+            //println("Waiting for web-scrape")
         }
         return logoImageList
     }
@@ -111,7 +117,7 @@ class CnSScrapeFinal(val context: Context, private var previousUrlList: ArrayLis
     fun getDescription1(): ArrayList<String> {
         while (confirmCount == 0)
         {
-            //println("Waiting for webscrape")
+            //println("Waiting for web-scrape")
         }
         return description1List
     }
@@ -119,7 +125,7 @@ class CnSScrapeFinal(val context: Context, private var previousUrlList: ArrayLis
     fun getDescription2(): ArrayList<String> {
         while (confirmCount == 0)
         {
-            //println("Waiting for webscrape")
+            //println("Waiting for web-scrape")
         }
         return description2List
     }
@@ -127,7 +133,7 @@ class CnSScrapeFinal(val context: Context, private var previousUrlList: ArrayLis
     fun getParentUrlList(): ArrayList<String> {
         while (confirmCount == 0)
         {
-            //println("Waiting for webscrape")
+            //println("Waiting for web-scrape")
         }
         return parentUrlList
     }

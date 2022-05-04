@@ -14,11 +14,11 @@ class NewsReaderWriter(ctx: Context): AppCompatActivity() {
     @RequiresApi(Build.VERSION_CODES.O)
     fun checkFiles() {
         // Take file paths. The forward slash is necessary to make sure the file accesses the dir called "file"
-        var fYear = context.filesDir.path + "/" + LAST_SYNC_YEAR
-        var fDay = context.filesDir.path + "/" + LAST_SYNC_DAY
+        val fYear = context.filesDir.path + "/" + LAST_SYNC_YEAR
+        val fDay = context.filesDir.path + "/" + LAST_SYNC_DAY
         // Treat them as files
-        var fileYear = File(fYear)
-        var fileDay = File(fDay)
+        val fileYear = File(fYear)
+        val fileDay = File(fDay)
 
         // Create year file if it does not exist
         if (!fileYear.exists()) {
@@ -192,7 +192,7 @@ class NewsReaderWriter(ctx: Context): AppCompatActivity() {
         }
     }
 
-    fun readFromImageArray() : Array<String> {
+    fun readFromImageArray(): Array<String> {
         var fis: FileInputStream? = null
         val sb = StringBuilder()
         try {
@@ -221,9 +221,7 @@ class NewsReaderWriter(ctx: Context): AppCompatActivity() {
         val str = sb.toString()
         val delim = ",,"
 
-        val arr = str.split(delim).toTypedArray()
-
-        return arr
+        return str.split(delim).toTypedArray()
     }
 
     // Title array
@@ -252,7 +250,7 @@ class NewsReaderWriter(ctx: Context): AppCompatActivity() {
         }
     }
 
-    fun readFromTitleArray() : Array<String> {
+    fun readFromTitleArray(): Array<String> {
         var fis: FileInputStream? = null
         val sb = StringBuilder()
         try {
@@ -281,9 +279,7 @@ class NewsReaderWriter(ctx: Context): AppCompatActivity() {
         val str = sb.toString()
         val delim = ",,"
 
-        val arr = str.split(delim).toTypedArray()
-
-        return arr
+        return str.split(delim).toTypedArray()
     }
 
     // Description array
@@ -312,7 +308,7 @@ class NewsReaderWriter(ctx: Context): AppCompatActivity() {
         }
     }
 
-    fun readFromDescriptionArray() : Array<String> {
+    fun readFromDescriptionArray(): Array<String> {
         var fis: FileInputStream? = null
         val sb = StringBuilder()
         try {
@@ -341,9 +337,7 @@ class NewsReaderWriter(ctx: Context): AppCompatActivity() {
         val str = sb.toString()
         val delim = ",,"
 
-        val arr = str.split(delim).toTypedArray()
-
-        return arr
+        return str.split(delim).toTypedArray()
     }
 
     companion object {

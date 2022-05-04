@@ -1,5 +1,6 @@
 package com.example.mygreenapp
 
+import android.annotation.SuppressLint
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
 import android.os.Bundle
@@ -26,6 +27,7 @@ class AddMeetingActivity : AppCompatActivity() {
     private lateinit var firebaseAuth: FirebaseAuth
 
 
+    @SuppressLint("SimpleDateFormat")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAddMeetingBinding.inflate(layoutInflater)
@@ -39,7 +41,7 @@ class AddMeetingActivity : AppCompatActivity() {
 
         val myCalendar = Calendar.getInstance()
 
-        val datePicker = DatePickerDialog.OnDateSetListener { view, year, month, dayOfMonth ->
+        val datePicker = DatePickerDialog.OnDateSetListener { _, year, month, dayOfMonth ->
             myCalendar.set(Calendar.YEAR, year)
             myCalendar.set(Calendar.MONTH, month)
             myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth)
@@ -49,7 +51,7 @@ class AddMeetingActivity : AppCompatActivity() {
         //Meeting Time Text View pops up the Time Picker to select the Meeting Date
         txtMeetingTime.setOnClickListener {
             val cal = Calendar.getInstance()
-            val timeSetListener = TimePickerDialog.OnTimeSetListener { timePicker, hour, minute ->
+            val timeSetListener = TimePickerDialog.OnTimeSetListener { _, hour, minute ->
                 cal.set(Calendar.HOUR_OF_DAY, hour)
                 cal.set(Calendar.MINUTE, minute)
                 //set time to Text View
@@ -80,7 +82,7 @@ class AddMeetingActivity : AppCompatActivity() {
         fStore = FirebaseFirestore.getInstance()
 
         val firebaseUser = firebaseAuth.currentUser
-        val email = firebaseUser!!.email
+        firebaseUser!!.email
         val userId = firebaseUser.uid
 
         binding.btnAddMeetingDb.setOnClickListener {

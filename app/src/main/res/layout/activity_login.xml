@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="Login"
+        android:text="@string/login"
         style="@style/TextAppearance.MaterialComponents.Headline4"/>
 
     <TextView
@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="Login to your account"
+        android:text="@string/login_to_your_account"
         android:layout_below="@id/lblLoginTitle"
         style="@style/TextAppearance.MaterialComponents.Caption"/>
 
@@ -35,8 +35,9 @@
             android:id="@+id/txtEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email"
-            android:inputType="textEmailAddress"/>
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:autofillHints="" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -52,7 +53,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
-            android:hint="Password"/>
+            android:hint="@string/password"
+            android:autofillHints="" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -63,17 +65,17 @@
         android:layout_below="@id/boxPassword"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:text="Login" />
-    
+        android:text="@string/login" />
+
     <TextView
         android:id="@+id/lblNoAccount"
+        style="@style/TextAppearance.MaterialComponents.Caption"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/no_account"
         android:layout_alignParentBottom="true"
-        android:padding="5dp"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="30dp"
-        style="@style/TextAppearance.MaterialComponents.Caption"/>
+        android:padding="5dp"
+        android:text="@string/no_account" />
 
 </RelativeLayout>

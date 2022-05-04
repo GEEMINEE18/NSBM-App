@@ -21,15 +21,15 @@ class ClubsAndSocietiesSecond : AppCompatActivity(), ButtonAdapter.OnItemClickLi
         // Get the file Location and name where Json File gets stored
         val fileName = filesDir.path + "/CnSDataSecond.json"
         // Read the written Json File
-        var reader = JSONReaderWriter(fileName)
+        val reader = JSONReaderWriter(fileName)
         // Send the url of the clicked parent button to the JSONReaderWriter file
         if (hiddenUrl != null) {
             reader.readJSONDataWithURL(hiddenUrl)
         }
-        var imgList = reader.getImageList()
-        var titleList = reader.getTitleList()
-        var urlList = reader.getUrlList()
-        var listSize = reader.getListSize()
+        val imgList = reader.getImageList()
+        val titleList = reader.getTitleList()
+        val urlList = reader.getUrlList()
+        val listSize = reader.getListSize()
 
         // getting the recyclerview by its id
         val recyclerview = findViewById<RecyclerView>(R.id.buttonRecyclerView)
@@ -58,9 +58,9 @@ class ClubsAndSocietiesSecond : AppCompatActivity(), ButtonAdapter.OnItemClickLi
         println("Item $position $text clicked")
 
         // Create a session and send value
-        val intent = Intent(this,ClubsAndSocietiesFinal::class.java);
+        val intent = Intent(this,ClubsAndSocietiesFinal::class.java)
         intent.putExtra("url", url)
         intent.putExtra("title", text)
-        startActivity(intent);
+        startActivity(intent)
     }
 }

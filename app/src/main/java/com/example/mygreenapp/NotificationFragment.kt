@@ -53,14 +53,14 @@ class NotificationFragment : Fragment() {
         val data = ArrayList<NotificationViewModel>()
 
         // this is the only way
-        getData() { result->
+        getData { result->
 
-            var clubName = result[2]
-            var title = result[4]
-            var description = result[5]
-            var date = result[3]
-            var time = result[0]
-            var venue = result[1]
+            val clubName = result[2]
+            val title = result[4]
+            val description = result[5]
+            val date = result[3]
+            val time = result[0]
+            val venue = result[1]
 
             // this creates a vertical layout Manager
             recyclerView.layoutManager = LinearLayoutManager(requireContext())
@@ -109,20 +109,12 @@ class NotificationFragment : Fragment() {
     private fun getData(callback: (ArrayList<String>) -> Unit) {
 
         val firebaseUser = firebaseAuth.currentUser
-        val email = firebaseUser!!.email
+        firebaseUser!!.email
         val userId = firebaseUser.uid
 
         // Data array and map
-        var dataArray = ArrayList<String>()
-        var dataMap = HashMap<String, String>()
-
-        // Separate arrays to store all data
-        var timeList = ArrayList<String>()
-        var venueList = ArrayList<String>()
-        var clubList = ArrayList<String>()
-        var dateList = ArrayList<String>()
-        var titleList = ArrayList<String>()
-        var descriptionList = ArrayList<String>()
+        var dataArray: ArrayList<String>
+        var dataMap: HashMap<String, String>
 
         fStore = FirebaseFirestore.getInstance()
         // Get the document [userId] in the collection "users"

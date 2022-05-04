@@ -14,11 +14,11 @@ class NewsPageActivity: AppCompatActivity() {
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.title = "News"
 
-        var reader = NewsReaderWriter(this)
+        val reader = NewsReaderWriter(this)
 
-        var titleList = reader.readFromTitleArray()
-        var descriptionList = reader.readFromDescriptionArray()
-        var imageList = reader.readFromImageArray()
+        val titleList = reader.readFromTitleArray()
+        val descriptionList = reader.readFromDescriptionArray()
+        val imageList = reader.readFromImageArray()
 
         val listSize = titleList.size
 

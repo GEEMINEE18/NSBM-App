@@ -25,8 +25,8 @@ class MainActivity : AppCompatActivity() {
     //This is the on/off switch for the extended fab
     private var clicked = false
     //Gives the ability open the drawer by the Toggle button
-    //lateinit: will initialize later
-    lateinit var toggle: ActionBarDrawerToggle
+    //"lateinit": will initialize later
+    private lateinit var toggle: ActionBarDrawerToggle
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
