@@ -12,9 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyGreenApp">
         <activity
-            android:name=".CalendarActivity"
-            android:exported="false" />
-        <activity
             android:name=".WelcomeActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
@@ -35,7 +32,7 @@
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
-            android:exported="false"></activity>
+            android:exported="false"/>
         <activity
             android:name=".ClubsAndSocietiesFinal"
             android:exported="false"

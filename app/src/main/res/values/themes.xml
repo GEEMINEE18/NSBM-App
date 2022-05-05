@@ -18,6 +18,8 @@
         <item name="android:textColorPrimary">@color/lightBlack</item>
         <item name="android:textColorSecondary">@color/lightBlack</item>
         <item name="android:textColorTertiary">@color/lightBlack</item>
+        <item name="drawerBarColor">@color/black</item>
+
     </style>
 
     <style name="Theme.MyGreenApp.Fullscreen" parent="Theme.MyGreenApp">
@@ -30,7 +32,7 @@
     <style name="ThemeOverlay.MyGreenApp.FullscreenContainer" parent="">
         <item name="fullscreenBackgroundColor">@color/light_blue_600</item>
         <item name="fullscreenTextColor">@color/light_blue_A200</item>
-    </style>
 
+    </style>
 
 </resources>

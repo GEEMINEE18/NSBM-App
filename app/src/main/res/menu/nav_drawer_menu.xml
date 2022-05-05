@@ -6,6 +6,7 @@
         android:icon="@drawable/ic_account"
         android:title="@string/profile" />
 
+
     <item
         android:id="@+id/miItem2"
         android:icon="@drawable/ic_settings"

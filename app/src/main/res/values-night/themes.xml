@@ -22,10 +22,14 @@
         <item name="android:buttonTint">@color/white</item>
         <item name="android:navigationBarColor">@color/secondaryDarkColor</item>
         <item name="iconTint">@color/white</item>
+        <item name="drawerBarColor">@color/white</item>
+
+
     </style>
 
     <style name="ThemeOverlay.MyGreenApp.FullscreenContainer" parent="">
         <item name="fullscreenBackgroundColor">@color/light_blue_900</item>
         <item name="fullscreenTextColor">@color/light_blue_A400</item>
+
     </style>
 </resources>
