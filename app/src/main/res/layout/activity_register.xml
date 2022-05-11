@@ -26,6 +26,8 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/boxName"
+        app:helperText="@string/required"
+        app:helperTextTextColor="@color/red"
         android:layout_above="@+id/boxStdId"
         android:layout_marginBottom="10dp"
         android:layout_width="match_parent"
@@ -43,6 +45,8 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/boxStdId"
+        app:helperText="@string/required"
+        app:helperTextTextColor="@color/red"
         android:layout_above="@+id/boxBatch"
         android:layout_marginBottom="10dp"
         android:layout_width="match_parent"
@@ -60,6 +64,8 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/boxBatch"
+        app:helperText="@string/required"
+        app:helperTextTextColor="@color/red"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true">
@@ -76,6 +82,8 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/boxEmail"
+        app:helperText="@string/required"
+        app:helperTextTextColor="@color/red"
         android:layout_below="@+id/boxBatch"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
@@ -93,6 +101,8 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/boxPassword"
+        app:helperText="@string/required"
+        app:helperTextTextColor="@color/red"
         app:passwordToggleEnabled="true"
         android:layout_below="@id/boxEmail"
         android:layout_marginTop="10dp"

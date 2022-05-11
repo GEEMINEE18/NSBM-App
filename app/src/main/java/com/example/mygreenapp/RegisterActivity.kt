@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.mygreenapp.databinding.ActivityRegisterBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import kotlinx.android.synthetic.main.activity_register.*
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -51,6 +52,18 @@ class RegisterActivity : AppCompatActivity() {
         //init firebase auth
         firebaseAuth = FirebaseAuth.getInstance()
 
+        binding.boxName.helperText = ""
+        binding.boxStdId.helperText = ""
+        binding.boxBatch.helperText = ""
+        binding.boxEmail.helperText = ""
+        binding.boxPassword.helperText = ""
+
+        nameFocusListener()
+        stdIDFocusListener()
+        batchFocusListener()
+        emailFocusListener()
+        passwordFocusListener()
+
         //handle click, begin register
         binding.btnRegister.setOnClickListener {
 
@@ -60,23 +73,138 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     private fun validateData() {
+        binding.boxName.helperText = validName()
+        binding.boxStdId.helperText = validStdID()
+        binding.boxBatch.helperText = validBatch()
+        binding.boxEmail.helperText = validEmail()
+        binding.boxPassword.helperText = validPassword()
 
-        email = binding.txtEmail.text.toString().trim()
-        password = binding.txtPassword.text.toString().trim()
+        val validName = binding.boxName.helperText == null
+        val validStdID = binding.boxStdId.helperText == null
+        val validBatch = binding.boxBatch.helperText == null
+        val validEmail = binding.boxEmail.helperText == null
+        val validPassword = binding.boxPassword.helperText == null
 
-        //Validate data
-        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            //invalid email format
-            binding.txtEmail.error = "Invalid email format"
-        } else if (TextUtils.isEmpty(password)) {
-            //Password is not entered
-            binding.txtPassword.error = "Please enter password"
-        } else if (password.length < 6) {
-            //password is short
-            binding.txtPassword.error = "Password must be at least more than 6 characters"
-        } else {
+        if (validName && validStdID && validBatch && validEmail && validPassword) {
             firebaseRegister()
         }
+        else {
+            Toast.makeText(this, "Fill the Required fields", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+
+    private fun nameFocusListener()
+    {
+        binding.txtName.setOnFocusChangeListener { _, focused ->
+            if(!focused)
+            {
+                binding.boxName.helperText = validName()
+            }
+        }
+    }
+
+    private fun validName(): String?
+    {
+        val nameText = binding.txtName.text.toString()
+        if(TextUtils.isEmpty(nameText))
+        {
+            return "Required"
+        }
+        return null
+    }
+
+    private fun stdIDFocusListener()
+    {
+        binding.txtStdId.setOnFocusChangeListener { _, focused ->
+            if(!focused)
+            {
+                binding.boxStdId.helperText = validStdID()
+            }
+        }
+    }
+
+    private fun validStdID(): String?
+    {
+        val stdIDText = binding.txtStdId.text.toString()
+        if(TextUtils.isEmpty(stdIDText))
+        {
+            return "Required"
+        }
+        return null
+    }
+
+    private fun batchFocusListener()
+    {
+        binding.txtBatch.setOnFocusChangeListener { _, focused ->
+            if(!focused)
+            {
+                binding.boxBatch.helperText = validBatch()
+            }
+        }
+    }
+
+    private fun validBatch(): String?
+    {
+        val batchText = binding.txtBatch.text.toString()
+        if(TextUtils.isEmpty(batchText))
+        {
+            return "Required"
+        }
+        return null
+    }
+
+    private fun emailFocusListener()
+    {
+        binding.txtEmail.setOnFocusChangeListener { _, focused ->
+            if(!focused)
+            {
+                binding.boxEmail.helperText = validEmail()
+            }
+        }
+    }
+
+    private fun validEmail(): String?
+    {
+        email = binding.txtEmail.text.toString()
+        if(!Patterns.EMAIL_ADDRESS.matcher(email).matches())
+        {
+            return "Invalid Email Address"
+        }
+        return null
+    }
+
+    private fun passwordFocusListener()
+    {
+        binding.txtPassword.setOnFocusChangeListener { _, focused ->
+            if(!focused)
+            {
+                binding.boxPassword.helperText = validPassword()
+            }
+        }
+    }
+
+    private fun validPassword(): String?
+    {
+        password = binding.txtPassword.text.toString()
+        if(password.length < 8)
+        {
+            return "Minimum 8 Character Password"
+        }
+        if(!password.matches(".*[A-Z].*".toRegex()))
+        {
+            return "Must Contain 1 Upper-case Character"
+        }
+        if(!password.matches(".*[a-z].*".toRegex()))
+        {
+            return "Must Contain 1 Lower-case Character"
+        }
+        if(!password.matches(".*[@#\$%^&+=].*".toRegex()))
+        {
+            return "Must Contain 1 Special Character (@#\$%^&+=)"
+        }
+
+        return null
     }
 
     private fun firebaseRegister() {
