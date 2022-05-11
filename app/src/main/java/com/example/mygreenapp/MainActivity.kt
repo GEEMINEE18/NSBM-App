@@ -12,6 +12,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -27,6 +28,10 @@ class MainActivity : AppCompatActivity() {
     //Gives the ability open the drawer by the Toggle button
     //"lateinit": will initialize later
     private lateinit var toggle: ActionBarDrawerToggle
+
+    //FirebaseAuth
+    private lateinit var firebaseAuth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -50,17 +55,23 @@ class MainActivity : AppCompatActivity() {
         }
 
         //For the drawerLayout to work we should include: id 'kotlin-android-extensions' in build.gradle(Module) plugins section
-        toggle = ActionBarDrawerToggle(this,drawerLayout,R.string.open,R.string.close)
+        toggle = ActionBarDrawerToggle(this@MainActivity,drawerLayout,R.string.open,R.string.close)
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
+
+        //init firebase auth
+        firebaseAuth = FirebaseAuth.getInstance()
 
         navView.setNavigationItemSelectedListener {
             when(it.itemId){
                 R.id.miItem1 -> startActivity(Intent(this,ProfileActivity::class.java))
                 R.id.miItem2 -> Toast.makeText(applicationContext,
                     "Clicked Item 2",Toast.LENGTH_SHORT).show()
-                R.id.miItem3 -> Toast.makeText(applicationContext,
-                    "Clicked Item 3",Toast.LENGTH_SHORT).show()
+                R.id.miItem3 -> {
+                    firebaseAuth.signOut()
+                    startActivity(Intent(this,LoginActivity::class.java))
+                    finish()
+                }
             }
             true
         }

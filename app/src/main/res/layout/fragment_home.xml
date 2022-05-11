@@ -21,52 +21,18 @@
             android:orientation="vertical">
 
 
-            <ImageView
+            <com.denzcoskun.imageslider.ImageSlider
+                android:id="@+id/image_slider"
                 android:layout_width="wrap_content"
-                android:layout_height="109dp"
-                android:layout_marginTop="15dp"
-                android:contentDescription="@string/example_image_reader"
-                android:src="@drawable/pic1" />
-
-            <RadioGroup
-                android:id="@+id/radio_group"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="15dp"
-                android:orientation="horizontal">
-
-                <RadioButton
-                    android:id="@+id/radio1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:checked="true" />
-
-                <RadioButton
-                    android:id="@+id/radio2"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="01" />
-
-                <RadioButton
-                    android:id="@+id/radio3"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-
-                <RadioButton
-                    android:id="@+id/radio4"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-
-                <RadioButton
-                    android:id="@+id/radio5"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-            </RadioGroup>
+                android:layout_height="300dp"
+                app:iss_auto_cycle="true"
+                app:iss_period="1500"
+                app:iss_delay="0"
+                app:iss_text_align="CENTER"
+                app:iss_title_background="@drawable/gradient"
+                app:iss_error_image="@drawable/error"
+                app:iss_selected_dot="@drawable/default_selected_dot"
+                app:iss_unselected_dot="@drawable/default_unselected_dot"/>
 
 
             <Button
@@ -108,18 +74,9 @@
                 android:layout_height="56dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="15dp"
+                android:backgroundTint="@color/ash"
+                android:clickable="false"
                 android:text="@string/map"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <Button
-                android:id="@+id/myButton"
-                android:layout_width="287dp"
-                android:layout_height="56dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="15dp"
-                android:text="@string/covid_information_center"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

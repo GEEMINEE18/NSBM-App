@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/1 Local Disk D/NSBM-App/app/src/main/res/drawable-xxhdpi/logout_48px.xml" value="0.15" />
         <entry key="..\:/1 Local Disk D/NSBM-App/app/src/main/res/drawable/ic_add.xml" value="0.1135" />
         <entry key="..\:/1 Local Disk D/NSBM-App/app/src/main/res/layout/academicclub_mainpage.xml" value="0.33" />
         <entry key="..\:/1 Local Disk D/NSBM-App/app/src/main/res/layout/activity_add_meeting.xml" value="0.22541156606162938" />
@@ -19,6 +20,7 @@
         <entry key="..\:/1 Local Disk D/NSBM-App/app/src/main/res/layout/button_layout.xml" value="0.11677479147358666" />
         <entry key="..\:/1 Local Disk D/NSBM-App/app/src/main/res/layout/clubandsocieties.xml" value="0.278125" />
         <entry key="..\:/1 Local Disk D/NSBM-App/app/src/main/res/layout/fragment_home.xml" value="0.22830269345874304" />
+        <entry key="..\:/1 Local Disk D/NSBM-App/app/src/main/res/layout/fragment_notification.xml" value="0.278125" />
         <entry key="..\:/1 Local Disk D/NSBM-App/app/src/main/res/layout/internationalclub_mainpage.xml" value="0.278125" />
         <entry key="..\:/1 Local Disk D/NSBM-App/app/src/main/res/layout/nav_header.xml" value="0.22830269345874304" />
         <entry key="..\:/1 Local Disk D/NSBM-App/app/src/main/res/layout/news_page.xml" value="0.278125" />
