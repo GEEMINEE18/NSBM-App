@@ -4,12 +4,16 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/1 Local Disk D/NSBM-App/app/src/main/res/drawable-xxhdpi/logout_48px.xml" value="0.15" />
+        <entry key="..\:/1 Local Disk D/NSBM-App/app/src/main/res/drawable/ic_account.xml" value="0.15" />
         <entry key="..\:/1 Local Disk D/NSBM-App/app/src/main/res/drawable/ic_add.xml" value="0.1135" />
+        <entry key="..\:/1 Local Disk D/NSBM-App/app/src/main/res/drawable/ic_message.xml" value="0.15" />
+        <entry key="..\:/1 Local Disk D/NSBM-App/app/src/main/res/drawable/ic_settings.xml" value="0.15" />
         <entry key="..\:/1 Local Disk D/NSBM-App/app/src/main/res/layout/academicclub_mainpage.xml" value="0.33" />
         <entry key="..\:/1 Local Disk D/NSBM-App/app/src/main/res/layout/activity_add_meeting.xml" value="0.22541156606162938" />
+        <entry key="..\:/1 Local Disk D/NSBM-App/app/src/main/res/layout/activity_edit_profile.xml" value="0.278125" />
         <entry key="..\:/1 Local Disk D/NSBM-App/app/src/main/res/layout/activity_login.xml" value="0.22541156606162938" />
         <entry key="..\:/1 Local Disk D/NSBM-App/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/1 Local Disk D/NSBM-App/app/src/main/res/layout/activity_profile.xml" value="0.22830269345874304" />
+        <entry key="..\:/1 Local Disk D/NSBM-App/app/src/main/res/layout/activity_profile.xml" value="0.25" />
         <entry key="..\:/1 Local Disk D/NSBM-App/app/src/main/res/layout/activity_profile2.xml" value="0.22830269345874304" />
         <entry key="..\:/1 Local Disk D/NSBM-App/app/src/main/res/layout/activity_register.xml" value="0.22830269345874304" />
         <entry key="..\:/1 Local Disk D/NSBM-App/app/src/main/res/layout/activity_settings.xml" value="0.25" />

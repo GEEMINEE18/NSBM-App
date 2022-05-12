@@ -2,11 +2,18 @@ package com.example.mygreenapp
 
 import android.annotation.SuppressLint
 import android.app.DatePickerDialog
+import android.app.NotificationChannel
+import android.app.NotificationManager
 import android.app.TimePickerDialog
+import android.content.Context
+import android.os.Build
 import android.os.Bundle
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.NotificationCompat
+import androidx.core.app.NotificationManagerCompat
+import androidx.core.content.getSystemService
 import com.example.mygreenapp.databinding.ActivityAddMeetingBinding
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
@@ -26,6 +33,8 @@ class AddMeetingActivity : AppCompatActivity() {
     //FirebaseAuth
     private lateinit var firebaseAuth: FirebaseAuth
 
+    private val CHANNEL_ID = "channel_id_example_01"
+    private val notificationId = 101
 
     @SuppressLint("SimpleDateFormat")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,6 +42,9 @@ class AddMeetingActivity : AppCompatActivity() {
         binding = ActivityAddMeetingBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar!!.title = "Add New Meeting"
+
+        //Just tried push notifications
+            //createNotificationChannel()
 
         //init firebaseAuth
         firebaseAuth = FirebaseAuth.getInstance()
@@ -115,10 +127,39 @@ class AddMeetingActivity : AppCompatActivity() {
             binding.txtMeetingDate.text = ""
             binding.txtMeetingTime.text = ""
 
+            //Just tried push notifications
+                //sendNotification()
             Toast.makeText(this@AddMeetingActivity, "Meeting successfully added", Toast.LENGTH_SHORT).show()
 
         }
     }
+
+    //Just tried push notifications
+    /*private fun createNotificationChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+            val name = "Notification Title"
+            val descriptionText = "Notification Description"
+            val importance = NotificationManager.IMPORTANCE_DEFAULT
+            val channel = NotificationChannel(CHANNEL_ID,name,importance).apply {
+                description = descriptionText
+            }
+            val notificationManager: NotificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+            notificationManager.createNotificationChannel(channel)
+        }
+    }
+
+    //Just tried push notifications
+    private fun sendNotification(){
+
+        val builder = NotificationCompat.Builder(this,CHANNEL_ID)
+            .setContentTitle("Example Title")
+            .setContentText("Example Description")
+            .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+
+        with(NotificationManagerCompat.from(this)){
+            notify(notificationId,builder.build())
+        }
+    }*/
 
     private fun updateLabel(myCalendar: Calendar) {
         val myFormat = "dd-MM-yyyy"
