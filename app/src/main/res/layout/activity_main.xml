@@ -61,6 +61,8 @@
                     android:layout_height="70dp"
                     android:layout_marginEnd="16dp"
                     android:background="@color/transparent"
+                    app:itemIconTint="@drawable/bottom_navigation_color"
+                    app:itemTextColor="@drawable/bottom_navigation_color"
                     app:menu="@menu/bottom_nav_menu">
 
                 </com.google.android.material.bottomnavigation.BottomNavigationView>
@@ -131,6 +133,8 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
+        app:itemIconTint="?attr/drawerBarColor"
+        app:itemTextColor="?attr/drawerBarColor"
         app:headerLayout="@layout/nav_header"
         app:menu="@menu/nav_drawer_menu">
 
