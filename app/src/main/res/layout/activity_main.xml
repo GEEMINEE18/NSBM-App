@@ -59,8 +59,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
                     android:layout_marginEnd="16dp"
-                    app:itemIconTint="@navigation/bottom_navigation_selector"
-                    app:itemTextColor="@navigation/bottom_navigation_selector"
                     android:background="@color/transparent"
                     app:itemIconTint="@drawable/bottom_navigation_color"
                     app:itemTextColor="@drawable/bottom_navigation_color"
