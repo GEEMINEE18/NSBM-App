@@ -2,11 +2,19 @@ package com.example.mygreenapp
 
 import android.content.Intent
 import android.os.Bundle
+import android.transition.Slide
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import com.denzcoskun.imageslider.ImageSlider
+import com.denzcoskun.imageslider.constants.ActionTypes
+import com.denzcoskun.imageslider.constants.ScaleTypes
+import com.denzcoskun.imageslider.interfaces.ItemChangeListener
+import com.denzcoskun.imageslider.interfaces.ItemClickListener
+import com.denzcoskun.imageslider.interfaces.TouchListener
+import com.denzcoskun.imageslider.models.SlideModel
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -38,6 +46,48 @@ class HomeFragment : Fragment() {
         //We have to add view.findViewById instead of findViewById
         val button = view.findViewById<Button>(R.id.clubSocietyBtn)
         val newsBtn = view.findViewById<Button>(R.id.newsBtn)
+
+        val imageSlider = view.findViewById<ImageSlider>(R.id.image_slider) // init imageSlider
+
+        val reader = NewsReaderWriter(requireContext())
+
+        val imageReference = reader.readFromImageArray()
+        val imageList = ArrayList<SlideModel>()
+
+        imageSlider.setOnClickListener {
+            val intent = Intent (requireContext(),NewsPageActivity::class.java)
+            startActivity(intent)
+        }
+
+        for (i in imageReference.indices){
+            imageList.add(SlideModel(imageReference[i], "News $i"))
+        }
+
+        imageSlider.setImageList(imageList)
+
+        imageSlider.setItemClickListener(object : ItemClickListener {
+            override fun onItemSelected(position: Int) {
+                // You can listen here.
+                val intent = Intent (requireContext(),NewsPageActivity::class.java)
+                startActivity(intent)
+            }
+        })
+
+        imageSlider.setItemChangeListener(object : ItemChangeListener {
+            override fun onItemChanged(position: Int) {
+                //println("Pos: " + position)
+            }
+        })
+
+        imageSlider.setTouchListener(object : TouchListener {
+            override fun onTouched(touched: ActionTypes) {
+                if (touched == ActionTypes.DOWN){
+                    imageSlider.stopSliding()
+                } else if (touched == ActionTypes.UP ) {
+                    imageSlider.startSliding(1500)
+                }
+            }
+        })
 
         button.setOnClickListener {
             //Intent works when we replace "this" with "requireContext()"
