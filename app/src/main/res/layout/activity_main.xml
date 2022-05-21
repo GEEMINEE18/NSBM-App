@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--Using Drawer Layout to use the Navigation Drawer-->
-<androidx.drawerlayout.widget.DrawerLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawerLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -14,8 +13,8 @@
     <!--Constraint Layout for the activity views-->
 
     <!--Swipe to view the activity-->
-        <!--layout_gravity: Prevent overlapping the Navigation View with the Activity-->
-        <!--fitsSystemWindows: Navigation View will leave space for system windows-->
+    <!--layout_gravity: Prevent overlapping the Navigation View with the Activity-->
+    <!--fitsSystemWindows: Navigation View will leave space for system windows-->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -61,6 +60,8 @@
                     android:layout_height="70dp"
                     android:layout_marginEnd="16dp"
                     android:background="@color/transparent"
+                    app:itemIconTint="@drawable/bottom_navigation_color"
+                    app:itemTextColor="@drawable/bottom_navigation_color"
                     app:menu="@menu/bottom_nav_menu">
 
                 </com.google.android.material.bottomnavigation.BottomNavigationView>
@@ -88,12 +89,12 @@
             android:layout_marginTop="40dp"
             android:layout_marginEnd="20dp"
             android:clickable="true"
+            android:contentDescription="@string/add_event_button"
             android:focusable="true"
             android:visibility="invisible"
             app:layout_constraintEnd_toStartOf="@+id/addPostBtn"
             app:layout_constraintTop_toTopOf="@+id/addPostBtn"
-            app:srcCompat="@drawable/ic_event"
-            android:contentDescription="@string/add_event_button" />
+            app:srcCompat="@drawable/ic_event" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/addPostBtn"
@@ -101,14 +102,14 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:clickable="true"
+            android:contentDescription="@string/add_post_button"
             android:focusable="true"
             android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="@+id/fragmentContainerView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/ic_post"
-            android:contentDescription="@string/add_post_button" />
+            app:srcCompat="@drawable/ic_post" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/addMeetingBtn"
@@ -117,12 +118,12 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="40dp"
             android:clickable="true"
+            android:contentDescription="@string/add_meeting_button"
             android:focusable="true"
             android:visibility="invisible"
             app:layout_constraintStart_toEndOf="@+id/addPostBtn"
             app:layout_constraintTop_toTopOf="@+id/addPostBtn"
-            app:srcCompat="@drawable/ic_meeting"
-            android:contentDescription="@string/add_meeting_button" />
+            app:srcCompat="@drawable/ic_meeting" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.navigation.NavigationView
@@ -131,6 +132,8 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
+        app:itemIconTint="?attr/drawerBarColor"
+        app:itemTextColor="?attr/drawerBarColor"
         app:headerLayout="@layout/nav_header"
         app:menu="@menu/nav_drawer_menu">
 

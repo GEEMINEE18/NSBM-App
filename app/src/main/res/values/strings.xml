@@ -130,4 +130,7 @@
     <string name="profile">Profile</string>
     <string name="settings">Settings</string>
     <string name="item_3">Item 3</string>
+    <string name="day">Day</string>
+    <string name="event_name">Event name</string>
+    <string name="required">Required</string>
 </resources>

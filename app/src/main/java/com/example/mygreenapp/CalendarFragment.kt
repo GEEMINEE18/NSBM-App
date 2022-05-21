@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.CalendarView
+import android.widget.TextView
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -29,6 +31,16 @@ class CalendarFragment : Fragment() {
         }
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val calendarView: CalendarView = view.findViewById<CalendarView>(R.id.calendarView)
+        val dateView: TextView = view.findViewById<TextView>(R.id.txtDay)
+        calendarView.setOnDateChangeListener { View, year, month, dayOfMonth ->
+            val date = dayOfMonth.toString() + "−" + (month + 1) + "−" + year
+            dateView.text = date
+
+        }
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
