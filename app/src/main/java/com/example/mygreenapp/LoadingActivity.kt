@@ -16,17 +16,38 @@ class LoadingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_loading)
 
-        val syncButton = findViewById<Button>(R.id.btnSync)
-        val enterButton = findViewById<Button>(R.id.btnEnter)
-        val syncText = findViewById<TextView>(R.id.txtSyncDialog)
-
         // Take Admin variables from Login activity and redirect to Main
         val host = intent.getStringExtra("host")
         val userCurrent = intent.getStringExtra("userCurrent")
 
+        // If already synced, go to MainActivity.kt
+
+        // Create ReaderWriter object to check if user had already synced today
+        val newsWriter = NewsReaderWriter(this)
+
+        newsWriter.checkFiles()
+
+        val yearNow = LocalDateTime.now().year
+        val dayNow = LocalDateTime.now().dayOfYear
+        val yearLast = newsWriter.loadLastSyncYear()
+        val dayLast = newsWriter.loadLastSyncDay()
+
+        if (yearNow == yearLast || dayNow == dayLast) {
+            val intent = Intent(this@LoadingActivity, MainActivity::class.java)
+            intent.putExtra("host", host)
+            intent.putExtra("userCurrent", userCurrent)
+            startActivity(intent)
+            finish()
+        }
+
+
+        val syncButton = findViewById<Button>(R.id.btnSync)
+        val enterButton = findViewById<Button>(R.id.btnEnter)
+        val syncText = findViewById<TextView>(R.id.txtSyncDialog)
+
         syncButton.setOnClickListener {
             scrape()
-            syncText.visibility = VISIBLE
+            syncText.text = getString(R.string.web_sync_completed)
             enterButton.isEnabled = true
             enterButton.isClickable = true
         }

@@ -133,4 +133,5 @@
     <string name="day">Day</string>
     <string name="event_name">Event name</string>
     <string name="required">Required</string>
+    <string name="please_wait_if_the_app_appears_to_be_stuck_when_you_sync_for_the_first_time_today">Please wait if the app appears to be stuck when you sync for the first time today</string>
 </resources>

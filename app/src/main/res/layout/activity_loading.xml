@@ -19,13 +19,12 @@
 
     <TextView
         android:id="@+id/txtSyncDialog"
-        android:layout_width="wrap_content"
+        android:layout_width="300sp"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:text="@string/web_sync_completed"
-        android:visibility="invisible"
+        android:text="@string/please_wait_if_the_app_appears_to_be_stuck_when_you_sync_for_the_first_time_today"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnSync" />
 
