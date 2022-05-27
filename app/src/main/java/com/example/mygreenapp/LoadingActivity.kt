@@ -32,7 +32,7 @@ class LoadingActivity : AppCompatActivity() {
         val yearLast = newsWriter.loadLastSyncYear()
         val dayLast = newsWriter.loadLastSyncDay()
 
-        if (yearNow == yearLast || dayNow == dayLast) {
+        if (yearNow == yearLast && dayNow == dayLast) {
             val intent = Intent(this@LoadingActivity, MainActivity::class.java)
             intent.putExtra("host", host)
             intent.putExtra("userCurrent", userCurrent)
