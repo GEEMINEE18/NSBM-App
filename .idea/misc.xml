@@ -63,6 +63,7 @@
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/activity_register_aerobics_club.xml" value="0.35625" />
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/activity_register_archery_club.xml" value="0.35625" />
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/activity_rugby_club.xml" value="0.35625" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/activity_settings.xml" value="0.35625" />
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/activity_welcome.xml" value="0.18177083333333333" />
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/activitybased_club.xml" value="0.35625" />
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/basketball_regform.xml" value="0.34629629629629627" />
@@ -74,6 +75,7 @@
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/event_page.xml" value="0.35625" />
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/feedback_page.xml" value="0.35625" />
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/fragment_invitation.xml" value="0.35625" />
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/fragment_notification.xml" value="0.34629629629629627" />
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/fragment_time_picker.xml" value="0.35625" />
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/internationalclub_mainpage.xml" value="0.34629629629629627" />
@@ -86,7 +88,9 @@
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/sportsclub_mainpage.xml" value="0.35625" />
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/layout/web_card_layout.xml" value="0.35625" />
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/menu/bottom_nav_menu.xml" value="0.34629629629629627" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/menu/menu.xml" value="0.35625" />
         <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/menu/nav_drawer_menu.xml" value="0.35625" />
+        <entry key="..\:/AndroidStudioProjects/NSBM-App/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3135" />
         <entry key="..\:/MyGreenApp/app/src/main/res/drawable/searchview.xml" value="0.1385" />
         <entry key="..\:/MyGreenApp/app/src/main/res/layout/academicclub_mainpage.xml" value="0.25" />
         <entry key="..\:/MyGreenApp/app/src/main/res/layout/activity_main.xml" value="0.264" />
